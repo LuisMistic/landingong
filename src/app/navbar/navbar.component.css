@@ -1,0 +1,13 @@
+
+.navbar-brand img {
+  width: auto;
+  height: 3rem;
+}
+
+.navbar-nav .nav-link  {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0.5rem 1.25rem;
+  color: #000000;
+  transition: all 0.2s;
+}
