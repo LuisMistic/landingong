@@ -91,7 +91,7 @@ export class AppComponent {
       price: this.totalAmount.toString(),
     };
 
-    fetch("https://able-charming-garnet.glitch.me/create_preference", {
+    fetch("http://localhost:8080/create_preference", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
