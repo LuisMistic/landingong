@@ -1,0 +1,19 @@
+<h1 id="product-description">Beer Donation Page 🍻</h1>
+<p>Choose the amount of beers you want to donate:</p>
+<p><small>Beer $50</small></p>
+
+<div class="buttons-container">
+  <button id="donate-3" (click)="beer3ButtonClicked()">3 🍻</button>
+  <button id="donate-5" (click)="beer5ButtonClicked()">5 🍻</button>
+  <button id="donate-10" (click)="beer10ButtonClicked()">10 🍻</button>
+</div>
+
+<p>Or enter the amount of beers you want to donate:</p>
+<input type="number" id="amount-input" min="0" [(ngModel)]="totalAmount" />
+<p>
+  Total amount to pay: <span id="total-amount"> {{ getTotalAmount() }} </span> $
+</p>
+
+<button id="checkout-btn" (click)="checkoutButtonClicked()">Checkout</button>
+
+<div id="button-checkout"></div>
