@@ -21,33 +21,45 @@ export class BotonDePagoComponent {
   }
 
   updateTotalAmount() {
-    this.totalAmount = this.beerCount * 50;
+    if (this.amountInput) {
+      this.totalAmount = this.amountInput;
+    } else {
+      this.totalAmount = this.beerCount * 50;
+    }
+  }
+
+  updateAmountInput() {
+    this.amountInput = this.beerCount * 50;
+  }
+
+  updateBeerCount() {
+    this.beerCount = this.amountInput;
+    this.updateTotalAmount();
   }
 
   beer3ButtonClicked() {
     this.amountInput = 3;
     this.beerCount = 3;
     this.updateTotalAmount();
+    this.updateAmountInput();
   }
 
   beer5ButtonClicked() {
     this.amountInput = 5;
     this.beerCount = 5;
     this.updateTotalAmount();
+    this.updateAmountInput();
   }
 
   beer10ButtonClicked() {
     this.amountInput = 10;
     this.beerCount = 10;
     this.updateTotalAmount();
-  }
-
-  amountInputChanged() {
-    this.beerCount = Number(this.amountInput.valueOf);
-    this.updateTotalAmount();
+    this.updateAmountInput();
   }
 
   getTotalAmount(): number {
+    this.updateTotalAmount();
     return this.totalAmount;
   }
 
