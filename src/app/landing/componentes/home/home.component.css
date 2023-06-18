@@ -1,7 +1,50 @@
-.changeDivSize {
-  height: 50px;
-  border: solid 1px red;
-  margin: 15px;
-  width: 50px;
-  height: 50px;
+.container {
+  margin: auto;
 }
+
+.container_title {
+  font-size: 15vw;
+  font-weight: 600;
+  text-align: center;
+  columns: black;
+}
+
+.container_subtitle {
+  font-weight: 200;
+  font-size: 3vw;
+  text-align: center;
+  columns: black;
+}
+
+.cards {
+  padding: 10px;
+  height: auto;
+}
+
+/* Primer columna */
+.first-column {
+  padding: 4px;
+  width: 35%;
+  height: auto;
+}
+
+.first-column--img {
+}
+
+.first-column--anchor {
+  display: inline-block;
+  max-width: 100%;
+  text-decoration: none;
+  text-align: center;
+  color: #28282e;
+  font-size: 1.5vw;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.first-column--text {
+  text-align: center;
+  margin: 10px 0;
+}
+
+/* FIN primer columna */

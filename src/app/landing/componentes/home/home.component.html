@@ -1,7 +1,32 @@
 <button
-  [@changeDivSize]="currentState"
+  [@changeButtonSize]="currentState"
   class="btn btn-success"
   (click)="payMethod()"
 >
   Donación
 </button>
+
+<div class="container">
+  <p class="container_title">NEWS</p>
+  <p class="container_subtitle">LATEST UPDATES FROM ONG</p>
+  <div class="container cards">
+    <!-- /* Primer columna */ -->
+    <div class="col-2 first-column">
+      <img
+        class="img-fluid first-column--img"
+        src="assets/test.jpg"
+        alt="imagen descriptiva de un evento o something like info about especific thing"
+      />
+      <a class="first-column--anchor" href="#"
+        >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita
+        temporibus praesentium ad error mollitia quisquam ipsum esse! Aperiam,
+        recusandae velit.</a
+      >
+      <p class="first-column--text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+        mollitia nihil quia, explicabo natus numquam!
+      </p>
+    </div>
+    <!-- /* END Primer columna */ -->
+  </div>
+</div>

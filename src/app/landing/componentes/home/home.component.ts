@@ -13,13 +13,13 @@ import { Router } from '@angular/router';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
   animations: [
-    trigger('changeDivSize', [
+    trigger('changeButtonSize', [
       state(
         'initial',
         style({
           backgroundColor: 'green',
           width: '100px',
-          height: '100px',
+          height: '50px',
         })
       ),
       state(
