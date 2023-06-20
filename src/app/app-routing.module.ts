@@ -3,15 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { BotonDePagoComponent } from './landing/componentes/boton-de-pago/boton-de-pago.component';
 import { HomeComponent } from './landing/componentes/home/home.component';
 
-import { AppComponent } from './app.component';
-
 const routes: Routes = [
-
-  { path: 'index', component: AppComponent }
+  { path: 'mercado-pago', component: BotonDePagoComponent },
+  { path: 'home', component: HomeComponent },
+  { path: '**', pathMatch: 'full', redirectTo: 'home' },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
