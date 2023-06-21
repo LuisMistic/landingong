@@ -8,11 +8,13 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule  } from '@angular/platform-browser/animations'
 
 // Componentes
+
 import { HomeComponent } from './landing/componentes/home/home.component';
 import { BotonDePagoComponent } from './landing/componentes/boton-de-pago/boton-de-pago.component';
+import { NavbarComponent } from './landing/componentes/navbar/navbar.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, BotonDePagoComponent],
+  declarations: [AppComponent, HomeComponent, BotonDePagoComponent, NavbarComponent ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, BrowserAnimationsModule],
   providers: [HTMLElement],
   bootstrap: [AppComponent],

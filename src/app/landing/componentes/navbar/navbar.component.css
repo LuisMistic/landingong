@@ -1,0 +1,176 @@
+
+
+/* fuentes */
+
+.estilo a {
+  font-size: 18px !important;
+  font-family: 'PT Sans', sans-serif;
+}
+
+/* sombreado del navbar*/
+.navbar{
+  box-shadow:
+   2px 2px 5px rgba(0, 0, 0, 0.3),
+    -2px -2px 5px rgba(255, 255, 255, 0.3);
+  
+}
+
+/* boton adaptativo a formatos mas chicos*/
+.navbar-toggler {
+  background-color: rgb(41, 56, 37, 30%);
+
+}
+
+/* Estilo para el ícono cuando la barra de navegación se reduce */
+@media (max-width: 768px) {
+  .navbar-toggler-icon {
+    color: #333;
+    /* Color oscuro */
+    text-shadow: 0 0 5px #fff;
+    /* Sombra blanca */
+  }
+}
+
+/* Estilo para el ícono cuando se pasa el cursor por encima */
+@media (max-width: 768px) {
+  .navbar-toggler:hover .navbar-toggler-icon {
+    color: #410b0b;
+    /* Cambia a color blanco */
+    text-shadow: none;
+    /* Remueve la sombra */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    /* Agrega un borde brillante */
+  }
+}
+
+.estilo {
+  
+  background-color: #7d9170 ;
+  background-image: linear-gradient(to right top, #7d9170, #eff3f0);
+  position: absolute;
+  top: 0;
+  margin-left: 0;
+  z-index: 1;
+  width: 100%;
+ 
+}
+
+.navbar-brand img {
+  width: auto;
+  height: 3rem;
+}
+
+.navbar-nav .nav-link {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0.5rem 1.25rem;
+  color: #ffffff;
+  transition: all 0.2s;
+}
+
+.navbar-nav .nav-link:hover {
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+  box-shadow: 
+  2px 2px 5px rgba(0, 0, 0, 0.3),
+  -2px -2px 5px rgba(255, 255, 255, 0.3);
+}
+
+.sub {
+  background-color: white;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+}
+
+.dropdown-menu {
+  margin-top: 0.5rem;
+  border: none;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+  
+}
+
+
+/* estilo boton donacion */
+.donacion {
+  display: inline-block;
+  margin: 20px;
+  padding: 10px 10px;
+  font-size: 14px;
+  color: #fff;
+  background-color: rgba(194, 63, 23, 0.4);
+  border-radius: 20px;
+  border: none;
+  text-align: center;
+  animation: pulse 5s infinite;
+  overflow: hidden; /* Ocultamos el contenido que se desborde */
+  position: relative; /* Establecemos la posición relativa para los elementos hijos */
+}
+
+.donacion:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.5), #fff, rgba(255, 255, 255, 0.5));
+  animation: move-bar 1s infinite ease-in-out;
+}
+
+@keyframes move-bar {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+  60% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  80%{
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  90% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 10% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+  }
+
+  20%, 80% {
+    box-shadow: 0 0 0 10px rgba(40, 167, 69, 0);
+  }
+
+  90%, 100% {
+    box-shadow: 0 0 0 0 rgba(232, 248, 7, 0);
+  }
+  
+}
+
+.donacion:hover:before {
+  animation: pulse 3s infinite;
+}
+
+.donacion:focus:before {
+  animation: move-bar 20s infinite ease-in-out;
+}
+
+.donacion:hover:after,
+.donacion:focus:after {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  border-radius: 50%;
+  animation: pulse 9s infinite;
+  opacity: 0;
+}
