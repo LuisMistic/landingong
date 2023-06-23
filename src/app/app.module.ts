@@ -12,9 +12,10 @@ import { BrowserAnimationsModule  } from '@angular/platform-browser/animations'
 import { HomeComponent } from './landing/componentes/home/home.component';
 import { BotonDePagoComponent } from './landing/componentes/boton-de-pago/boton-de-pago.component';
 import { NavbarComponent } from './landing/componentes/navbar/navbar.component';
+import { BannerComponent } from './landing/componentes/banner/banner.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, BotonDePagoComponent, NavbarComponent ],
+  declarations: [AppComponent, HomeComponent, BotonDePagoComponent, NavbarComponent, BannerComponent ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, BrowserAnimationsModule],
   providers: [HTMLElement],
   bootstrap: [AppComponent],
