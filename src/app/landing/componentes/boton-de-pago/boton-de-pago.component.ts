@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { environment } from 'src/environments/environment'
 
 declare var MercadoPago: any;
 
@@ -8,12 +9,7 @@ declare var MercadoPago: any;
   styleUrls: ['./boton-de-pago.component.css'],
 })
 export class BotonDePagoComponent {
-  // URL= 'https://able-charming-garnet.glitch.me';
-  URL = 'http://localhost:8080';
-
-  PRODUCTION_LUIS: string = 'APP_USR-0b59bab9-7402-420c-bf92-13fb10f20c25';
-  TEST_CREDENTIAL: string = 'TEST-2570476f-179d-421d-b6aa-d57511a3faff';
-
+  
   productDescription: string = 'Donaciones';
   totalAmount: number = 0;
   beerCount: number = 0;
@@ -68,7 +64,7 @@ export class BotonDePagoComponent {
 
   // PUBLIC-KEY
 
-  mercadopago = new MercadoPago(this.TEST_CREDENTIAL, {
+  mercadopago = new MercadoPago(environment.publicKey, {
     locale: 'es-AR', // The most common are: 'pt-BR', 'es-AR' and 'en-US'
   });
 
@@ -103,7 +99,7 @@ export class BotonDePagoComponent {
       price: this.totalAmount.toString(),
     };
 
-    fetch(this.URL + '/create_preference', {
+    fetch(environment.URL + '/create_preference', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
