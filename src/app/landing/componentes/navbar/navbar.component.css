@@ -12,7 +12,7 @@
   box-shadow:
    2px 2px 5px rgba(0, 0, 0, 0.3),
     -2px -2px 5px rgba(255, 255, 255, 0.3);
-  
+   
 }
 
 /* boton adaptativo a formatos mas chicos*/
@@ -45,8 +45,8 @@
 
 .estilo {
   
-  background-color: #7d9170 ;
-  background-image: linear-gradient(to right top, #7d9170, #eff3f0);
+ 
+ 
   position: absolute;
   top: 0;
   margin-left: 0;
@@ -70,12 +70,7 @@
 
 
 
-.sub {
-  background-color: #7d9170;
-  border-radius: 0.25rem;
-  padding: 0.1rem;
-    background-image: linear-gradient(to bottom , rgb(150, 166, 140, 100%), #eff3f0);
-}
+
 
 .dropdown-menu {
   margin-top: 1.5rem;
@@ -92,6 +87,7 @@
 .sub.show {
   max-height: 10rem; /* o cualquier valor que cubra todo el contenido del submenu */
 }
+
 
 
  .dropdown-submenu:hover > .dropdown-menu {
