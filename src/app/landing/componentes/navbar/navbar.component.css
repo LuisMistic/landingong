@@ -1,18 +1,25 @@
-
-
 /* fuentes */
 
 .estilo a {
   font-size: 18px !important;
   font-family: 'PT Sans', sans-serif;
+  color: #0a0a0a;
 }
 
+.sticky-top {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+}
+
+
 /* sombreado del navbar*/
-.navbar{
+.navbar {
   box-shadow:
-   2px 2px 5px rgba(0, 0, 0, 0.3),
+    2px 2px 5px rgba(0, 0, 0, 0.3),
     -2px -2px 5px rgba(255, 255, 255, 0.3);
-   
+
 }
 
 /* boton adaptativo a formatos mas chicos*/
@@ -20,6 +27,14 @@
   background-color: rgb(41, 56, 37, 30%);
 
 }
+
+.navbar {
+  backdrop-filter: blur(5px); /* Aplicar un desenfoque de 5px */
+  -webkit-backdrop-filter: blur(5px); /* Prefijo para navegadores webkit */
+  opacity: 0.9; /* Reducir la opacidad del navbar */
+}
+
+
 
 /* Estilo para el ícono cuando la barra de navegación se reduce */
 @media (max-width: 768px) {
@@ -43,16 +58,36 @@
   }
 }
 
-.estilo {
+.nav-link {
+  position: relative;
+}
+
+.nav-link:hover::before {
   
+  content: "";
+  position: absolute;
+  top: -5%;
+  left: -5%;
+  right: -5%;
+  bottom: -5%;
+  background-color: rgba(255, 255, 255, 0.3); /* Color del destello */
+  border-radius: 50%; /* Hace que el borde tenga forma circular */
  
- 
+  filter: blur(10px); /* Agrega un efecto de difuminado */
+  
+}
+
+
+
+.estilo {
+
+
   position: absolute;
   top: 0;
   margin-left: 0;
   z-index: 1;
   width: 100%;
- 
+
 }
 
 .navbar-brand img {
@@ -60,42 +95,41 @@
   height: 3rem;
 }
 
-.navbar-nav .nav-link {
+.nav-link {
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 700; /* Ajusta el valor para obtener la apariencia deseada */
   padding: 0.5rem 1.25rem;
   color: #ffffff;
   transition: all 0.2s;
 }
 
-
-
-
-
+ /*submenu*/
 .dropdown-menu {
   margin-top: 1.5rem;
   border: none;
+  background-color: rgb(255, 255, 255, 10%);
+  filter: opacity(10); /* Reducir la opacidad del navbar */
 
-  
 }
+
 .sub {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s ease-out;
+  
 }
 
 .sub.show {
-  max-height: 10rem; /* o cualquier valor que cubra todo el contenido del submenu */
-}
-
-
-
- .dropdown-submenu:hover > .dropdown-menu {
-  display: block;
+  max-height: 10rem;
+  /* o cualquier valor que cubra todo el contenido del submenu */
   
 }
 
 
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+
+}
 
 
 
@@ -111,8 +145,10 @@
   border: none;
   text-align: center;
   animation: pulse 0s infinite;
-  overflow: hidden; /* Ocultamos el contenido que se desborde */
-  position: relative; /* Establecemos la posición relativa para los elementos hijos */
+  overflow: hidden;
+  /* Ocultamos el contenido que se desborde */
+  position: relative;
+  /* Establecemos la posición relativa para los elementos hijos */
 }
 
 .donacion:before {
@@ -122,7 +158,7 @@
   left: -100%;
   width: 200%;
   height: 100%;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.5), #fff, rgba(255, 255, 255, 0.5));
+  background-image: linear-gradient(to right, rgba(255, 0, 0, 0.5), #fff, rgba(255, 255, 255, 0.5));
   animation: move-bar 1s infinite ease-in-out;
 }
 
@@ -130,41 +166,48 @@
   50% {
     transform: translateX(5);
   }
+
   100% {
     transform: translateX(100%);
   }
+
   50% {
     transform: translateX(300%);
     opacity: 0;
   }
-  50%{
+
+  50% {
     transform: translateX(-300%);
     opacity: 0;
   }
+
   50% {
     transform: translateX(-100%);
   }
+
   0% {
     transform: translateX(0);
   }
 }
 
 @keyframes pulse {
-  0%, 50% {
+
+  0%,
+  50% {
     box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1);
   }
 
-  20%, 0% {
+  20%,
+  0% {
     box-shadow: 0 0 0 10px rgba(40, 167, 69, 0);
   }
 
-  90%, 100% {
+  90%,
+  100% {
     box-shadow: 0 0 0 0 rgba(232, 248, 7, 0);
   }
-  
+
 }
-
-
 
 
 .donacion:hover:after,

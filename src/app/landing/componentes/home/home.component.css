@@ -8,11 +8,10 @@
 
 
 
-
 .fondo {
   padding: 0 30px;
-    display: table-cell;
-    vertical-align: middle;
+  display: table-cell;
+  vertical-align: middle;
   position: absolute;
   top: 0;
   left: 0;
@@ -22,10 +21,8 @@
   background-image: url("../../../../assets/imagen/fotos.jpg");
   background-size: cover;
   background-position: center;
-  
   margin: 0;
-
   justify-content: center;
   align-items: center;
+  filter: brightness(90%) opacity(80%) ; 
 }
-
