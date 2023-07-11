@@ -6,6 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-
+  mostrar:boolean=false
+  cambiar(){
+    this.mostrar=true
+  }
 }
 

@@ -13,9 +13,11 @@ import { HomeComponent } from './landing/componentes/home/home.component';
 import { BotonDePagoComponent } from './landing/componentes/boton-de-pago/boton-de-pago.component';
 import { NavbarComponent } from './landing/componentes/navbar/navbar.component';
 import { BannerComponent } from './landing/componentes/banner/banner.component';
+import { QuienesSomosComponent } from './landing/componentes/quienes-somos/quienes-somos.component';
+import { DonarComponent } from './landing/componentes/donar/donar.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, BotonDePagoComponent, NavbarComponent, BannerComponent ],
+  declarations: [AppComponent, HomeComponent, BotonDePagoComponent, NavbarComponent, BannerComponent, QuienesSomosComponent, DonarComponent ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, BrowserAnimationsModule],
   providers: [HTMLElement],
   bootstrap: [AppComponent],
