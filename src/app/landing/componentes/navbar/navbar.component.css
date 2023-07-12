@@ -1,9 +1,15 @@
 /* fuentes */
+
+
 header {
   position: sticky;
   top: 0;
   z-index: 1000;
+  width: 100;
+  padding: auto;
 }/* estilo navbar*/
+
+
 
 
 .estilo a {
@@ -28,9 +34,10 @@ header {
 }
 
 .navbar {
-  backdrop-filter: blur(5px); /* Aplicar un desenfoque de 5px */
+  backdrop-filter: blur(20px); /* Aplicar un desenfoque de 5px */
   -webkit-backdrop-filter: blur(5px); /* Prefijo para navegadores webkit */
   opacity: 0.9; /* Reducir la opacidad del navbar */
+  
 }
 
 
@@ -38,7 +45,7 @@ header {
 /* Estilo para el ícono cuando la barra de navegación se reduce */
 @media (max-width: 768px) {
   .navbar-toggler-icon {
-    color: #333;
+    color: #c43838;
     /* Color oscuro */
     text-shadow: 0 0 5px #fff;
     /* Sombra blanca */
@@ -77,17 +84,6 @@ header {
 }
 
 
-
-.estilo {
-
-
-  position: absolute;
-  top: 0;
-  margin-left: 0;
-  z-index: 1;
-  width: 100%;
-
-}
 
 .navbar-brand img {
   width: auto;
