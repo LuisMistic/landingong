@@ -4,6 +4,6 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class SharedServiceService {
-  currentComponent: string = 'default'; // Puedes establecer un componente predeterminado
+  currentComponent: string = 'default'; 
   constructor() { }
 }

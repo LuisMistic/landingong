@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { SharedServiceService } from '../shared-service.service';
 
 @Component({
   selector: 'app-donar',
@@ -8,12 +9,10 @@ import { Router } from '@angular/router';
 })
 export class DonarComponent {
   
-   mostrar:boolean=false
-   constructor(private route:Router){
-    
-   }
-  dondeIr(){
-    this.mostrar=true
+  constructor(private sharedServiceService: SharedServiceService) {}
+  
+   loadDonar() {
+    this.sharedServiceService.currentComponent = 'donar';
   }
 
 }
