@@ -17,6 +17,28 @@ header {
   font-family: 'PT Sans', sans-serif;
   color: #0a0a0a;
 }
+/* CSS */
+.nav-link {
+  font-size: 18px !important;
+  /* Color del texto */
+  color: black !important;
+  /* Quitar color de fondo */
+  background-color: transparent;
+  /* Quitar borde */
+  border: none;
+  /* Espacio entre el texto y el borde */
+  padding: 10px 20px;
+  /* Transición suave de 0.3 segundos */
+  transition: 0.3s;
+}
+
+/* Al poner el cursor encima (hover) */
+.nav-link:hover {
+  /* Aumentar el tamaño un 10% */
+  transform: scale(1.1);
+  /* Añadir un efecto de brillo */
+  filter: brightness(150%);
+}
 
 
 /* sombreado del navbar*/
@@ -127,3 +149,27 @@ header {
 }
 
 
+/* CSS */
+.boton {
+  /* Color del texto */
+  color: black;
+  /* Color de fondo */
+
+  
+  /* Esquinas redondeadas */
+  border-radius: 5px;
+  /* Espacio entre el texto y el borde */
+  padding: 0px 0px;
+  /* Transición suave de 0.3 segundos */
+  transition: 0.3s;
+}
+
+/* Al poner el cursor encima (hover) */
+.boton:hover {
+  /* Aumentar el tamaño un 10% */
+  transform: scale(1.1);
+  /* Cambiar el color de fondo */
+  background-color: #F2F2F2;
+  /* Añadir una sombra */
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}

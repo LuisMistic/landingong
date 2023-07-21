@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { SharedServiceService } from '../shared-service.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,13 +7,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-  constructor(private router: Router) { 
+  constructor(private sharedServiceService: SharedServiceService) {}
 
+  loadQuienesSomos() {
+    this.sharedServiceService.currentComponent = 'quienesSomos';
+  }
 
+  loadDonar() {
+    this.sharedServiceService.currentComponent = 'donar';
   }
-  redirigir() {
-    this.router.navigate(['/mercado-pago']);
-  }
-  
+
+  // Puedes agregar más métodos para cargar otros componentes según necesites
 }
-
