@@ -1,87 +1,85 @@
 <body [ngClass]="{ dark: isDarkMode }">
-    <nav class="sidebar" [ngClass]="{ close: isSidebarClosed }" #sidebar>
-      <header>
-        <div class="image-text">
-          <span class="image">
-            <img src="assets/logo.PNG" alt="logo" />
-          </span>
-  
-          <div class="text header-text">
-            <span class="name">Fundacion </span>
-            <span class="subtitulo">ONG</span>
-          </div>
-        </div>
-  
-        <i class="bx bx-chevron-right toggle" (click)="toggleSwitch()"></i>
-      </header>
-  
-      <div class="menu-bar">
-        <div class="menu">
-          <li class="search-box">
-            <a href="#">
-              <i class="bx bx-search icon"></i>
-              <input type="text" placeholder="Buscar..." />
-            </a>
-          </li>
-          <ul class="menu-links">
-            <li class="nav-link">
-              <a href="#">
-                <i class="bx bx-home icon"></i>
-                <span class="text nav-text">Dashboard</span>
-              </a>
-            </li>
-            <li class="nav-link">
-              <a href="#">
-                <i class="bx bx-home icon"></i>
-                <span class="text nav-text">Componente 2</span>
-              </a>
-            </li>
-            <li class="nav-link">
-              <a href="#">
-                <i class="bx bx-home icon"></i>
-                <span class="text nav-text">Componente 3</span>
-              </a>
-            </li>
-            <li class="nav-link">
-              <a href="#">
-                <i class="bx bx-home icon"></i>
-                <span class="text nav-text">Componente 4</span>
-              </a>
-            </li>
-            <li class="nav-link">
-              <a href="#">
-                <i class="bx bx-home icon"></i>
-                <span class="text nav-text">Componente 5</span>
-              </a>
-            </li>
-            <li class="nav-link">
-              <a href="#">
-                <i class="bx bx-home icon"></i>
-                <button
-                  class="text nav-text"
-                  [@changeButtonSize]="currentState"
-                  (click)="payMethod()"
-                >
-                  Donación
-                </button>
-              </a>
-            </li>
-          </ul>
-        </div>
-  
-        <div class="botton-content">
-          <li class="mode">
-            <div class="moon-sun">
-              <i class="bx bx-moon icon moon"></i>
-              <i class="bx bx-sun icon sun"></i>
-            </div>
-            <span class="mode-text text">{{ getModeText() }}</span>
-            <div class="toggle-switch" (click)="toggleDarkMode()">
-              <span class="switch"></span>
-            </div>
-          </li>
+  <nav class="sidebar" [ngClass]="{ close: isSidebarClosed }" #sidebar>
+    <header>
+      <div class="image-text">
+        <span class="image">
+          <img src="assets/logo-ong.PNG" alt="logo" />
+        </span>
+
+        <div class="text header-text">
+          <span class="name">Fundacion </span>
+          <span class="subtitulo">ONG</span>
         </div>
       </div>
-    </nav>
-    <app-dashboard></app-dashboard>
-  </body>
+
+      <i class="bx bx-chevron-right toggle" (click)="toggleSwitch()"></i>
+    </header>
+
+    <div class="menu-bar">
+      <div class="menu">
+        <li class="search-box">
+          <i class="bx bx-search icon"></i>
+          <input type="text" placeholder="Buscar..." />
+        </li>
+        <ul class="menu-links">
+          <li class="nav-link">
+            <a href="#">
+              <i class="bx bx-home icon"></i>
+              <span class="text nav-text">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="#">
+              <i class="bx bx-home icon"></i>
+              <span class="text nav-text">Componente 2</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="#">
+              <i class="bx bx-home icon"></i>
+              <span class="text nav-text">Componente 3</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="#">
+              <i class="bx bx-home icon"></i>
+              <span class="text nav-text">Componente 4</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="#">
+              <i class="bx bx-home icon"></i>
+              <span class="text nav-text">Componente 5</span>
+            </a>
+          </li>
+          <li class="nav-link">
+            <a href="#">
+              <i class="bx bx-home icon"></i>
+              <button
+                class="text nav-text"
+                [@changeButtonSize]="currentState"
+                (click)="payMethod()"
+              >
+                Donación
+              </button>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="botton-content">
+        <li class="mode">
+          <div class="moon-sun">
+            <i class="bx bx-moon icon moon"></i>
+            <i class="bx bx-sun icon sun"></i>
+          </div>
+          <span class="mode-text text">{{ getModeText() }}</span>
+          <div class="toggle-switch" (click)="toggleDarkMode()">
+            <span class="switch"></span>
+          </div>
+        </li>
+      </div>
+    </div>
+  </nav>
+  <app-dashboard></app-dashboard>
+</body>
