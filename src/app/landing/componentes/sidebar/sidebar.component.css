@@ -240,3 +240,11 @@ body.dark {
   body.dark .switch::before {
     left: 24px;
   }
+
+  .changeDivSize {
+  height: 50px;
+  border: solid 1px red;
+  margin: 15px;
+  width: 50px;
+  height: 50px;
+}

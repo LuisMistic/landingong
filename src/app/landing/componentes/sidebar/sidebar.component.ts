@@ -1,3 +1,4 @@
+import { trigger, state, style, transition, animate } from '@angular/animations';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -7,7 +8,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent {
-  currentState = 'initial';
   isDarkMode: boolean = false;
   isSwitchOn: boolean = false;
   isSidebarClosed: boolean = false;
@@ -41,7 +41,6 @@ export class SidebarComponent {
   }
 
   payMethod() {
-    this.currentState = this.currentState === 'initial' ? 'final' : 'initial';
     setTimeout(() => {
       this.router.navigate(['mercado-pago']);
     }, 1500);
