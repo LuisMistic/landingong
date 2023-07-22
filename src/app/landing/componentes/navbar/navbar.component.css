@@ -9,8 +9,14 @@ header {
   padding: auto;
 }/* estilo navbar*/
 
+.home-icon {
+  width: 2em;
+  height: 2em;
+}
 
-
+.home {
+  font-size: 1.3em;
+}
 
 .estilo a {
   font-size: 18px !important;

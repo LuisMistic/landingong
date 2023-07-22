@@ -6,10 +6,7 @@
   height: 50px;
 } */
 
-
-
 .fondo {
-
   display: table-cell;
   vertical-align: middle;
   position: absolute;
@@ -24,5 +21,35 @@
   margin: 0;
   justify-content: center;
   align-items: center;
-  filter: brightness(90%) opacity(80%) ; 
+  filter: brightness(81%) opacity(92%);
+}
+
+.title {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: 700;
+  letter-spacing: 0px;
+  line-height: 120%;
+  color: rgb(255, 255, 255);
+  font-family: Montserrat;
+  font-size: 136.5px;
+  text-align: center;
+}
+
+.subtitle {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: 700;
+  letter-spacing: 0px;
+  line-height: 120%;
+  color: rgb(255, 255, 255);
+  font-family: Montserrat;
+  font-size: 136.5px;
+  text-align: center;
 }
