@@ -8,13 +8,16 @@ import { SharedServiceService } from '../shared-service.service';
 })
 export class NavbarComponent {
   constructor(private sharedServiceService: SharedServiceService) {}
-
+  
   loadQuienesSomos() {
     this.sharedServiceService.currentComponent = 'quienesSomos';
   }
 
   loadDonar() {
     this.sharedServiceService.currentComponent = 'donar';
+  }
+  loadActividadQuienesSomos() {
+    this.sharedServiceService.currentComponent = 'quienesSomos';
   }
 
   // Puedes agregar más métodos para cargar otros componentes según necesites

@@ -12,7 +12,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
                 <li class="nav-item">
-                    <button class="nav-link" id="navbarDropdown1" data-bs-toggle="dropdown"
+                    <button class="nav-link" id="navbarDropdown1" data-bs-toggle="dropdown" 
                         data-bs-submenu aria-expanded="false" (click)="loadQuienesSomos()">
                         QUE HACEMOS
                     </button>
@@ -21,13 +21,16 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown"
-                        data-bs-submenu aria-expanded="false" (click)="loadDonar()">
+                        data-bs-submenu aria-expanded="false" >
                         DONAR
                     </a>
-                    <ul class="dropdown-menu sub" aria-labelledby="navbarDropdown1">
-                        <li><a class="dropdown-item" href="#">item 1</a></li>
-                        <li><a class="dropdown-item" href="#">item 2</a></li>
-                        <li><a class="dropdown-item" href="#">item 3</a></li>
+                    <ul class="dropdown-menu sub nav-link" aria-labelledby="navbarDropdown1" id="submenu">
+                        <li><button class="nav-link" id="navbarDropdown1" data-bs-toggle="dropdown"
+                            data-bs-submenu aria-expanded="false">item 1</button></li>
+                        <li><button class="nav-link" id="navbarDropdown1" data-bs-toggle="dropdown"
+                            data-bs-submenu aria-expanded="false"(click)="loadDonar()">item 2</button></li>
+                        <li><button class="nav-link" id="navbarDropdown1" data-bs-toggle="dropdown"
+                            data-bs-submenu aria-expanded="false">item 3</button></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -35,10 +38,13 @@
                         data-bs-submenu aria-expanded="false">
                         ACTIVIDAD
                     </a>
-                    <ul class="dropdown-menu sub" aria-labelledby="navbarDropdown2">
-                        <li><a class="dropdown-item" href="#">item 1</a></li>
-                        <li><a class="dropdown-item" href="#">item 2</a></li>
-                        <li><a class="dropdown-item" href="#">item 3</a></li>
+                    <ul class="dropdown-menu sub nav-link " aria-labelledby="navbarDropdown2" id="submenu">
+                        <li><button class="nav-link" id="navbarDropdown1" data-bs-toggle="dropdown"
+                            data-bs-submenu aria-expanded="false">item 1</button></li>
+                        <li><button class="nav-link" id="navbarDropdown1" data-bs-toggle="dropdown"
+                            data-bs-submenu aria-expanded="false">item 2</button></li>
+                        <li><button class="nav-link" id="navbarDropdown1" data-bs-toggle="dropdown"
+                            data-bs-submenu aria-expanded="false"(click)="loadQuienesSomos()">item 2</button></li>
                     </ul>
                 </li>
                 <li class="nav-item">

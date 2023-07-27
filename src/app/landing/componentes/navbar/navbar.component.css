@@ -1,5 +1,3 @@
-/* fuentes */
-
 
 header {
   position: sticky;
@@ -7,18 +5,30 @@ header {
   z-index: 1000;
   width: 100;
   padding: auto;
-}/* estilo navbar*/
-
-
-
-
-.estilo a {
-  font-size: 18px !important;
-  font-family: 'PT Sans', sans-serif;
-  color: #0a0a0a;
 }
+
 /* CSS */
 .nav-link {
+  font-size: 18px !important;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 700;
+  /* Ajusta el valor para obtener la apariencia deseada */
+  padding: 0;
+  transition: all 0.2s;
+  font-size: 18px !important;
+  /* Color del texto */
+  color: black !important;
+  /* Quitar color de fondo */
+  background-color: transparent;
+  /* Quitar borde */
+  border: none;
+  /* Espacio entre el texto y el borde */
+  padding: 0px;
+  /* Transición suave de 0.3 segundos */
+  transition: 0.3s;
+}
+
+.nav-link1 {
   font-size: 18px !important;
   /* Color del texto */
   color: black !important;
@@ -32,15 +42,6 @@ header {
   transition: 0.3s;
 }
 
-/* Al poner el cursor encima (hover) */
-.nav-link:hover {
-  /* Aumentar el tamaño un 10% */
-  transform: scale(1.1);
-  /* Añadir un efecto de brillo */
-  filter: brightness(150%);
-}
-
-
 /* sombreado del navbar*/
 .navbar {
   box-shadow:
@@ -52,17 +53,16 @@ header {
 /* boton adaptativo a formatos mas chicos*/
 .navbar-toggler {
   background-color: rgb(41, 56, 37, 30%);
-
 }
 
 .navbar {
-  backdrop-filter: blur(20px); /* Aplicar un desenfoque de 5px */
-  -webkit-backdrop-filter: blur(5px); /* Prefijo para navegadores webkit */
-  opacity: 0.9; /* Reducir la opacidad del navbar */
-  
+  backdrop-filter: blur(20px);
+  /* Aplicar un desenfoque de 5px */
+  -webkit-backdrop-filter: blur(5px);
+  /* Prefijo para navegadores webkit */
+  opacity: 0.9;
+  /* Reducir la opacidad del navbar */
 }
-
-
 
 /* Estilo para el ícono cuando la barra de navegación se reduce */
 @media (max-width: 768px) {
@@ -91,85 +91,57 @@ header {
 }
 
 .nav-link:hover::before {
-  
+
   content: "";
   position: absolute;
   top: -5%;
   left: -5%;
   right: -5%;
   bottom: -5%;
-  background-color: rgba(255, 255, 255, 0.3); /* Color del destello */
-  border-radius: 50%; /* Hace que el borde tenga forma circular */
- 
-  filter: blur(10px); /* Agrega un efecto de difuminado */
-  
+  background-color: rgba(255, 255, 255, 0.3);
+  /* Color del destello */
+  border-radius: 20%;
+  /* Hace que el borde tenga forma circular */
+
+  filter: blur(5px);
+  /* Agrega un efecto de difuminado */
+
 }
-
-
 
 .navbar-brand img {
   width: auto;
   height: 3rem;
 }
 
-.nav-link {
-  font-size: 14px;
-  font-weight: 700; /* Ajusta el valor para obtener la apariencia deseada */
-  padding: 0.5rem 1.25rem;
-  color: #ffffff;
-  transition: all 0.2s;
-}
-
- /*submenu*/
+/*submenu*/
 .dropdown-menu {
-  margin-top: 1.5rem;
+  margin-top: 2.3rem;
   border: none;
   background-color: rgb(255, 255, 255, 10%);
-  filter: opacity(10); /* Reducir la opacidad del navbar */
-
+  filter: opacity(10);
+  /* Reducir la opacidad del navbar */
 }
-
+/* velocidad de desplazmiento submenu*/
 .sub {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s ease-out;
+  transition: max-height 0.3s ease-out;
+  visibility: hidden;
   
 }
 
 .sub.show {
   max-height: 10rem;
   /* o cualquier valor que cubra todo el contenido del submenu */
+  visibility: visible;
   
 }
 
-
-.dropdown-submenu:hover>.dropdown-menu {
-  display: block;
-
+.navbar-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Ajusta la alineación horizontal */
 }
 
 
-/* CSS */
-.boton {
-  /* Color del texto */
-  color: black;
-  /* Color de fondo */
 
-  
-  /* Esquinas redondeadas */
-  border-radius: 5px;
-  /* Espacio entre el texto y el borde */
-  padding: 0px 0px;
-  /* Transición suave de 0.3 segundos */
-  transition: 0.3s;
-}
-
-/* Al poner el cursor encima (hover) */
-.boton:hover {
-  /* Aumentar el tamaño un 10% */
-  transform: scale(1.1);
-  /* Cambiar el color de fondo */
-  background-color: #F2F2F2;
-  /* Añadir una sombra */
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
