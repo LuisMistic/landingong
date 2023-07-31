@@ -87,7 +87,7 @@ header {
 .line-divider {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   /* Cambiar el color y estilo de la línea según tus preferencias */
-  margin: 5px 0;
+  margin: 10px 0;
   /* Ajustar el espaciado entre las líneas */
 }
 
@@ -120,12 +120,13 @@ header {
 
 
 .navbar {
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(40px);
   /* Aplicar un desenfoque de 5px */
   -webkit-backdrop-filter: blur(5px);
   /* Prefijo para navegadores webkit */
   opacity: 0.9;
   /* Reducir la opacidad del navbar */
+ 
 }
 
 /* Estilo para el ícono cuando la barra de navegación se reduce */
