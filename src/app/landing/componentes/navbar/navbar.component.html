@@ -1,90 +1,79 @@
-<header>
-  <nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg">
     <div class="container-fluid estilo">
-      <a class="navbar-brand" href="#"
-        ><svg
-          class="home-icon"
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          style="fill: rgba(0, 0, 0, 1); transform: ; msfilter: "
-        >
-          <path
-            d="M11 19.91 10 22h4l-1-2.09c4-.65 7-5.28 7-9.91a8 8 0 0 0-16 0c0 4.63 3.08 9.26 7 9.91zm1-15.66v1.5A4.26 4.26 0 0 0 7.75 10h-1.5A5.76 5.76 0 0 1 12 4.25z"
-          ></path></svg></a>
-      <small class="home">home</small>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
+        <a class="navbar-brand" href="#">
+            <img src="../../../../assets/imagen/logo.png" alt="Logo de la ONG" class="logo-img">
+            <span class="association-link">ASOCIACION </span>
+            <span class="association-link1"> MISERICORDIA</span>
+        </a>
+      
+        <div class="casilla d-md-none" role="button" (click)="toggleSubMenu()">
+            <fa-icon [icon]="faBars" class="custom-icon fa-fw"></fa-icon>
+        </div>
+       
+        <div class="collapse navbar-collapse" [ngClass]="{ collapse: isCollapsed }" id="navbarSupportedContent">
+            <div class="line-divider  d-md-none"></div>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
+                
+               <li class="nav-item">
+    <button class="nav-link full-width-btn w-100" id="navbarDropdown1" data-bs-toggle="dropdown"
+        data-bs-submenu aria-expanded="false" (click)="loadQuienesSomos(); isCollapsed = !isCollapsed">
+        <fa-icon [icon]="['fas', 'house']" id="icon-house"></fa-icon> <span>QUE HACEMOS</span>
+    </button>
+    <div class="line-divider  d-md-none"></div>
+</li>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
-          <li class="nav-item">
-            <button
-              class="nav-link"
-              id="navbarDropdown1"
-              data-bs-toggle="dropdown"
-              data-bs-submenu
-              aria-expanded="false"
-              (click)="loadQuienesSomos()"
-            >
-              QUE HACEMOS
-            </button>
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link"
-              href="#"
-              id="navbarDropdown1"
-              role="button"
-              data-bs-toggle="dropdown"
-              data-bs-submenu
-              aria-expanded="false"
-              (click)="loadDonar()"
-            >
-              DONAR
-            </a>
-            <ul class="dropdown-menu sub" aria-labelledby="navbarDropdown1">
-              <li><a class="dropdown-item" href="#">item 1</a></li>
-              <li><a class="dropdown-item" href="#">item 2</a></li>
-              <li><a class="dropdown-item" href="#">item 3</a></li>
+                <div class="line-divider  d-md-none"></div>
+                <li class="nav-item dropdown ">
+                    <a class="nav-link" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown"
+                        data-bs-submenu aria-expanded="false"><fa-icon [icon]="faHourglassEnd"
+                            id="icon-Hourglass"></fa-icon> NUESTRO TRABAJO
+                    </a>
+                    <div class="line-divider  d-md-none "></div>
+                    <ul class="dropdown-menu sub nav-link" [ngClass]="{ collapse: isCollapsed }"
+                        aria-labelledby="navbarDropdown1" id="submenu">
+
+                        <li><button class="nav-link" id="navbarDropdown1" data-bs-toggle="dropdown" data-bs-submenu
+                                aria-expanded="false">item 1</button></li>
+                        <li><button class="nav-link" id="navbarDropdown1" data-bs-toggle="dropdown" data-bs-submenu
+                                aria-expanded="false" (click)="loadDonar(); isCollapsed = !isCollapsed">item 2</button>
+                        </li>
+                        <li><button class="nav-link" id="navbarDropdown1" data-bs-toggle="dropdown" data-bs-submenu
+                                aria-expanded="false">item 3</button></li>
+                    </ul>
+                    
+                </li>
+                <div class="line-divider  d-md-none"></div>
+                <li class="nav-item dropdown">
+                    <button class="nav-link full-width-btn w-100" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown"
+                        data-bs-submenu aria-expanded="false"> <fa-icon [icon]="faPerson" id="icon-faPerson"></fa-icon>
+                        ACTIVIDAD
+                    </button>
+
+                    <div class="line-divider  d-md-none"></div>
+                    <ul class="dropdown-menu sub nav-link" [ngClass]="{ collapse: isCollapsed }"
+                        aria-labelledby="navbarDropdown2" id="submenu">
+                        <li><button class="nav-link" id="navbarDropdown1" data-bs-toggle="dropdown" data-bs-submenu
+                                aria-expanded="false">item 1</button></li>
+                        <li><button class="nav-link" id="navbarDropdown1" data-bs-toggle="dropdown" data-bs-submenu
+                                aria-expanded="false">item 2</button></li>
+                        <li><button class="nav-link" id="navbarDropdown1" data-bs-toggle="dropdown" data-bs-submenu
+                                aria-expanded="false" (click)="loadQuienesSomos(); isCollapsed = !isCollapsed">item
+                                2</button></li>
+                    </ul>
+                   
+                </li>
+                <div class="line-divider  d-md-none"></div>
+                <li class="nav-item">
+                    <a class="nav-link full-width-btn w-100" aria-current="page" href="#participar"
+                        (click)="isCollapsed = !isCollapsed"><fa-icon [icon]="faUsers" class="fa-xs"
+                            id="icon-faUsers"></fa-icon> PARTICIPAR</a>
+                   
+                </li>
+                <div class="line-divider  d-md-none "></div>
             </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link"
-              href="#"
-              id="navbarDropdown2"
-              role="button"
-              data-bs-toggle="dropdown"
-              data-bs-submenu
-              aria-expanded="false"
-            >
-              ACTIVIDAD
-            </a>
-            <ul class="dropdown-menu sub" aria-labelledby="navbarDropdown2">
-              <li><a class="dropdown-item" href="#">item 1</a></li>
-              <li><a class="dropdown-item" href="#">item 2</a></li>
-              <li><a class="dropdown-item" href="#">item 3</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#participar"
-              >PARTICIPAR</a
-            >
-          </li>
-        </ul>
-        <app-donar></app-donar>
-      </div>
+            <form class="d-flex ml-auto">
+                <button class="donacion" (click)="loadDonar(); isCollapsed = !isCollapsed">DONAR AQUÍ</button>
+            </form>
+        </div>
     </div>
-  </nav>
-</header>
+</nav>

@@ -17,10 +17,12 @@ import { QuienesSomosComponent } from './landing/componentes/quienes-somos/quien
 import { DonarComponent } from './landing/componentes/donar/donar.component';
 import { SidebarComponent } from './landing/componentes/sidebar/sidebar.component';
 import { DashboardComponent } from './landing/componentes/dashboard/dashboard.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, BotonDePagoComponent, NavbarComponent, BannerComponent, QuienesSomosComponent, DonarComponent, SidebarComponent, DashboardComponent ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, BrowserAnimationsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, BrowserAnimationsModule, FontAwesomeModule,],
   providers: [HTMLElement],
   bootstrap: [AppComponent],
 })

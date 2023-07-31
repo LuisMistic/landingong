@@ -1,31 +1,100 @@
-/* fuentes */
-
-
 header {
   position: sticky;
   top: 0;
   z-index: 1000;
   width: 100;
   padding: auto;
-}/* estilo navbar*/
-
-.home-icon {
-  width: 2em;
-  height: 2em;
 }
 
-.home {
-  font-size: 1.3em;
-  color: white;
-}
-
-.estilo a {
-  font-size: 18px !important;
-  font-family: 'PT Sans', sans-serif;
-  color: #0a0a0a;
-}
 /* CSS */
 .nav-link {
+  font-size: 18px !important;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 700;
+  /* Ajusta el valor para obtener la apariencia deseada */
+  padding: 0;
+  transition: all 0.2s;
+  font-size: 18px !important;
+  /* Color del texto */
+  color: rgb(48, 43, 2) !important;
+  /* Quitar color de fondo */
+  background-color: transparent;
+  /* Quitar borde */
+  border: none;
+  /* Espacio entre el texto y el borde */
+  padding: 0px;
+  /* Transición suave de 0.3 segundos */
+  transition: 0.3s;
+}
+
+.casilla {
+  font-size: 3rem;
+  /* Cambiar el tamaño del icono a 2rem */
+  border: 1 solid;
+  color: rgba(16, 16, 16, 0.8);
+  /* Cambiar el color del icono a rojo (#ff0000) */
+
+}
+
+/* Ajusta tamaños de las líneas de los iconos menus */
+
+.custom-icon {
+  font-size: 45px;
+  /* Tamaño personalizado que desees */
+  stroke-width: 1.5px;
+  /* Grosor de las líneas, puedes ajustarlo según tu preferencia */
+}
+
+#icon-house {
+  font-size: 30px;
+  stroke-width: 1.5px;
+  margin-right: 9px;
+  /* espacio margen derecho*/
+}
+.full-width-btn {
+  width: 100%;
+  /* Ajusta otros estilos del botón según tus preferencias */
+  text-align: left;
+}
+
+
+
+
+#icon-Hourglass {
+  font-size: 30px;
+  padding-left: 5px;
+  margin-right: 14px;
+  /* espacio margen derecho*/
+  
+
+}
+
+#icon-faPerson {
+  font-size: 30px;
+  padding-left: 5px;
+  margin-right: 18px;
+  /* espacio margen derecho*/
+
+}
+
+#icon-faUsers {
+  font-size: 32px;
+  padding-bottom: 0px;
+  margin-right: 5px;
+
+}
+
+.line-divider {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  /* Cambiar el color y estilo de la línea según tus preferencias */
+  margin: 5px 0;
+  /* Ajustar el espaciado entre las líneas */
+}
+
+
+
+
+.nav-link1 {
   font-size: 18px !important;
   /* Color del texto */
   color: black !important;
@@ -39,144 +108,218 @@ header {
   transition: 0.3s;
 }
 
-/* Al poner el cursor encima (hover) */
-.nav-link:hover {
-  /* Aumentar el tamaño un 10% */
-  transform: scale(1.1);
-  /* Añadir un efecto de brillo */
-  filter: brightness(150%);
-}
-
-
 /* sombreado del navbar*/
 .navbar {
   box-shadow:
-    2px 2px 5px rgba(0, 0, 0, 0.3),
-    -2px -2px 5px rgba(255, 255, 255, 0.3);
+    2px 2px 5px rgba(185, 183, 183, 0.3),
+    -2px -2px 5px rgba(218, 208, 208, 0.3);
 
 }
 
 /* boton adaptativo a formatos mas chicos*/
-.navbar-toggler {
-  background-color: rgb(41, 56, 37, 30%);
 
-}
 
 .navbar {
-  backdrop-filter: blur(20px); /* Aplicar un desenfoque de 5px */
-  -webkit-backdrop-filter: blur(5px); /* Prefijo para navegadores webkit */
-  opacity: 0.9; /* Reducir la opacidad del navbar */
-  
+  backdrop-filter: blur(20px);
+  /* Aplicar un desenfoque de 5px */
+  -webkit-backdrop-filter: blur(5px);
+  /* Prefijo para navegadores webkit */
+  opacity: 0.9;
+  /* Reducir la opacidad del navbar */
 }
-
-
 
 /* Estilo para el ícono cuando la barra de navegación se reduce */
-@media (max-width: 768px) {
-  .navbar-toggler-icon {
-    color: #c43838;
-    /* Color oscuro */
-    text-shadow: 0 0 5px #fff;
-    /* Sombra blanca */
-  }
-}
+
 
 /* Estilo para el ícono cuando se pasa el cursor por encima */
-@media (max-width: 768px) {
-  .navbar-toggler:hover .navbar-toggler-icon {
-    color: #410b0b;
-    /* Cambia a color blanco */
-    text-shadow: none;
-    /* Remueve la sombra */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
-    /* Agrega un borde brillante */
-  }
-}
+
 
 .nav-link {
   position: relative;
 }
 
 .nav-link:hover::before {
-  
+
   content: "";
   position: absolute;
   top: -5%;
   left: -5%;
   right: -5%;
   bottom: -5%;
-  background-color: rgba(255, 255, 255, 0.3); /* Color del destello */
-  border-radius: 50%; /* Hace que el borde tenga forma circular */
- 
-  filter: blur(10px); /* Agrega un efecto de difuminado */
-  
+  background-color: rgba(255, 255, 255, 0.3);
+  /* Color del destello */
+  border-radius: 20%;
+  /* Hace que el borde tenga forma circular */
+
+  filter: blur(5px);
+  /* Agrega un efecto de difuminado */
+
 }
-
-
 
 .navbar-brand img {
   width: auto;
   height: 3rem;
 }
 
-.nav-link {
-  font-size: 14px;
-  font-weight: 700; /* Ajusta el valor para obtener la apariencia deseada */
-  padding: 0.5rem 1.25rem;
-  color: #ffffff;
-  transition: all 0.2s;
-}
-
- /*submenu*/
+/*submenu distrancia entre botones */
 .dropdown-menu {
-  margin-top: 1.5rem;
+  margin-top: 0rem;
   border: none;
   background-color: rgb(255, 255, 255, 10%);
-  filter: opacity(10); /* Reducir la opacidad del navbar */
-
+  filter: opacity(10);
+  /* Reducir la opacidad del navbar */
 }
 
+/* velocidad de desplazmiento submenu*/
 .sub {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s ease-out;
-  
+  transition: max-height 0.3s ease-out;
+  visibility: hidden;
+
 }
 
 .sub.show {
   max-height: 10rem;
   /* o cualquier valor que cubra todo el contenido del submenu */
-  
+  visibility: visible;
+
+}
+
+.navbar-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* Ajusta la alineación horizontal */
 }
 
 
-.dropdown-submenu:hover>.dropdown-menu {
+
+
+/* separacion de menu  */
+.vr-blurry {
+  width: 1px;
+  height: 100%;
+  background-image: linear-gradient(to bottom, transparent, #ccc, transparent);
+}
+
+/* logo */
+.logo-img {
   display: block;
+  max-width: 100%;
+  height: auto;
+  margin-left:40px ;
+}
+/* texto logo*/
+.association-link {
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 700;
+  color: rgb(35, 35, 34); /* Cambia el color a dorado */
+  margin-top: 0px; /* Ajusta el margen superior según tu preferencia */
+}
+.association-link1 {
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 700;
+  color: rgb(35, 35, 34); /* Cambia el color a dorado */
+  margin-top: -10px; /* Ajusta el margen superior según tu preferencia */
+}
+
+
+/*boton donar*/
+/* estilo boton donacion */
+.donacion {
+  display: inline-block;
+  margin: 20px;
+  padding: 10px 10px;
+  font-size: 14px;
+  color: #fff;
+  background-color: rgba(194, 63, 23, 0.1);
+  border-radius: 20px;
+  border: none;
+  text-align: center;
+  animation: pulse 0s infinite;
+  overflow: hidden;
+  /* Ocultamos el contenido que se desborde */
+  position: relative;
+  /* Establecemos la posición relativa para los elementos hijos */
+}
+
+
+
+.donacion:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background-image: linear-gradient(to right, rgba(255, 0, 0, 0.5), #fff, rgba(255, 255, 255, 0.5));
+  animation: move-bar 1s infinite ease-in-out;
+}
+
+@keyframes move-bar {
+  50% {
+    transform: translateX(5);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+
+  50% {
+    transform: translateX(300%);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateX(-300%);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateX(-100%);
+  }
+
+  0% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+
+  0%,
+  50% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1);
+  }
+
+  20%,
+  0% {
+    box-shadow: 0 0 0 10px rgba(40, 167, 69, 0);
+  }
+
+  90%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(232, 248, 7, 0);
+  }
 
 }
 
 
-/* CSS */
-.boton {
-  /* Color del texto */
-  color: black;
-  /* Color de fondo */
-
-  
-  /* Esquinas redondeadas */
-  border-radius: 5px;
-  /* Espacio entre el texto y el borde */
-  padding: 0px 0px;
-  /* Transición suave de 0.3 segundos */
-  transition: 0.3s;
-}
-
-/* Al poner el cursor encima (hover) */
-.boton:hover {
-  /* Aumentar el tamaño un 10% */
-  transform: scale(1.1);
-  /* Cambiar el color de fondo */
-  background-color: #F2F2F2;
-  /* Añadir una sombra */
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+.donacion:hover:after,
+.donacion:focus:after {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  border-radius: 50%;
+  animation: pulse 9s infinite;
+  opacity: 0;
 }

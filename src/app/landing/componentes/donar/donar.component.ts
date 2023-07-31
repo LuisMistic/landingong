@@ -15,4 +15,8 @@ export class DonarComponent {
     this.sharedServiceService.currentComponent = 'donar';
   }
 
+  isCollapsed = true;
+   
+  ngOnInit(): void { } 
+
 }
