@@ -1,32 +1,46 @@
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg"  >
     <div class="container-fluid estilo">
         <a class="navbar-brand" href="#">
             <img src="../../../../assets/imagen/logo.png" alt="Logo de la ONG" class="logo-img">
             <span class="association-link">ASOCIACION </span>
             <span class="association-link1"> MISERICORDIA</span>
         </a>
-      
+
         <div class="casilla d-md-none" role="button" (click)="toggleSubMenu()">
             <fa-icon [icon]="faBars" class="custom-icon fa-fw"></fa-icon>
         </div>
-       
+
         <div class="collapse navbar-collapse" [ngClass]="{ collapse: isCollapsed }" id="navbarSupportedContent">
             <div class="line-divider  d-md-none"></div>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
-                
-               <li class="nav-item">
-    <button class="nav-link full-width-btn w-100" id="navbarDropdown1" data-bs-toggle="dropdown"
-        data-bs-submenu aria-expanded="false" (click)="loadQuienesSomos(); isCollapsed = !isCollapsed">
-        <fa-icon [icon]="['fas', 'house']" id="icon-house"></fa-icon> <span>QUIENES SOMOS</span>
-    </button>
-    <div class="line-divider  d-md-none"></div>
-</li>
+
+                <li class="nav-item dropdown ">
+                    <button class="nav-link full-width-btn w-100" id="navbarDropdown1" data-bs-toggle="dropdown"
+                        data-bs-submenu aria-expanded="false" >
+                        <fa-icon [icon]="['fas', 'house']" id="icon-house"></fa-icon> <span>QUIENES SOMOS</span>
+                    </button>
+                    <div class="line-divider  d-md-none"></div>
+                    <ul class="dropdown-menu sub nav-link" [ngClass]="{ collapse: isCollapsed }"
+                    aria-labelledby="navbarDropdown1" id="submenu">
+
+                    <li><button class="nav-link" id="navbarDropdown1" data-bs-toggle="dropdown" data-bs-submenu
+                            aria-expanded="false"(click)="loadQuienesSomos(); isCollapsed = !isCollapsed">Sobre Nosotros</button></li>
+                    <div id="lineaSub"></div>
+                    <li><button class="nav-link" id="navbarDropdown1" data-bs-toggle="dropdown" data-bs-submenu
+                            aria-expanded="false" (click)="loadNuestraHistoria(); isCollapsed = !isCollapsed">Nuestra Historia</button>
+                    </li>
+                    <div id="lineaSub"></div>
+                    <li><button class="nav-link" id="navbarDropdown1" data-bs-toggle="dropdown" data-bs-submenu
+                            aria-expanded="false">item 3</button></li>
+                </ul>
+
+                </li>
 
                 <div class="line-divider  d-md-none"></div>
                 <li class="nav-item dropdown ">
                     <a class="nav-link" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown"
                         data-bs-submenu aria-expanded="false"><fa-icon [icon]="faHourglassEnd"
-                            id="icon-Hourglass"></fa-icon> NUESTRO TRABAJO
+                            id="icon-Hourglass"></fa-icon> TRABAJOS
                     </a>
                     <div class="line-divider  d-md-none "></div>
                     <ul class="dropdown-menu sub nav-link" [ngClass]="{ collapse: isCollapsed }"
@@ -34,18 +48,21 @@
 
                         <li><button class="nav-link" id="navbarDropdown1" data-bs-toggle="dropdown" data-bs-submenu
                                 aria-expanded="false">item 1</button></li>
+                        <div id="lineaSub"></div>
                         <li><button class="nav-link" id="navbarDropdown1" data-bs-toggle="dropdown" data-bs-submenu
                                 aria-expanded="false" (click)="loadDonar(); isCollapsed = !isCollapsed">item 2</button>
                         </li>
+                        <div id="lineaSub"></div>
                         <li><button class="nav-link" id="navbarDropdown1" data-bs-toggle="dropdown" data-bs-submenu
                                 aria-expanded="false">item 3</button></li>
                     </ul>
-                    
+
                 </li>
                 <div class="line-divider  d-md-none"></div>
                 <li class="nav-item dropdown">
-                    <button class="nav-link full-width-btn w-100" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown"
-                        data-bs-submenu aria-expanded="false"> <fa-icon [icon]="faPerson" id="icon-faPerson"></fa-icon>
+                    <button class="nav-link full-width-btn w-100" href="#" id="navbarDropdown2" role="button"
+                        data-bs-toggle="dropdown" data-bs-submenu aria-expanded="false"> <fa-icon [icon]="faPerson"
+                            id="icon-faPerson"></fa-icon>
                         ACTIVIDAD
                     </button>
 
@@ -53,21 +70,25 @@
                     <ul class="dropdown-menu sub nav-link" [ngClass]="{ collapse: isCollapsed }"
                         aria-labelledby="navbarDropdown2" id="submenu">
                         <li><button class="nav-link" id="navbarDropdown1" data-bs-toggle="dropdown" data-bs-submenu
-                                aria-expanded="false">Noticias</button></li>
+                                aria-expanded="false"
+                                (click)="loadQuienesSomos(); isCollapsed = !isCollapsed">Noticias</button></li>
+                        <div id="lineaSub"></div>
                         <li><button class="nav-link" id="navbarDropdown1" data-bs-toggle="dropdown" data-bs-submenu
                                 aria-expanded="false">Participar</button></li>
+                        <div id="lineaSub"></div>
                         <li><button class="nav-link" id="navbarDropdown1" data-bs-toggle="dropdown" data-bs-submenu
                                 aria-expanded="false" (click)="loadQuienesSomos(); isCollapsed = !isCollapsed">item
                                 2</button></li>
+                        <div id="lineaSub"></div>
                     </ul>
-                   
+
                 </li>
                 <div class="line-divider  d-md-none"></div>
                 <li class="nav-item">
                     <a class="nav-link full-width-btn w-100" aria-current="page" href="#participar"
                         (click)="isCollapsed = !isCollapsed"><fa-icon [icon]="faUsers" class="fa-xs"
                             id="icon-faUsers"></fa-icon> CONTACTOS</a>
-                   
+
                 </li>
                 <div class="line-divider  d-md-none "></div>
             </ul>

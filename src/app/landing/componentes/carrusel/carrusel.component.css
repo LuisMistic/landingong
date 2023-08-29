@@ -1,0 +1,30 @@
+/* Ajustes generales para el carrusel */
+.carousel {
+  position: relative;
+  height: 50vh; /* Altura del carrusel, ajusta según sea necesario */
+}
+
+/* Estilos para el contenedor de las imágenes */
+.carousel-inner {
+  height: 100%;
+  position: relative;
+}
+
+/* Estilos para las imágenes */
+.carousel-inner img {
+  object-fit: contain;
+  max-height: 50vh;
+  width: auto;
+}
+
+/* Estilos para los botones de navegación */
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px; /* Ajusta este valor según sea necesario */
+}
+
+.carousel-controls button {
+  margin: 0 5px; /* Espacio entre los botones */
+}

@@ -1,44 +1,30 @@
-/* Estilos del contenedor principal */
-.container {
-  /* Centra vertical y horizontalmente */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  /* Altura igual al 100% del viewport */
-  height: 100vh;
-
-  /* Tamaño de letra y fuente */
-  font-size: 70px !important; /* !important para sobrescribir otros estilos */
-  font-family: "PT Sans", sans-serif;
-
-  /* Color de letra blanco y sombreado tenue */
-  color: white;
-  text-shadow: 2px 2px 2px rgba(0, 0, 5, 1.9);
-}
-
-/* Estilos específicos del título */
-p {
-  /* Tipografía semi cursiva y ancha */
-  font-style: italic;
-  font-weight: bold;
-
-  /* Centrar texto horizontal y verticalmente */
-  text-align: center;
-
-  /* Dividir palabras largas en varias líneas */
-  word-break: break-word;
-}
-@media (max-width: 768px) {
-  /* Reducir el tamaño de letra y altura de línea para pantallas más pequeñas */
-  p {
-    font-size: 50px;
-    line-height: 1;
+/* Ajustes generales para el carrusel */
+.carousel {
+    position: relative;
+    height: 50vh; /* Altura del carrusel, ajusta según sea necesario */
   }
-}
-
-.subtitulo {
-  font-size: 30px; /* Tamaño mediano para el subtitulo */
-  font-weight: normal;
-  text-align: center;
-}
+  
+  /* Estilos para el contenedor de las imágenes */
+  .carousel-inner {
+    height: 100%;
+    position: relative;
+  }
+  
+  /* Estilos para las imágenes */
+  .carousel-inner img {
+    object-fit: contain;
+    max-height: 50vh;
+    width: auto;
+  }
+  
+  /* Estilos para los botones de navegación */
+  .carousel-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px; /* Ajusta este valor según sea necesario */
+  }
+  
+  .carousel-controls button {
+    margin: 0 5px; /* Espacio entre los botones */
+  }

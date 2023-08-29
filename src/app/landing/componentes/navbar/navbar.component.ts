@@ -13,7 +13,7 @@ import { faBars, faHourglassEnd,faHouse,faPerson,faUsers } from '@fortawesome/fr
 export class NavbarComponent implements OnInit {
   constructor(private  sharedServiceService: SharedServiceService, private library: FaIconLibrary,) {
     library.addIcons(faBars, faHouse, faHourglassEnd, faPerson,faUsers );
-  }
+  } 
 
   faHourglassEnd = faHourglassEnd;
   faBars = faBars;
@@ -21,6 +21,10 @@ export class NavbarComponent implements OnInit {
   faUsers = faUsers
   loadQuienesSomos() {
     this.sharedServiceService.currentComponent = 'quienesSomos';
+  }
+
+  loadNuestraHistoria() {
+     this.sharedServiceService.currentComponent = 'historia'
   }
 
   loadDonar() {

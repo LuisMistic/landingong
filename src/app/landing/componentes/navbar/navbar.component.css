@@ -1,10 +1,33 @@
-header {
+.navbar {
   position: sticky;
   top: 0;
   z-index: 1000;
-  width: 100;
-  padding: auto;
+}/* estilo navbar*/
+
+
+/* Estilos para el navbar en orientación horizontal */
+@media screen and (min-width: 768px) {
+  nav.navbar {
+   
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    /* Ajusta el valor de padding según tus necesidades */
+    padding: 0;
+  }
+
+  ul.dropdown-menu.sub.nav-link {
+    position: absolute;
+    z-index: 1001;
+    /* Ajusta el top y left según sea necesario para que el submenu esté debajo del navbar */
+    top: 100%;
+    left: 0;
+    /* Ajusta el valor de width según tus necesidades */
+    width: 200px;
+  }
 }
+
+
 
 /* CSS */
 .nav-link {
@@ -87,7 +110,7 @@ header {
 .line-divider {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   /* Cambiar el color y estilo de la línea según tus preferencias */
-  margin: 10px 0;
+  margin: 2px 0;
   /* Ajustar el espaciado entre las líneas */
 }
 
@@ -116,6 +139,7 @@ header {
 
 }
 
+
 /* boton adaptativo a formatos mas chicos*/
 
 
@@ -129,7 +153,7 @@ header {
  
 }
 
-/* Estilo para el ícono cuando la barra de navegación se reduce */
+
 
 
 /* Estilo para el ícono cuando se pasa el cursor por encima */
@@ -143,11 +167,11 @@ header {
 
   content: "";
   position: absolute;
-  top: -5%;
-  left: -5%;
-  right: -5%;
-  bottom: -5%;
-  background-color: rgba(255, 255, 255, 0.3);
+  top: -1%;
+  left: -1%;
+  right: -1%;
+  bottom: -1%;
+  background-color: rgba(255, 255, 255, 0.2);
   /* Color del destello */
   border-radius: 20%;
   /* Hace que el borde tenga forma circular */
@@ -162,14 +186,19 @@ header {
   height: 3rem;
 }
 
-/*submenu distrancia entre botones */
+/*submenu distancia entre botones */
 .dropdown-menu {
+  border: 20px solid ;
   margin-top: 0rem;
   border: none;
-  background-color: rgb(255, 255, 255, 10%);
-  filter: opacity(10);
+  background-color: rgb(255, 255, 255, 40%);
+  box-shadow:
+  100px 80px 5px rgba(185, 183, 183, 80.3),
+
   /* Reducir la opacidad del navbar */
+  
 }
+
 
 /* velocidad de desplazmiento submenu*/
 .sub {
@@ -185,7 +214,16 @@ header {
   /* o cualquier valor que cubra todo el contenido del submenu */
   visibility: visible;
 
+
 }
+
+#lineaSub { height: 4px; /* Ajusta el grosor de la línea según tus necesidades */ 
+  background-image: linear-gradient(to right, rgb(0, 0, 0, 0.1), transparent); /* Imagen degradada de dorado a transparente */
+   background-position: 3 center left; /* Alinea el degradado a la izquierda */
+    background-repeat: repeat-x; /* Repite el degradado horizontalmente */
+     margin-top: 15px; 
+
+  }
 
 .navbar-nav {
   display: flex;
@@ -199,7 +237,7 @@ header {
 
 /* separacion de menu  */
 .vr-blurry {
-  width: 1px;
+  width: 3px;
   height: 100%;
   background-image: linear-gradient(to bottom, transparent, #ccc, transparent);
 }

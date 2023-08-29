@@ -1,5 +1,135 @@
-p {
-    font-size: 2em !important;
-    font-family: 'PT Sans', sans-serif;
-    color: #0a0a0a;
+
+
+
+h1{
+  color:  rgb(212, 93, 9);;;
+}
+.row.uno {
+ margin: 10px;
+  width: 100vw; /* 100% del ancho del viewport */
+  min-height: 100vh; /* 100% de la altura mínima del viewport */
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.img1 {
+
+
+  border-radius: 50px !important;
+  box-shadow: 3px 3px 10px 2px rgba(0,0,0,0.5);
+
+  width: 600px;
+  height: auto;
+  
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateX(600px) rotate(0deg);;
+    /* inclinar la imagen 75 grados */
+    border: 5px solid black;
   }
+  to {
+    opacity: 1;
+    transform: translateX(0px) rotate(7deg);
+  }
+}
+.img1 {
+  animation: aparecer 2s forwards 1;
+}
+
+
+
+.texto p:first-child {
+  margin: 30px 30px;
+  border: 10px solid rgba(255, 255, 255, 0.1);
+  border-bottom-color:  rgba(116, 183, 196, 0.3);;
+  border-radius: 150% / 90% / 150% / 90% ;
+  background-color: rgb(144, 238, 144. 50); /* color de fondo verde claro */
+}
+
+
+/*lina decortaiva*/
+#contfoto {
+  border: 10px solid rgba(255, 255, 255, 0.1);
+  border-right-color: rgba(255, 255, 255, 0.3);
+  border-radius: 1500px 50px 70px 50px;
+  background-color:rgba(116, 183, 196, 0.3);
+  display: flex; /* crear un contenedor flexible */
+  justify-content: center; /* alinear los elementos hijos en el centro horizontalmente */
+  align-items: center; /* alinear los elementos hijos en el centro verticalmente */
+}
+
+
+
+
+.subtitulo1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  color: #ffffff;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+
+}
+
+/* .mision{
+  color:rgb(255, 7, 7);
+  font-size: 70px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+} */
+
+
+/*parafo */ 
+
+
+
+p{
+  font-size: 30px;
+}
+
+@media (max-width: 480px) {
+  .subtitulo1  {
+    margin-top: 30px;
+    margin-left: 20px;
+    text-align: left;
+    align-items: left;
+  justify-content: left;
+    
+    font-size: 28px;
+    color:  rgb(212, 93, 9);;
+  }
+}
+
+
+.img2 {
+  max-width: 100%;
+  height: auto;
+  transform: rotate(-7deg); /* inclinar la imagen 75 grados */
+  border: 5px solid black;
+  border-radius: 50px !important;
+  box-shadow: 3px 3px 5px 2px rgba(0,0,0,0.5);
+ ;
+  width: 600px;
+  height: auto;
+}
+
+
+@media (max-width: 480px) {
+  .img-fluid {
+    transform: rotate(0deg); /* poner la imagen recta */
+  }
+}
+
+
+
+
+.misions{
+background-color: rgb(212, 93, 9);
+border-radius: 580px 30px 180px 0px;
+}
