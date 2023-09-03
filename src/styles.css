@@ -1,3 +1,8 @@
+html, body { 
+    scroll-behavior: smooth
+  }
+  
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap%27');
 
 
@@ -36,3 +41,5 @@ div.dark {
     --toggle-color: #FFF;
     --text-color: #CCC;
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

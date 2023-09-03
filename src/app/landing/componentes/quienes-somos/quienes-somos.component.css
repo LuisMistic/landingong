@@ -1,5 +1,13 @@
 
+html, body { 
+  scroll-behavior: smooth
+}
 
+#secc {
+  scroll-margin-top: 50px;
+  width: 100%;
+  height: 100vh;
+}
 
 h1{
   color:  rgb(212, 93, 9);;;
@@ -13,6 +21,80 @@ h1{
   display: flex;
 }
 
+.texto{
+  margin:10
+}
+
+/* Animación para aparecer */
+@keyframes aparecerTexto {
+  from {
+    opacity: 0;
+    transform: translateX(-600px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.texto {animation: aparecerTexto 0.9s forwards 1;
+}
+
+
+
+/* Animación para desaparecer */
+@keyframes desaparecerTexto {
+  from {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-600px);
+  }
+}
+
+
+/* Aplicar la animación de desaparecer cuando el elemento tiene la clase 'desaparecer' */
+.desaparecerTexto {
+  animation: desaparecerTexto 1s forwards;
+}
+
+/* Animación para aparecer */
+
+
+@keyframes aparecerTexto1 {
+  from {
+    opacity: 0;
+    transform: translateX(600px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.texto1 {animation: aparecerTexto1 1.3s forwards 1;
+}
+
+
+
+/* Animación para desaparecer */
+@keyframes desaparecerTexto1 {
+  from {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(600px);
+  }
+}
+
+
+/* Aplicar la animación de desaparecer cuando el elemento tiene la clase 'desaparecer' */
+.desaparecerTexto1 {
+  animation: desaparecerTexto1 2s forwards;
+}
+
 .img1 {
 
 
@@ -23,113 +105,123 @@ h1{
   height: auto;
   
 }
-
+/* animacion foto */
 @keyframes aparecer {
   from {
     opacity: 0;
-    transform: translateX(600px) rotate(0deg);;
+    transform: translateX(600px) rotate(0deg);
     /* inclinar la imagen 75 grados */
     border: 5px solid black;
   }
   to {
     opacity: 1;
     transform: translateX(0px) rotate(7deg);
+    border: 5px solid black;
   }
 }
 .img1 {
-  animation: aparecer 2s forwards 1;
+  animation: aparecer 1s forwards 1;
 }
 
 
+@keyframes desaparecer {
+  from {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(600px);
+  }
+}
 
-.texto p:first-child {
-  margin: 30px 30px;
-  border: 10px solid rgba(255, 255, 255, 0.1);
-  border-bottom-color:  rgba(116, 183, 196, 0.3);;
-  border-radius: 150% / 90% / 150% / 90% ;
-  background-color: rgb(144, 238, 144. 50); /* color de fondo verde claro */
+.desaparecer {
+  animation: desaparecer 1s forwards;
 }
 
 
 /*lina decortaiva*/
 #contfoto {
   border: 10px solid rgba(255, 255, 255, 0.1);
-  border-right-color: rgba(255, 255, 255, 0.3);
-  border-radius: 1500px 50px 70px 50px;
-  background-color:rgba(116, 183, 196, 0.3);
+  border-bottom: 11px dashed rgb(28, 110, 164,08%);
+  border-radius: 40px 33px 40px 133px;
+  
+  background-color:rgba(116, 196, 127, 0.3);
   display: flex; /* crear un contenedor flexible */
   justify-content: center; /* alinear los elementos hijos en el centro horizontalmente */
   align-items: center; /* alinear los elementos hijos en el centro verticalmente */
 }
+@keyframes aparecerFondo {
+  from {
+    opacity: 0;
+    transform: translateX(600px) rotate(0deg);
+   
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px) rotate(7deg);
+    border: 10px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 11px dashed rgb(28, 110, 164,08%);
+    border-radius: 40px 33px 40px 133px;
+    
+    background-color:rgba(116, 196, 127, 0.3);
+    display: flex; /* crear un contenedor flexible */
+    justify-content: center; /* alinear los elementos hijos en el centro horizontalmente */
+    align-items: center; /* alinear los elementos hijos en el centro verticalmente */
+  }
+  }
+  @keyframes desaparecerFondo {
+    from {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+    to {
+      opacity: 0;
+      transform: translateX(600px);
+    }
+  }
+  
+  .desaparecer {
+    animation: desaparecerFondo 1s forwards;
+  }
 
 
-
-
-.subtitulo1 {
-  font-family: "Roboto", sans-serif;
-  font-size: 40px;
-  font-weight: bold;
-  color: #ffffff;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-
+/*boton flotante para secciones*/
+.scroll-button .fas {
+  font-size: 3em;
+  line-height: 1;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  padding: 0.5rem;
 }
-
-/* .mision{
-  color:rgb(255, 7, 7);
-  font-size: 70px;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-} */
-
-
-/*parafo */ 
-
-
+.scroll-button {
+  background-color: #5f97b6;
+  color: #fff;
+}
+.scroll-button {
+  box-shadow: 0 2px 4px #ccc;
+}
 
 p{
   font-size: 30px;
 }
 
-@media (max-width: 480px) {
-  .subtitulo1  {
-    margin-top: 30px;
-    margin-left: 20px;
-    text-align: left;
-    align-items: left;
-  justify-content: left;
-    
-    font-size: 28px;
-    color:  rgb(212, 93, 9);;
+.dos {
+  width: 100vw;
+  height: 100vh;
+}
+p {
+  line-height: 1.5;
+  font-family: 'Roboto', sans-serif;
+}
+
+.img-fluid {
+  -webkit-box-shadow: inset -1px 3px 8px 5px #1F87FF, 2px 5px 16px 0px #0B325E, 13px 10px 10px 11px rgba(0,0,0,0.12); 
+  box-shadow: inset -1px 3px 8px 5px #1F87FF, 2px 5px 16px 0px #0B325E, 13px 10px 10px 11px rgba(0,0,0,0.12);
+  background: #1C6EA4;
   }
-}
-
-
-.img2 {
-  max-width: 100%;
-  height: auto;
-  transform: rotate(-7deg); /* inclinar la imagen 75 grados */
-  border: 5px solid black;
-  border-radius: 50px !important;
-  box-shadow: 3px 3px 5px 2px rgba(0,0,0,0.5);
- ;
-  width: 600px;
-  height: auto;
-}
-
-
-@media (max-width: 480px) {
-  .img-fluid {
-    transform: rotate(0deg); /* poner la imagen recta */
+  body#tinymce {
+  background: #FFFFFF
   }
-}
-
-
-
-
-.misions{
-background-color: rgb(212, 93, 9);
-border-radius: 580px 30px 180px 0px;
-}

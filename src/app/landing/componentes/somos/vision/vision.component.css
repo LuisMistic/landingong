@@ -1,0 +1,152 @@
+
+
+body {
+    scroll-behavior: smooth;
+  }
+  #secc {
+    scroll-margin-top: 50px;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  h1{
+    color:  rgb(212, 93, 9);;;
+  }
+  .row.uno {
+   margin: 10px;
+    width: 100vw; /* 100% del ancho del viewport */
+    min-height: 100vh; /* 100% de la altura mínima del viewport */
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+  
+  .texto{
+    margin:10
+  }
+  
+  /* Animación para aparecer */
+  @keyframes aparecerTexto {
+    from {
+      opacity: 0;
+      transform: translateX(-600px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+  .texto {animation: aparecerTexto 1s forwards 1;
+  }
+  
+  
+  
+  /* Animación para desaparecer */
+  @keyframes desaparecerTexto {
+    from {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+    to {
+      opacity: 0;
+      transform: translateX(-600px);
+    }
+  }
+  
+  
+  /* Aplicar la animación de aparecer cuando el elemento tiene la clase 'aparecer' */
+  
+  
+  /* Aplicar la animación de desaparecer cuando el elemento tiene la clase 'desaparecer' */
+  .desaparecerTexto {
+    animation: desaparecerTexto 2s forwards;
+  }
+  
+  
+  
+  
+  .img1 {
+  
+  
+    border-radius: 50px !important;
+    box-shadow: 3px 3px 10px 2px rgba(0,0,0,0.5);
+  
+    width: 600px;
+    height: auto;
+    
+  }
+  /* animacion foto */
+  @keyframes aparecer {
+    from {
+      opacity: 0;
+      transform: translateX(600px) rotate(0deg);
+      /* inclinar la imagen 75 grados */
+      border: 5px solid black;
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px) rotate(7deg);
+      border: 5px solid black;
+    }
+  }
+  .img1 {
+    animation: aparecer 2s forwards 1;
+  }
+  
+  
+  @keyframes desaparecer {
+    from {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+    to {
+      opacity: 0;
+      transform: translateX(600px);
+    }
+  }
+  
+  .desaparecer {
+    animation: desaparecer 1s forwards;
+  }
+  
+  
+  
+  
+  /*lina decortaiva*/
+  #contfoto {
+    border: 10px solid rgba(255, 255, 255, 0.1);
+    border-right-color: rgba(255, 255, 255, 0.3);
+    border-radius: 1500px 50px 70px 50px;
+    background-color:rgba(116, 183, 196, 0.3);
+    display: flex; /* crear un contenedor flexible */
+    justify-content: center; /* alinear los elementos hijos en el centro horizontalmente */
+    align-items: center; /* alinear los elementos hijos en el centro verticalmente */
+  }
+  
+  /*boton flotante para secciones*/
+  .scroll-button{
+    display: flex; /* crear un contenedor flexible */
+    justify-content: center; /* alinear los elementos hijos en el centro horizontalmente */
+    align-items: center; 
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .scroll-button:hover {
+    background-color: #0056b3;
+  }
+  
+  p{
+    font-size: 30px;
+  }
+  
+  
+  .dos {
+    width: 100vw;
+    height: 100vh;
+  }
+  

@@ -1,67 +1,31 @@
 
-
-  <div class="row uno">
-    
-    <div class="col-12 col-md-6">
+<div class="row uno">
+  <div class="col-12 col-md-4">
       <!-- Texto sobre nosotros -->
- 
-      <div class="texto">
-         <h1>SOBRE NOSOTROS</h1>
-        <p>La Asociación Misericordia es una asociación civil sin fines de lucro que tiene como objetivo principal brindar asistencia y garantizar derechos a niños en situación de riesgo, ya sean de bajos recursos, abandonados o excluidos de sus familias. Nuestra obra está dirigida a toda la comunidad.</p>
-        
+      <div class="texto" [ngClass]="{'desaparecerTexto': shouldDisappear, 'aparecerTexto': shouldAppear}">
+          <h1>SOBRE NOSOTROS</h1>
+          <p>La Asociación Misericordia es una asociación civil sin fines de lucro que tiene como objetivo principal brindar asistencia y garantizar derechos a niños en situación de riesgo, ya sean de bajos recursos, abandonados o excluidos de sus familias.</p>
       </div>
-    </div>
-    <div class="col-12 col-md-6" id="contfoto">
+  </div>
+  <div class="col-12 col-md-4" >
       <!-- Imagen con bordes redondeados -->
-      <img src="../../../../assets/quienesSomos/nosotros.JPG" alt="Imagen de la asociación" class="img-fluid img1">
-    </div>
-  </div>
-    <div class="row dos misions">
-      <div class="col-12">
-        <!-- Subtítulo destacado -->
-        <p class="subtitulo1 timision">MISION</p>
+      <div id="contfoto" [ngClass]="{' desaparecerFondo': shouldDisappear, 'aparecerFondo': shouldAppear}">
+        <img src="../../../../../assets/quienesSomos/nosotros.JPG" alt="Imagen de la asociación" class="img-fluid img1" [ngClass]="{'desaparecer': shouldDisappear, 'aparecer': shouldAppear}">
       </div>
-      
-    <div class="col-12 col-md-6">
-    <img src="../../../../assets/quienesSomos/mision.JPG" alt="Imagen de la asociación" class="img-fluid img2">
-    </div>
-    <div class="col-12 col-md-6">
-      <p> Trabajamos para que las infancias tengan un entorno de crecimiento feliz y seguro -libre de violencias- donde puedan desarrollar todas sus potencialidades y prepararse para el futuro.</p>
-       </div>
-  </div>
-
-
-    
-    
-    <p>Visión: Que todos los niños, niñas y adolescentes puedan vivir sus derechos de acuerdo con lo establecido en la Convención sobre los Derechos del Niño.</p>
-    <p>Valores: Respeto por el interés superior de en el cumplimiento de todos sus derechos. Profesionalismo y calidad en la implementación de nuestras acciones. Transparencia en la administración de los recursos. Trabajo coordinado con las Instituciones de gestión pública y privada que comparten nuestra visión. Compromiso y responsabilidad con nuestro equipo de trabajo, Socios, voluntarios, proveedores.</p>
-
-    
-    <div class="col-12">
-      <!-- Comisión directiva -->
-      <p>Comisión Directiva:</p>
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th scope="col">Cargo</th>
-            <th scope="col">Nombre</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>PRESIDENTA</td>
-            <td>PAOLA MAFFEI</td>
-          </tr>
-          <tr>
-            <td>SECRETARIO</td>
-            <td>MARCELO CELI</td>
-          </tr>
-          <tr>
-            <td>TESORERA</td>
-            <td>MARCELA TOMADIN</td>
-          </tr>
-          <!-- Agregar más filas según corresponda -->
-        </tbody>
-      </table>
-    </div>
+      </div>
+  <div class="col-12 col-md-4">
+  <div class="texto1" [ngClass]="{'desaparecerTexto1': shouldDisappear, 'aparecerTexto1': shouldAppear}">
+         
+          <p> Nuestra obra está dirigida a toda la comunidad.</p>
+      </div></div>
+  <li (click)="toQuienessomos()" routerLink="/quienesomos" role="button" routerLinkActive="active">abajo</li>
   
+</div>
+
+<section class="dos misions" id="quienessomos" >
+  <app-mision ></app-mision>
+</section>
+
+<section class="dos misions" #missionsSection>
+  <app-vision></app-vision>
+</section>

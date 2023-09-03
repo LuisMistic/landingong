@@ -17,6 +17,7 @@ import { SharedServiceService } from '../shared-service.service';
     </ng-container>
     <!-- Puedes agregar más componentes según los botones del menú -->
   `,
+  
 })
 export class BannerComponent {
   constructor(public sharedServiceService: SharedServiceService) {}

@@ -1,0 +1,25 @@
+
+<div class="row uno">
+    <div class="col-12 col-md-6">
+        <!-- Texto sobre nosotros -->
+        <div class="texto" [ngClass]="{'desaparecerTexto': shouldDisappear, 'aparecerTexto': shouldAppear}">
+            <h1>SOBRE NOSOTROS</h1>
+            <p>La Asociación Misericordia es una asociación civil sin fines de lucro que tiene como objetivo principal brindar asistencia y garantizar derechos a niños en situación de riesgo, ya sean de bajos recursos, abandonados o excluidos de sus familias. Nuestra obra está dirigida a toda la comunidad.</p>
+        </div>
+    </div>
+    <div class="col-12 col-md-6" id="contfoto">
+        <!-- Imagen con bordes redondeados -->
+        <img src="../../../../../assets/quienesSomos/nosotros.JPG" alt="Imagen de la asociación" class="img-fluid img1" [ngClass]="{'desaparecer': shouldDisappear, 'aparecer': shouldAppear}">
+    </div>
+    <button class="scroll-button" (click)="scrollToMissions()">
+        <i class="fas fa-arrow-down fa-2x"></i>
+    </button>
+  </div>
+  
+  <section class="dos misions" #missionsSection>
+    <app-mision></app-mision>
+  </section>
+  
+  <section class="dos misions" #missionsSection>
+    <app-mision></app-mision>
+  </section>
