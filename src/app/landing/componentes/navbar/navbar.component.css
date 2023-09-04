@@ -225,7 +225,7 @@
 
   }
 
-.navbar-nav {
+button.navbar-nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -251,6 +251,7 @@
 }
 /* texto logo*/
 .association-link {
+  line-height: 1.5;
   display: block;
   text-align: center;
   font-size: 20px;
@@ -260,6 +261,7 @@
   margin-top: 0px; /* Ajusta el margen superior según tu preferencia */
 }
 .association-link1 {
+  line-height: 1.5;
   display: block;
   text-align: center;
   font-size: 20px;
@@ -273,6 +275,7 @@
 /*boton donar*/
 /* estilo boton donacion */
 .donacion {
+  
   display: inline-block;
   margin: 20px;
   padding: 10px 10px;
@@ -361,4 +364,20 @@
   border-radius: 50%;
   animation: pulse 9s infinite;
   opacity: 0;
+}
+
+/*estilo boton mercado pago */
+#estilob{
+
+  
+color:rgb(214, 137, 21);
+font-family: 'Lato', sans-serif;
+font-weight: bolder;
+}
+
+.donacion{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 0;
 }

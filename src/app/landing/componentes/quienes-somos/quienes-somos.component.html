@@ -3,27 +3,38 @@
   <div class="col-12 col-md-4">
       <!-- Texto sobre nosotros -->
       <div class="texto" [ngClass]="{'desaparecerTexto': shouldDisappear, 'aparecerTexto': shouldAppear}">
-          <h1>SOBRE NOSOTROS</h1>
+          <h1 id="sobre"[ngClass]="{'desaparecerTexto': shouldDisappear, 'aparecerTexto': shouldAppear}">SOBRE NOSOTROS</h1>
           <p>La Asociación Misericordia es una asociación civil sin fines de lucro que tiene como objetivo principal brindar asistencia y garantizar derechos a niños en situación de riesgo, ya sean de bajos recursos, abandonados o excluidos de sus familias.</p>
       </div>
   </div>
-  <div class="col-12 col-md-4" >
+  <div class="col-12 col-md-5" >
       <!-- Imagen con bordes redondeados -->
-      <div id="contfoto" [ngClass]="{' desaparecerFondo': shouldDisappear, 'aparecerFondo': shouldAppear}">
+      <div class="contfoto"[ngClass]="{'desaparecerFondo': shouldDisappear, 'aparecerFondo': shouldAppear}" >
         <img src="../../../../../assets/quienesSomos/nosotros.JPG" alt="Imagen de la asociación" class="img-fluid img1" [ngClass]="{'desaparecer': shouldDisappear, 'aparecer': shouldAppear}">
       </div>
       </div>
-  <div class="col-12 col-md-4">
+  <div class="col-12 col-md-3">
   <div class="texto1" [ngClass]="{'desaparecerTexto1': shouldDisappear, 'aparecerTexto1': shouldAppear}">
          
           <p> Nuestra obra está dirigida a toda la comunidad.</p>
+          
       </div></div>
-  <li (click)="toQuienessomos()" routerLink="/quienesomos" role="button" routerLinkActive="active">abajo</li>
+       
+      <div class="col-12 col-md-1 container"(click)="smoothScroll()"[ngClass]="{'botdesaparecer': botonDesaparecer, 'botAparecer':botonAparecer}" >
+        <button class="button type1">
+          MISION
+        </button>
+      
+        <!-- (click)="toQuienessomos()" routerLink="/quienesomos" role="button" routerLinkActive="active" -->
+    </div>
+
   
 </div>
 
-<section class="dos misions" id="quienessomos" >
+<section class="dos misions" id="mySection" >
   <app-mision ></app-mision>
+  
+  
 </section>
 
 <section class="dos misions" #missionsSection>

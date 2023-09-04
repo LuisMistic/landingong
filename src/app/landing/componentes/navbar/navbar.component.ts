@@ -14,11 +14,14 @@ export class NavbarComponent implements OnInit {
   constructor(private  sharedServiceService: SharedServiceService, private library: FaIconLibrary,) {
     library.addIcons(faBars, faHouse, faHourglassEnd, faPerson,faUsers );
   } 
+    lastScrollTop = 0;
 
   faHourglassEnd = faHourglassEnd;
   faBars = faBars;
   faPerson = faPerson
   faUsers = faUsers
+
+  
   loadQuienesSomos() {
     this.sharedServiceService.currentComponent = 'quienesSomos';
   }
