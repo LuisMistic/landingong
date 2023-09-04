@@ -13,10 +13,13 @@
         <img src="../../../../../assets/quienesSomos/mision.JPG" alt="Imagen de la asociación" class="img-fluid img2" [ngClass]="{'desaparecer': shouldDisappear, 'aparecerImagenMision': shouldAppear }">
     </div>
    
-    <div class="col-12 col-md-1 container"[ngClass]="{'botdesaparecer': botonDesaparecer, 'botAparecer':botonAparecer}" (click)="toQuienessomos()" routerLink="/quienesomos" role="button" routerLinkActive="active">
-    <button class="button type1">
-      MISION
-    </button>
+    <div class="col-12 col-md-1 container"(click)="visionScroll()"[ngClass]="{'botdesaparecer': botonvDesaparecer, 'botAparecer':botonvAparecer}" >
+        <button class="button type1">
+          VISION
+        </button>
+      
+        <!-- (click)="toQuienessomos()" routerLink="/quienesomos" role="button" routerLinkActive="active" -->
     </div>
-
+      
+</div>
   

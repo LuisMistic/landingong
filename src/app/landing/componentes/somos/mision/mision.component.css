@@ -11,20 +11,39 @@ h1 {
   ;
 }
 
+
+
 .row.uno {
+  background-color: rgba(180, 174, 141, 0.23);
   overflow: hidden;
-  margin: 10px;
-  width: 100vw;
-  /* 100% del ancho del viewport */
-  min-height: 100vh;
-  /* 100% de la altura mínima del viewport */
+  padding: 5%;
+  width: 100vw; /* 100% del ancho del viewport */
+  height: 100vh; /* 100% de la altura del viewport */
   align-items: center;
-  justify-content: center;
-  display: flex;
 }
 
+/* Estilos para pantallas pequeñas (menos de 600px de ancho) */
+@media (max-width: 600px) {
+  .img2 * {
+    font-size: 17px;
+  }
+}
+
+/* Estilos para pantallas medianas (entre 600px y 900px de ancho) */
+@media (min-width: 600px) and (max-width: 900px) {
+  .img2 * {
+    font-size: 18px;
+  }
+}
+
+/* Estilos para pantallas grandes (más de 900px de ancho) */
+@media (min-width: 900px) {
+  .img2 * {
+    font-size: 24px;
+  }
+}
 .texto {
-  margin: 10
+  margin:20
 }
 
 

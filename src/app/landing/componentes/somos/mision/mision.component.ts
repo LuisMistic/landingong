@@ -1,5 +1,5 @@
 import { Component, ElementRef, HostListener, ViewChild, ViewEncapsulation } from '@angular/core';
-
+import { PageScrollService } from 'ngx-page-scroll-core';
 @Component({
   selector: 'app-mision',
   templateUrl: './mision.component.html',
@@ -12,6 +12,8 @@ export class MisionComponent {
   shouldDisappear = false; 
   botonAparecer = false;
   botonDesaparecer = false;
+  botonvDesaparecer = false;
+  botonvAparecer = false;
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
@@ -20,7 +22,8 @@ export class MisionComponent {
     this.botonDesaparecer = scrollPosition > 400;
     this.botonAparecer = scrollPosition <= 500;
    
-   
+    this.botonvDesaparecer = scrollPosition > 1300;
+    this.botonvAparecer = scrollPosition <= 1400;
    
    
     // Controla la aparición y desaparición basada en la posición del scroll
@@ -38,9 +41,16 @@ export class MisionComponent {
     }
     
   }
-  toQuienessomos(){
-    document.getElementById("quienessomos")?.scrollIntoView({ behavior: 'smooth' });
+  
+  constructor(private pageScrollService: PageScrollService) { }
+
+
+ 
+    visionScroll() {
+      this.pageScrollService.scroll({
+        document: document,
+        scrollTarget: '#vision',
+      });
+    }
   }
 
-
-}

@@ -13,7 +13,8 @@ export class QuienesSomosComponent {
   shouldDisappear = false;
   botonAparecer = false;
   botonDesaparecer = false;
- 
+
+
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const scrollPosition = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
@@ -25,7 +26,12 @@ export class QuienesSomosComponent {
       
        this.botonDesaparecer = scrollPosition > 400;
        this.botonAparecer = scrollPosition <= 500;
-    const yOffset: number = window.scrollY || window.pageYOffset;
+  
+       // Controla la aparición y desaparición del boton vision basada en la posición del scroll
+      
+    
+       
+    
     
   }
 
@@ -36,10 +42,12 @@ export class QuienesSomosComponent {
  smoothScroll() {
    this.pageScrollService.scroll({
      document: document,
-     scrollTarget: '#mySection',
+     scrollTarget: '#mision',
    });
    
  }
+
+
 //  toQuienessomos(){
 //   document.getElementById("quienessomos")?.scrollIntoView({ behavior: 'smooth' });
 // }

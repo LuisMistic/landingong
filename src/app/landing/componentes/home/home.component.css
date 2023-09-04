@@ -48,3 +48,8 @@
   align-items: center;
   filter: brightness(84%) opacity(99%);
 }
+
+html{
+  width: 100vw; /* 100% del ancho del viewport */
+  height: 100vh; /* 100% de la altura del viewport */
+}

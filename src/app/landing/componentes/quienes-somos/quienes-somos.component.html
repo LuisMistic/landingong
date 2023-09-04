@@ -1,6 +1,6 @@
 
 <div class="row uno">
-  <div class="col-12 col-md-4">
+  <div class="col-12 col-md-4" >
       <!-- Texto sobre nosotros -->
       <div class="texto" [ngClass]="{'desaparecerTexto': shouldDisappear, 'aparecerTexto': shouldAppear}">
           <h1 id="sobre"[ngClass]="{'desaparecerTexto': shouldDisappear, 'aparecerTexto': shouldAppear}">SOBRE NOSOTROS</h1>
@@ -31,12 +31,11 @@
   
 </div>
 
-<section class="dos misions" id="mySection" >
+<section class="dos misions" id="mision" >
   <app-mision ></app-mision>
-  
-  
+
 </section>
 
-<section class="dos misions" #missionsSection>
+<section class="dos misions" id="vision">
   <app-vision></app-vision>
 </section>
