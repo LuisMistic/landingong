@@ -205,7 +205,7 @@ h1{
   border-bottom: 11px dashed rgb(28, 110, 164,08%);
   border-radius: 40px 33px 40px 133px;
   
-  background-color:rgba(116, 196, 127, 0.3);
+  background-color:rgba(92, 64, 70, 0.3);
   display: flex; /* crear un contenedor flexible */
   justify-content: center; /* alinear los elementos hijos en el centro horizontalmente */
   align-items: center; /* alinear los elementos hijos en el centro verticalmente */

@@ -1,12 +1,13 @@
-import { Component, ElementRef, HostListener, ViewChild, ViewEncapsulation } from '@angular/core';
+import { Component, HostListener, ViewEncapsulation } from '@angular/core';
 import { PageScrollService } from 'ngx-page-scroll-core';
+
 @Component({
-  selector: 'app-vision',
-  templateUrl: './vision.component.html',
-  styleUrls: ['./vision.component.css'],
+  selector: 'app-valores',
+  templateUrl: './valores.component.html',
+  styleUrls: ['./valores.component.css'],
   encapsulation: ViewEncapsulation.Emulated
 })
-export class VisionComponent {
+export class ValoresComponent {
 
   shouldAppear = false;
   shouldDisappear = false; 
@@ -22,21 +23,21 @@ export class VisionComponent {
     this.botonDesaparecer = scrollPosition > 400;
     this.botonAparecer = scrollPosition <= 500;
    
-    this.botonvDesaparecer = scrollPosition > 2200;
-    this.botonvAparecer = scrollPosition <= 1400;
+    this.botonvDesaparecer = scrollPosition > 3300;
+    this.botonvAparecer = scrollPosition <= 2400;
    
    
     // Controla la aparición y desaparición basada en la posición del scroll
     
-    if (scrollPosition > 2200) {
+    if (scrollPosition > 3300) {
       console.log(scrollPosition);
 
       this.shouldDisappear = true;
       this.shouldAppear = false;
-    } else if (scrollPosition <= 2200 && scrollPosition > 1400) {
+    } else if (scrollPosition <= 3300 && scrollPosition > 2400) {
       this.shouldDisappear = false;
       this.shouldAppear = true;
-    } else if (scrollPosition <= 400) {
+    } else if (scrollPosition <= 2400) {
       this.shouldDisappear = true;
       this.shouldAppear = false;
     }
@@ -46,10 +47,10 @@ export class VisionComponent {
   constructor(private pageScrollService: PageScrollService) { }
 
  
-    valoresScroll() {
+  volverScroll() {
       this.pageScrollService.scroll({
         document: document,
-        scrollTarget: '#valores',
+        scrollTarget: '#nosotros',
       });
     }
   }
