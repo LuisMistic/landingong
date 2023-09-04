@@ -4,17 +4,19 @@
     <div class="col-12 col-md-6">
         <!-- Texto sobre nosotros -->
         <div class="texto" [ngClass]="{'desaparecerTextoMision':shouldDisappear, 'aparecerTextoMision': shouldAppear }">
-            <h1>SOBRE NOSOTROS</h1>
-            <p>Trabajamos para que las infancias tengan un entorno de crecimiento feliz y seguro -libre de violencias- donde puedan desarrollar todas sus potencialidades y prepararse para el futuro.</p>
+            <h1>MISION</h1>
+            <p>Trabajamos para que las infancias tengan un entorno de crecimiento feliz y seguro -libre de violencias- donde puedan desarrollar todas sus potencialidades y prepararse para el futuro. </p>
         </div>
     </div>
-    <div class="col-12 col-md-6" id="contfoto1">
+    <div class="col-12 col-md-6" id="contfoto1"[ngClass]="{'desaparecerFondo':shouldDisappear, 'aparecerFondo': shouldAppear }">
         <!-- Imagen con bordes redondeados -->
         <img src="../../../../../assets/quienesSomos/mision.JPG" alt="Imagen de la asociación" class="img-fluid img2" [ngClass]="{'desaparecer': shouldDisappear, 'aparecerImagenMision': shouldAppear }">
     </div>
-    <button class="scroll-button" (click)="scrollToMissions()">
-        <i class="fas fa-arrow-down fa-2x"></i>
+   
+    <div class="col-12 col-md-1 container"[ngClass]="{'botdesaparecer': botonDesaparecer, 'botAparecer':botonAparecer}" (click)="toQuienessomos()" routerLink="/quienesomos" role="button" routerLinkActive="active">
+    <button class="button type1">
+      MISION
     </button>
-</div>
+    </div>
 
   
