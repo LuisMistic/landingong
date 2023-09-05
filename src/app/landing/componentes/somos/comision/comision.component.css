@@ -6,42 +6,59 @@ html { scroll-behavior: auto !important }
 }
 
 
+h1 {
+  color: rgb(212, 93, 9);
+  font-size: 40px;
+  line-height: 1.5;
+}
 
+@keyframes comisionAparecer {
+  from {
+    opacity: 0;
+    transform: translateX(-600px);
+
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.comisionAparecer{
+  animation: comisionAparecer 2s forwards 1;
+}
+
+@keyframes comisionDesaparecer {
+  from {
+    opacity: 1;
+    transform: translateX(0px);
+
+  }
+  to{
+    opacity: 0;
+    transform: translateX(-600px);
+  }
+}
+.comisionDesaparecer{
+  animation: comisionDesaparecer 1.4s forwards 1;
+}
 
 
 .row.uno {
-  background: #BCF6EF;
-  background: -moz-linear-gradient(-45deg, #BCF6EF 0%, #F7FFEC 21%, #FFDBCE 100%);
-  background: -webkit-linear-gradient(-45deg, #BCF6EF 0%, #F7FFEC 21%, #FFDBCE 100%);
-  background: linear-gradient(135deg, #BCF6EF 0%, #F7FFEC 21%, #FFDBCE 100%);
-
-  overflow: hidden;
+background-color: rgb(169, 169, 169,20%);
   padding: 5%;
   width: 100vw; /* 100% del ancho del viewport */
   height: 100vh; /* 100% de la altura del viewport */
   align-items: center;
 }
 
-/* Estilos para pantallas pequeñas (menos de 600px de ancho) */
-@media (max-width: 600px) {
-  .row.uno * {
-    font-size: 17px;
-  }
-}
 
-/* Estilos para pantallas medianas (entre 600px y 900px de ancho) */
-@media (min-width: 600px) and (max-width: 900px) {
-  .row.uno  * {
-    font-size: 18px;
-  }
-}
 
 /* Estilos para pantallas grandes (más de 900px de ancho) */
-@media (min-width: 900px) {
+/* @media (min-width: 900px) {
   .row.uno  * {
-    font-size: 24px;
+    
   }
-}
+} */
 
 
 
@@ -74,6 +91,7 @@ html { scroll-behavior: auto !important }
   to {
     opacity: 0;
     transform: translateX(-600px);
+
   }
 }
 
@@ -166,6 +184,76 @@ html { scroll-behavior: auto !important }
     animation: desaparecerVicePresidente  2.s forwards;
   }
   
+
+  /* animacion card */
+  @keyframes aparecerVocal{
+    from {
+      opacity: 0;
+      transform: translateX(-600px) rotate(7deg);
+      /* inclinar la imagen 75 grados */
+     
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px) rotate(0deg);
+    
+    }
+  }
+  .aparecerVocal {
+    animation: aparecerVocal 1.1s forwards 1 
+              
+  }
+
+
+  @keyframes aparecerVocalSuplente{
+    from {
+      opacity: 0;
+      transform: translateX(-600px) rotate(7deg);
+      /* inclinar la imagen 75 grados */
+     
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px) rotate(0deg);
+    
+    }
+  }
+
+  .aparecerVocalSuplente {
+    animation: aparecerVocalSuplente 1.2s forwards 1;
+  }
+  
+  
+  
+
+
+
+
+  @keyframes aparecerRevisor{
+    from {
+      opacity: 0;
+      transform: translateX(600px) rotate(7deg);
+      /* inclinar la imagen 75 grados */
+     
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px) rotate(0deg);
+    
+    }
+  }
+
+  .aparecerRevisor {
+    animation: aparecerRevisor 2.2s forwards 1;
+  }
+  
+  
+ 
+
+
+
+
+
 
 /*boton*/ 
 :root {
@@ -287,7 +375,7 @@ body {
 
 
 
-/* Estilo para el árbol genealógico */
+/* Estilo para el árbol gerar */
 .tree {
     display: flex;
     flex-direction: column;
@@ -354,29 +442,68 @@ body {
 
 /* Estilo para las tarjetas */
 .card {
-    transition: all .3s ease-in-out;
-    cursor: pointer;
-    width: 100%;
-    max-width: 400px; /* Ajusta el valor según sea necesario */
-    margin: 0 auto; /* Centrar las tarjetas */
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+  width: 100%;
+  max-width: 400px; /* Ajusta el valor según sea necesario */
+  margin: 0 auto; /* Centrar las tarjetas */
+  font-size: 14px; /* Ajusta el tamaño de fuente según tus preferencias */
+  padding: 5px;
+  margin-bottom: 20px;
+  backdrop-filter: blur(16px) saturate(200%);
+  -webkit-backdrop-filter: blur(16px) saturate(200%);
+  background-color: rgba(252, 248, 33, 0.3); /* Color de fondo con transparencia */
+  border-radius: 12px; /* Bordes redondeados */
+  border: 1px solid rgba(209, 213, 219, 0.3); /* Borde con transparencia */
+  background-color:hsla(0,0%,90%,1);
+  background-image:
+  radial-gradient(at 100% 0%, hsla(37,0%,100%,0.7) 0px, transparent 50%),
+  radial-gradient(at 1% 16%, hsla(48,57%,83%,1) 0px, transparent 50%),
+  radial-gradient(at 63% 31%, hsla(339,0%,100%,1) 0px, transparent 50%),
+  radial-gradient(at 97% 5%, hsla(43,93%,48%,0.79) 0px, transparent 50%),
+  radial-gradient(at 31% 100%, hsla(49,100%,56%,0.34) 0px, transparent 50%),
+  radial-gradient(at 73% 29%, hsla(343,0%,100%,1) 0px, transparent 50%)
 }
 
 .card:hover {
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    transform: translateY(-5px);
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2); /* Efecto de relieve más pronunciado al pasar el cursor */
 }
+
 
 .card-body {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    font-size: 10;
 }
 
 .card-title {
     margin-bottom: 5px;
 }
 
-.card-text {
-    margin: 0; /* Para evitar que se divida en una línea */
+.card-text{
+  font-size: 20px ;
+
+
+}
+@media (max-width: 576px) {
+  .row.uno .card-title,
+  .row.uno .card-text {
+    max-width: 400px;
+    max-height: 70px;
+      font-size: 14px; /* Ajusta el valor según sea necesario */
+
+  }
+
+  .row.uno .card {
+      max-width: 400px; /* Ajusta el valor según sea necesario */
+      max-height: 80px;
+      margin: 3px; /* Ajusta el valor según sea necesario */
+  }
+
+  .row.uno .card-body {
+
+  }
 }

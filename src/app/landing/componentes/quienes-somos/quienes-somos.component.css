@@ -13,10 +13,11 @@ h1{
   color:  rgb(212, 93, 9);;;
 }
 .row.uno {
-  background-color: rgb(22, 160, 133, 23%);
+ background: -moz-linear-gradient(left, rgba(255, 255, 255, 0.5) 0%, rgba(49, 164, 145, 0.3) 48%, rgba(255, 255, 255, 0.5) 0%);
+background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.5) 0%, rgba(49, 164, 145, 0.3) 48%, rgba(255, 255, 255, 0.5) 100%);
+background: linear-gradient(to right, rgba(234, 245, 241, 0.5) 0%, rgba(49, 164, 145, 0.3) 48%, rgba(250, 250, 250, 0.5) 100%);
   padding: 5%;
   overflow: hidden;
-  
   width: 100vw; /* 100% del ancho del viewport */
   height: 100vh; /* 100% de la altura del viewport */
   align-items: center;
@@ -203,7 +204,7 @@ h1{
   to {
     opacity: 1;
     transform: translateX(0px) rotate(7deg);
-  border: 5px solid black;
+    border: 5px solid black;
   }
 }
 .contfoto {
@@ -214,11 +215,11 @@ h1{
 @keyframes desaparecerFondo {
   from {
     opacity: 1;
-    transform: translateX(0px);
+    transform: translateX(0px)  rotate(7deg);
   }
   to {
     opacity: 0;
-    transform: translateX(600px);
+    transform: translateX(600px) rotate(0deg);
   }
 }
 
@@ -241,28 +242,12 @@ h1{
     border-bottom: 11px dashed rgb(28, 110, 164,08%);
     border-radius: 40px 33px 40px 133px;
     
-    background-color:rgba(116, 196, 127, 0.3);
+    background-color:rgba(188, 189, 125, 0.3);
     display: flex; /* crear un contenedor flexible */
     justify-content: center; /* alinear los elementos hijos en el centro horizontalmente */
     align-items: center; /* alinear los elementos hijos en el centro verticalmente */
   }
   }
-@keyframes desaparecerFondo {
-    from {
-      opacity: 1;
-      transform: translateX(0px);
-    }
-    to {
-      opacity: 0;
-      transform: translateX(600px);
-    }
-  }
-  
-  .desaparecer {
-    animation: desaparecerFondo 1s forwards;
-  }
-
-
 
 
 
@@ -422,3 +407,28 @@ p {
     transition: opacity 2s, transform 2s;
    
   }
+  .botonera-lateral {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #fff; /* Color de fondo */
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Coloca los botones a la derecha */
+    padding: 20px; /* Espaciado interior */
+  }
+  
+  .botonera-lateral button {
+    margin-bottom: 10px; /* Espacio entre botones */
+    padding: 10px; /* Espaciado dentro de los botones */
+    background-color: #007bff; /* Color de fondo del botón */
+    color: #fff; /* Color de texto del botón */
+    border: none;
+    cursor: pointer;
+  }
+  
+  .botonera-lateral button:hover {
+    background-color: #0056b3; /* Color de fondo en el hover */
+  }
+  

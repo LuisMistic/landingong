@@ -109,11 +109,11 @@ h1 {
 @keyframes desaparecer {
   from {
     opacity: 1;
-    transform: translateX(0px);
+    transform: translateX(px) rotate(7deg);
   }
   to {
     opacity: 0;
-    transform: translateX(600px);
+    transform: translateX(600px) rotate(0deg);
   }
 }
 

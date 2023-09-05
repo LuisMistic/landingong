@@ -26,7 +26,7 @@ export class ComisionComponent {
    
    
     this.botonvDesaparecer = scrollPosition > 4200;
-    this.botonvAparecer = scrollPosition <= 4200;
+    this.botonvAparecer = scrollPosition <= 4600;
    // Controla la aparición y desaparición del color de fondo en la posición del scroll
       
    
