@@ -28,15 +28,15 @@ export class VisionComponent {
    
     // Controla la aparición y desaparición basada en la posición del scroll
     
-    if (scrollPosition > 2200) {
+    if (scrollPosition > 2300) {
       console.log(scrollPosition);
 
       this.shouldDisappear = true;
       this.shouldAppear = false;
-    } else if (scrollPosition <= 2200 && scrollPosition > 1400) {
+    } else if (scrollPosition <= 2300 && scrollPosition > 1200) {
       this.shouldDisappear = false;
       this.shouldAppear = true;
-    } else if (scrollPosition <= 400) {
+    } else if (scrollPosition <= 1200) {
       this.shouldDisappear = true;
       this.shouldAppear = false;
     }
@@ -50,6 +50,20 @@ export class VisionComponent {
       this.pageScrollService.scroll({
         document: document,
         scrollTarget: '#valores',
+      });
+      
+    }
+    misionScroll() {
+      this.pageScrollService.scroll({
+        document: document,
+        scrollTarget: '#mision',
+      });
+    }
+
+    nosotrosScroll() {
+      this.pageScrollService.scroll({
+        document: document,
+        scrollTarget: '#nosotros',
       });
     }
   }

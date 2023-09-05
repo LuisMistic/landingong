@@ -55,5 +55,12 @@ export class MisionComponent {
         scrollTarget: '#vision',
       });
     }
+    nosotrosScroll() {
+      this.pageScrollService.scroll({
+        document: document,
+        scrollTarget: '#nosotros',
+      });
+    }
+  
   }
 

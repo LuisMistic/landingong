@@ -435,3 +435,12 @@ p {
 .desaparecerColorFondo  {
   animation: desaparecerColorFondo 1s forwards;
 }
+/* boton volver */
+.boton-volver {
+  /* Agrega tus estilos personalizados aquí */
+  font-size: 13px; /* Tamaño de fuente personalizado */
+
+  color: hwb(0 0% 100%); /* Color de texto personalizado */
+  /* Otros estilos personalizados */
+  background-color: rgb(0, 0, 0,2%);
+}

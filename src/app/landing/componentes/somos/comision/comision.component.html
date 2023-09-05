@@ -81,9 +81,12 @@
             </ul>
         </div>
    
-    <div class="col-12 col-md-1 container"(click)="visionScroll()"[ngClass]="{'botdesaparecer': botonvDesaparecer, 'botAparecer':botonvAparecer}" >
-        <button class="button type1">
-          VOLVER
+    <div class="col-12 col-md-1 container">
+        <button class="button type1 boton-volver" (click)="valoresScroll()"[ngClass]="{'botdesaparecer': botonvDesaparecer, 'botAparecer':botonvAparecer}">
+            <i class="material-icons">keyboard_arrow_up</i>
+        </button>
+        <button class="button type1" (click)="visionScroll()"[ngClass]="{'botdesaparecer': botonvDesaparecer, 'botAparecer':botonvAparecer}" >
+            <i class="material-icons">home</i>
         </button>
       
         <!-- (click)="toQuienessomos()" routerLink="/quienesomos" role="button" routerLinkActive="active" -->

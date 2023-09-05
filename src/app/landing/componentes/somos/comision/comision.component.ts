@@ -25,8 +25,8 @@ export class ComisionComponent {
     console.log(scrollPosition); // Imprime el valor de scrollPosition en la consola
    
    
-    this.botonvDesaparecer = scrollPosition > 4200;
-    this.botonvAparecer = scrollPosition <= 4600;
+    this.botonvDesaparecer = scrollPosition > 4250;
+    this.botonvAparecer = scrollPosition <= 4200;
    // Controla la aparición y desaparición del color de fondo en la posición del scroll
       
    
@@ -47,7 +47,12 @@ export class ComisionComponent {
   }
   
   constructor(private pageScrollService: PageScrollService) { }
-
+  valoresScroll() {
+    this.pageScrollService.scroll({
+      document: document,
+      scrollTarget: '#va',
+    });
+  }
 
  
     visionScroll() {
@@ -56,6 +61,8 @@ export class ComisionComponent {
         scrollTarget: '#nosotros',
       });
     }
+    
+
   }
 
 

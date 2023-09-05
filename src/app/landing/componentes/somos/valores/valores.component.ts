@@ -46,11 +46,22 @@ export class ValoresComponent {
   
   constructor(private pageScrollService: PageScrollService) { }
 
- 
-  volverScroll() {
+  visionScroll() {
+    this.pageScrollService.scroll({
+      document: document,
+      scrollTarget: '#vision',
+    });
+  }
+ comisionScroll() {
       this.pageScrollService.scroll({
         document: document,
         scrollTarget: '#comision',
+      });
+    }
+    nosotrosScroll() {
+      this.pageScrollService.scroll({
+        document: document,
+        scrollTarget: '#nosotros',
       });
     }
   }

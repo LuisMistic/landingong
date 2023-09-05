@@ -30,10 +30,16 @@
         </div>
     </div>
        
-      <div class="col-12 col-md-1 container "(click)="volverScroll()"[ngClass]="{'botdesaparecer': botonvDesaparecer, 'botAparecer':botonvAparecer}" >
-        <button class="button type1">
-         COMISION DIRECTIVA
-        </button>
+      <div class="col-12 col-md-1 container ">
+        <button class="button type1 boton-volver" (click)="visionScroll()"[ngClass]="{'botdesaparecer': botonvDesaparecer, 'botAparecer':botonvAparecer}">
+            <i class="material-icons">keyboard_arrow_up</i>
+          </button><button class="button type1"(click)="comisionScroll()"[ngClass]="{'botdesaparecer': botonvDesaparecer, 'botAparecer':botonvAparecer}">
+            COMISION DIRECTIVA<i class="material-icons">keyboard_arrow_down</i>
+          </button>
+          <button class="button type1 boton-volver" (click)="nosotrosScroll()"[ngClass]="{'botdesaparecer': botonvDesaparecer, 'botAparecer':botonvAparecer}">
+            <i class="material-icons">home</i>
+          </button>
+        
       
         <!-- (click)="toQuienessomos()" routerLink="/quienesomos" role="button" routerLinkActive="active" -->
     </div>
