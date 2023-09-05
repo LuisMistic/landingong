@@ -10,7 +10,8 @@ html, body {
   }
   
   h1{
-    color:  rgb(212, 93, 9);;;
+    color:  rgb(212, 93, 9);
+    font-size: 40px;
   }
   .row.uno {
     background-color: rgba(255, 116, 23, 0.23);

@@ -1,0 +1,110 @@
+<div class="row uno colorFondo">
+    <div class="col-12">
+        <h2 class="text-center">Comisión Directiva</h2>
+        <div class="tree">
+            <ul>
+                <li>
+                    <div class="row">
+                        <!-- PRESIDENTA -->
+                        <div class="col-md-2 offset-md-1">
+                            <div class="card" [ngClass]="{'desaparecerPresidenta': shouldDisappear, 'aparecerPresidenta': shouldAppear}">
+                                <i class="fas fa-star"></i> 
+                                <div class="card-body">
+                                    <h5 class="card-title">PRESIDENTA</h5>
+                                    <p class="card-text">PAOLA MAFFEI</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- VICEPRESIDENTE -->
+                        <div class="col-md-2">
+                            <div class="card" [ngClass]="{'desaparecerVicePresidente': shouldDisappear, 'aparecerVicePresidente': shouldAppear}">
+                                <i class="fas fa-star"></i>
+                                <div class="card-body">
+                                    <h5 class="card-title">VICEPRESIDENTE</h5>
+                                    <p class="card-text">MARCELO ZARZA</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- SECRETARIO -->
+                        <div class="col-md-2">
+                            <div class="card" [ngClass]="{'desaparecerSecretario': shouldDisappear, 'aparecerSecretario': shouldAppear}">
+                                <i class="fas fa-pen"></i>
+                                <div class="card-body">
+                                    <h5 class="card-title">SECRETARIO</h5>
+                                    <p class="card-text">MARCELO CELI</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- TESORERA -->
+                        <div class="col-md-2">
+                            <div class="card" [ngClass]="{'desaparecerTesorera': shouldDisappear, 'aparecerTesorera': shouldAppear}">
+                                <i class="fas fa-money-bill"></i>
+                                <div class="card-body">
+                                    <h5 class="card-title">TESORERA</h5>
+                                    <p class="card-text">MARCELA TOMADIN</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- VOCALES -->
+                        <div class="col-md-2">
+                            <div class="card">
+                                <i class="fas fa-users"></i>
+                                <div class="card-body">
+                                    <h5 class="card-title">VOCALES</h5>
+                                    <p class="card-text">DIANA<br />GIUDICE<br />LEANDRO<br />RISEZ</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- VOCALES SUPLENTES -->
+                        <div class="col-md-2">
+                            <div class="card">
+                                <i class="fas fa-users"></i>
+                                <div class="card-body">
+                                    <h5 class="card-title">VOCALES SUPLENTES</h5>
+                                    <p class="card-text">MARCELA<br />CAMPI<br />CESAR<br />ORTIZ</p>
+                                </div>
+                            </div>
+                        </div>
+                       
+                        <!-- ORGANO DE FISCALIZACIÓN -->
+                        <div class="col-md-2">
+                            <div class="card">
+                                <i class="fas fa-gavel"></i>
+                                <div class="card-body">
+                                    <h5 class="card-title">ORGANO DE FISCALIZACIÓN</h5><br />
+                                    <p class="card-text">REVISOR DE CUENTAS: JUAN AVERSENTE</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-12 col-md-1 container"(click)="visionScroll()"[ngClass]="{'botdesaparecer': botonvDesaparecer, 'botAparecer':botonvAparecer}" >
+        <button class="button type1">
+          VOLVER
+        </button>
+      
+        <!-- (click)="toQuienessomos()" routerLink="/quienesomos" role="button" routerLinkActive="active" -->
+    </div>
+      
+</div>
+
+            
+       
+    
+
+
+
+
+
+
+ 
+  
+  
+  
+   
+   
+
+  

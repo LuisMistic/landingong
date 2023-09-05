@@ -14,7 +14,11 @@ h1 {
 
 
 .row.uno {
-  background-color: rgba(180, 174, 141, 0.23);
+  background: #BCF6EF;
+  background: -moz-linear-gradient(-45deg, #BCF6EF 0%, #F7FFEC 21%, #FFDBCE 100%);
+  background: -webkit-linear-gradient(-45deg, #BCF6EF 0%, #F7FFEC 21%, #FFDBCE 100%);
+  background: linear-gradient(135deg, #BCF6EF 0%, #F7FFEC 21%, #FFDBCE 100%);
+
   overflow: hidden;
   padding: 5%;
   width: 100vw; /* 100% del ancho del viewport */

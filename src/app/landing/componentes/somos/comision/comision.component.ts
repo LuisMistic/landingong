@@ -1,13 +1,13 @@
-import { Component, HostListener, ViewEncapsulation } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { PageScrollService } from 'ngx-page-scroll-core';
 
 @Component({
-  selector: 'app-valores',
-  templateUrl: './valores.component.html',
-  styleUrls: ['./valores.component.css'],
-  encapsulation: ViewEncapsulation.Emulated
+  selector: 'app-comision',
+  templateUrl: './comision.component.html',
+  styleUrls: ['./comision.component.css']
 })
-export class ValoresComponent {
+export class ComisionComponent {
+
 
   shouldAppear = false;
   shouldDisappear = false; 
@@ -15,29 +15,31 @@ export class ValoresComponent {
   botonDesaparecer = false;
   botonvDesaparecer = false;
   botonvAparecer = false;
+  colorFondoAparecer = false;
+  colorFondoDesparecer = false;
+
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const scrollPosition = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
     console.log(scrollPosition); // Imprime el valor de scrollPosition en la consola
-    this.botonDesaparecer = scrollPosition > 400;
-    this.botonAparecer = scrollPosition <= 500;
    
-    this.botonvDesaparecer = scrollPosition > 3300;
-    this.botonvAparecer = scrollPosition <= 2400;
    
+    this.botonvDesaparecer = scrollPosition > 4200;
+    this.botonvAparecer = scrollPosition <= 4200;
+   // Controla la aparición y desaparición del color de fondo en la posición del scroll
+      
    
     // Controla la aparición y desaparición basada en la posición del scroll
     
-    if (scrollPosition > 3300) {
-      console.log(scrollPosition);
-
+    if (scrollPosition > 4300) {
+      
       this.shouldDisappear = true;
       this.shouldAppear = false;
-    } else if (scrollPosition <= 3300 && scrollPosition > 2400) {
+    } else if (scrollPosition <= 4300 && scrollPosition > 3400) {
       this.shouldDisappear = false;
       this.shouldAppear = true;
-    } else if (scrollPosition <= 2400) {
+    } else if (scrollPosition <= 3400) {
       this.shouldDisappear = true;
       this.shouldAppear = false;
     }
@@ -46,11 +48,14 @@ export class ValoresComponent {
   
   constructor(private pageScrollService: PageScrollService) { }
 
+
  
-  volverScroll() {
+    visionScroll() {
       this.pageScrollService.scroll({
         document: document,
-        scrollTarget: '#comision',
+        scrollTarget: '#nosotros',
       });
     }
   }
+
+

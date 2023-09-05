@@ -1,0 +1,382 @@
+html { scroll-behavior: auto !important }
+#secc {
+  scroll-margin-top: 50px;
+  width: 100%;
+  height: 100vh;
+}
+
+
+
+
+
+.row.uno {
+  background: #BCF6EF;
+  background: -moz-linear-gradient(-45deg, #BCF6EF 0%, #F7FFEC 21%, #FFDBCE 100%);
+  background: -webkit-linear-gradient(-45deg, #BCF6EF 0%, #F7FFEC 21%, #FFDBCE 100%);
+  background: linear-gradient(135deg, #BCF6EF 0%, #F7FFEC 21%, #FFDBCE 100%);
+
+  overflow: hidden;
+  padding: 5%;
+  width: 100vw; /* 100% del ancho del viewport */
+  height: 100vh; /* 100% de la altura del viewport */
+  align-items: center;
+}
+
+/* Estilos para pantallas pequeñas (menos de 600px de ancho) */
+@media (max-width: 600px) {
+  .row.uno * {
+    font-size: 17px;
+  }
+}
+
+/* Estilos para pantallas medianas (entre 600px y 900px de ancho) */
+@media (min-width: 600px) and (max-width: 900px) {
+  .row.uno  * {
+    font-size: 18px;
+  }
+}
+
+/* Estilos para pantallas grandes (más de 900px de ancho) */
+@media (min-width: 900px) {
+  .row.uno  * {
+    font-size: 24px;
+  }
+}
+
+
+
+
+
+/* animacion card */
+@keyframes aparecerPresidenta {
+  from {
+    opacity: 0;
+    transform: translateX(-600px) rotate(7deg);
+    /* inclinar la imagen 75 grados */
+   
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px) rotate(0deg);
+  
+  }
+}
+.aparecerPresidenta {
+  animation: aparecerPresidenta 1.4s forwards 1;
+}
+
+
+@keyframes desaparecerPresidenta {
+  from {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-600px);
+  }
+}
+
+.desaparecerPresidenta {
+  animation: desaparecerPresidenta 1.3s forwards;
+}
+
+/* animacion card */
+@keyframes aparecerVicePresidente {
+    from {
+      opacity: 0;
+      transform: translateX(-600px) rotate(7deg);
+      /* inclinar la imagen 75 grados */
+     
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px) rotate(0deg);
+    
+    }
+  }
+  .aparecerVicePresidente  {
+    animation: aparecerVicePresidente 1s forwards 1;
+  }
+
+  
+  .aparecerSecretario  {
+    animation: aparecerVicePresidente 0.8s forwards 1;
+  }
+  
+  @keyframes desaparecerVicePresidente  {
+    from {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+
+
+
+
+    to {
+      opacity: 0;
+      transform: translateX(-600px);
+    }
+  }
+  
+  .desaparecerSecretario {
+    animation: desaparecerVicePresidente  1.9s forwards;
+  }
+  .desaparecerVicePresidente  {
+    animation: desaparecerVicePresidente  1.6s forwards;
+  }
+  
+
+
+  /* animacion card */
+@keyframes aparecerTesorera{
+    from {
+      opacity: 0;
+      transform: translateX(600px) rotate(7deg);
+      /* inclinar la imagen 75 grados */
+     
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px) rotate(0deg);
+    
+    }
+  }
+  .aparecerTesorera {
+    animation: aparecerTesorera 0.8s forwards 1;
+  }
+  
+  
+  @keyframes desaparecerTesorera {
+    from {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+    to {
+      opacity: 0;
+      transform: translateX(600px);
+    }
+  }
+  
+  
+
+
+
+  .desaparecerTesorera  {
+    animation: desaparecerVicePresidente  2.s forwards;
+  }
+  
+
+/*boton*/ 
+:root {
+  --color: black;
+  --body-color: #ecf0f1;
+  --color1: #566473;
+  --color2: #16a085;
+  --color3: #435a6b;
+  --color4: red;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: Raleway;
+  background-color: var(--body-color);
+}
+
+.copyright {
+  position: absolute;
+  bottom: 0;
+}
+
+.copyright a {
+  text-decoration: none;
+  color: var(--color2);
+}
+
+.copyright a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+.button {
+  position: relative;
+  padding: 1em 1.5em;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  font-size: 18px;
+  margin: 1em 0.8em;
+}
+
+.type1 {
+  color: var(--color1);
+}
+
+.type1::after,
+.type1::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  border: 2px solid;
+  transition: all 0.6s ease;
+  border-radius: 2px;
+}
+
+.type1::after {
+  bottom: 0;
+  right: 0;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: var(--color1);
+  border-right-color: var(--color1);
+}
+
+.type1::before {
+  top: 0;
+  left: 0;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  border-top-color: var(--color1);
+  border-left-color: var(--color1);
+}
+
+.type1:hover::after,
+.type1:hover::before {
+    width:100%;
+    height:100%;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.botAparecer {
+
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 2s, transform 2s;
+}
+
+
+.botdesaparecer {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: opacity 2s, transform 2s;
+ 
+}
+
+
+
+
+/* Estilo para el árbol genealógico */
+.tree {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tree ul {
+    padding-top: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Espacio entre las filas */
+}
+
+.tree li {
+    list-style-type: none;
+    position: relative;
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.tree li::before,
+.tree li::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 50%;
+}
+
+.tree li::before {
+    border-top: solid #ccc;
+    border-width: thin;
+    width: calc(50% + var(--tree-row-padding, 0px));
+}
+
+.tree li::after {
+    border-left: solid #ccc;
+    border-width: thin;
+    height: calc(20px + var(--tree-row-padding, 0px));
+}
+
+.tree li:last-child::before {
+    width: calc(50% - var(--tree-row-padding, 0px));
+}
+
+.tree li:first-child::before {
+    width: calc(50% + var(--tree-row-padding, 0px));
+}
+
+.tree ul ul::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: calc(50% - var(--tree-row-padding, 0px));
+    border-left: solid #ccc;
+    border-width: thin;
+    height: calc(20px + var(--tree-row-padding, 0px));
+}
+
+/* Estilo para las tarjetas */
+.card {
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+    width: 100%;
+    max-width: 400px; /* Ajusta el valor según sea necesario */
+    margin: 0 auto; /* Centrar las tarjetas */
+}
+
+.card:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.card-title {
+    margin-bottom: 5px;
+}
+
+.card-text {
+    margin: 0; /* Para evitar que se divida en una línea */
+}
