@@ -60,8 +60,37 @@ h1{
 .texto {animation: aparecerTexto 0.9s forwards 1;
 }
 
+/*control color fondo*/
+@keyframes aparecerColorFondo {
+  from {
+    opacity: 0;
+   
+  }
+  to {
+    opacity: 1;
+   
+  }
+}
+.colorFondo {animation: aparecerColorFondo 1.9s forwards 1;
+}
+
+/* Animación para desaparecer */
+@keyframes desaparecerColorFondo {
+  from {
+    opacity: 1;
+    
+  }
+  to {
+    opacity: 0;
+    
+  }
+}
 
 
+/* Aplicar la animación de desaparecer cuando el elemento tiene la clase 'desaparecer' */
+.desaparecerColorFondo  {
+  animation: desaparecerColorFondo 1s forwards;
+}
 /* Animación para desaparecer */
 @keyframes desaparecerTexto {
   from {
@@ -174,7 +203,7 @@ h1{
   to {
     opacity: 1;
     transform: translateX(0px) rotate(7deg);
-    border: 5px solid black;
+  border: 5px solid black;
   }
 }
 .contfoto {
@@ -198,18 +227,7 @@ h1{
 }
 
 /*lina decortaiva*/
-.contfoto {
-  padding-bottom: 0%;
-  margin-bottom: 0%;
-  border: 10px solid rgba(255, 255, 255, 0.1);
-  border-bottom: 11px dashed rgb(28, 110, 164,08%);
-  border-radius: 40px 33px 40px 133px;
-  
-  background-color:rgba(116, 196, 127, 0.3);
-  display: flex; /* crear un contenedor flexible */
-  justify-content: center; /* alinear los elementos hijos en el centro horizontalmente */
-  align-items: center; /* alinear los elementos hijos en el centro verticalmente */
-}
+
 @keyframes aparecerFondo {
   from {
     opacity: 0;

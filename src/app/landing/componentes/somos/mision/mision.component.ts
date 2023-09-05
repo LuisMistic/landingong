@@ -14,17 +14,20 @@ export class MisionComponent {
   botonDesaparecer = false;
   botonvDesaparecer = false;
   botonvAparecer = false;
+  colorFondoAparecer = false;
+  colorFondoDesparecer = false;
+
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const scrollPosition = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
     console.log(scrollPosition); // Imprime el valor de scrollPosition en la consola
-    this.botonDesaparecer = scrollPosition > 400;
-    this.botonAparecer = scrollPosition <= 500;
+   
    
     this.botonvDesaparecer = scrollPosition > 1300;
     this.botonvAparecer = scrollPosition <= 1400;
-   
+   // Controla la aparición y desaparición del color de fondo en la posición del scroll
+      
    
     // Controla la aparición y desaparición basada en la posición del scroll
     

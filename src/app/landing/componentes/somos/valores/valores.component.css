@@ -13,7 +13,7 @@ html, body {
     color:  rgb(212, 93, 9);;;
   }
   .row.uno {
-    background-color: rgba(180, 141, 149, 0.23);
+    background-color: rgba(255, 116, 23, 0.23);
     padding: 5%;
     overflow: hidden;
     
@@ -24,15 +24,15 @@ html, body {
   
   /* Estilos para pantallas pequeñas (menos de 600px de ancho) */
   @media (max-width: 600px) {
-    .img1.lista-profesional * {
-      font-size: 16px;
+    .lista-profesional * {
+      font-size: 18px;
     }
   }
   
   /* Estilos para pantallas medianas (entre 600px y 900px de ancho) */
   @media (min-width: 600px) and (max-width: 900px) {
     .img1.lista-profesional * {
-      font-size: 18px;
+      font-size: 14px;
     }
   }
   
@@ -258,11 +258,8 @@ html, body {
   }
   /*titulos*/
   
-  h1{
-    font-size: 40px;
-    line-height: 1.5;
-  }
   
+ 
   p {
     line-height: 1.5;
     font-family: 'Roboto', sans-serif;
@@ -424,4 +421,34 @@ html, body {
         position: absolute;
         left: 0;
       }
-      
+        /*control color fondo*/
+@keyframes aparecerColorFondo {
+  from {
+    opacity: 0;
+   
+  }
+  to {
+    opacity: 1;
+   
+  }
+}
+.colorFondo {animation: aparecerColorFondo 1.9s forwards 1;
+}
+
+/* Animación para desaparecer */
+@keyframes desaparecerColorFondo {
+  from {
+    opacity: 1;
+    
+  }
+  to {
+    opacity: 0;
+    
+  }
+}
+
+
+/* Aplicar la animación de desaparecer cuando el elemento tiene la clase 'desaparecer' */
+.desaparecerColorFondo  {
+  animation: desaparecerColorFondo 1s forwards;
+}

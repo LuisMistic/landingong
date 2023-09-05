@@ -13,6 +13,8 @@ export class QuienesSomosComponent {
   shouldDisappear = false;
   botonAparecer = false;
   botonDesaparecer = false;
+  colorFondoAparecer = false;
+  colorFondoDesparecer = false;
 
 
   @HostListener('window:scroll', [])
@@ -27,8 +29,9 @@ export class QuienesSomosComponent {
        this.botonDesaparecer = scrollPosition > 400;
        this.botonAparecer = scrollPosition <= 500;
   
-       // Controla la aparición y desaparición del boton vision basada en la posición del scroll
-      
+       // Controla la aparición y desaparición del color de fondo en la posición del scroll
+       this.colorFondoDesparecer = scrollPosition > 400;
+       this.colorFondoAparecer = scrollPosition <= 200;
     
        
     

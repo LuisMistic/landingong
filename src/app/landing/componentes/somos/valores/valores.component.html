@@ -1,10 +1,10 @@
 
-<div class="row uno">
+<div class="row uno colorFondo" [ngClass]="{'desaparecerColorFondo': shouldDisappear, 'aparecerColorFondo ': shouldAppear}">
     <div class="col-12 col-md-4">
         <!-- Texto sobre nosotros -->
         <div class="texto" [ngClass]="{'desaparecerTexto': shouldDisappear, 'aparecerTexto': shouldAppear}">
             <h1 id="sobre"[ngClass]="{'desaparecerTexto': shouldDisappear, 'aparecerTexto': shouldAppear}"> VALORES</h1>
-            <ul class="lista-profesional">
+            <ul class="les lista-profesional">
                 <P>
                 <li>Respeto por el interés superior de en el cumplimiento de todos sus derechos.</li>
                 <li>Profesionalismo y calidad en la implementación de nuestras acciones.</li>
@@ -15,13 +15,13 @@
               
         </div>
     </div>
-    <div class="col-12 col-md-4" >
+    <div class="col-12 col-md-5" >
         <!-- Imagen con bordes redondeados -->
         <div class="contfoto"[ngClass]="{'desaparecerFondo': shouldDisappear, 'aparecerFondo': shouldAppear}" >
-          <img src="../../../../../assets/quienesSomos/vision.jpg" alt="Imagen de la asociación" class="img-fluid img1" [ngClass]="{'desaparecer': shouldDisappear, 'aparecer': shouldAppear}">
+          <img src="../../../../../assets/quienesSomos/valores.jpg" alt="Imagen de la asociación" class="img-fluid img1" [ngClass]="{'desaparecer': shouldDisappear, 'aparecer': shouldAppear}">
         </div>
         </div>
-    <div class="col-12 col-md-4">
+    <div class="col-12 col-md-3">
     <div class="texto1" [ngClass]="{'desaparecerTexto1': shouldDisappear, 'aparecerTexto1': shouldAppear}">
         <ul class="lista-profesional">
             <p> <li>Trabajo coordinado con las Instituciones de gestión pública y privada que comparten nuestra visión.</li>
@@ -30,7 +30,7 @@
         </div>
     </div>
        
-      <div class="col-12 col-md-12 container "(click)="volverScroll()"[ngClass]="{'botdesaparecer': botonvDesaparecer, 'botAparecer':botonvAparecer}" >
+      <div class="col-12 col-md-1 container "(click)="volverScroll()"[ngClass]="{'botdesaparecer': botonvDesaparecer, 'botAparecer':botonvAparecer}" >
         <button class="button type1">
          VOLVER
         </button>

@@ -1,6 +1,6 @@
 
 
-<div class="row uno"  data-spy="scroll" data-target=".navbar" data-offset="50">
+<div class="row uno colorFondo" [ngClass]="{'desaparecerColorFondo': shouldDisappear, 'aparecerColorFondo ': shouldAppear}" >
     <div class="col-12 col-md-6">
         <!-- Texto sobre nosotros -->
         <div class="texto" [ngClass]="{'desaparecerTextoMision':shouldDisappear, 'aparecerTextoMision': shouldAppear }">

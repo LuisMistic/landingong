@@ -1,5 +1,5 @@
 
-<div class="row uno" >
+<div class="row uno colorFondo" [ngClass]="{'desaparecerColorFondo': shouldDisappear, 'aparecerColorFondo ': shouldAppear}">
   <div class="col-12 col-md-4">
       <!-- Texto sobre nosotros -->
       <div class="texto" [ngClass]="{'desaparecerTexto': shouldDisappear, 'aparecerTexto': shouldAppear}">

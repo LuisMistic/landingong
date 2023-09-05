@@ -1,5 +1,5 @@
 
-<div class="row uno">
+<div class="row uno colorFondo" id="nosotros" [ngClass]="{'desaparecerColorFondo': colorFondoDesparecer, 'aparecerColorFondo ': colorFondoAparecer}">
   <div class="col-12 col-md-4" >
       <!-- Texto sobre nosotros -->
       <div class="texto" [ngClass]="{'desaparecerTexto': shouldDisappear, 'aparecerTexto': shouldAppear}">
@@ -10,7 +10,7 @@
   <div class="col-12 col-md-5" >
       <!-- Imagen con bordes redondeados -->
       <div class="contfoto"[ngClass]="{'desaparecerFondo': shouldDisappear, 'aparecerFondo': shouldAppear}" >
-        <img src="../../../../../assets/quienesSomos/nosotros.JPG" alt="Imagen de la asociación" class="img-fluid img1" [ngClass]="{'desaparecer': shouldDisappear, 'aparecer': shouldAppear}">
+        <img src="../../../../assets/quienesSomos/nosotros.JPG" alt="Imagen de la asociación" class="img-fluid img1" [ngClass]="{'desaparecer': shouldDisappear, 'aparecer': shouldAppear}">
       </div>
       </div>
   <div class="col-12 col-md-3">
@@ -39,3 +39,10 @@
 <section class="dos misions" id="vision">
   <app-vision></app-vision>
 </section>
+
+
+<section class="dos misions" id="valores">
+  <app-valores></app-valores>
+</section>
+
+

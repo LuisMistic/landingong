@@ -28,12 +28,13 @@ import { ScrollToDirective } from './scroll-to.directive';
 import { ScrollToService } from './scroll-to.service';
 import { MatDialogModule } from '@angular/material/dialog';
 import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
+import { ValoresComponent } from './landing/componentes/somos/valores/valores.component';
 
 
 
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, BotonDePagoComponent, NavbarComponent, BannerComponent, QuienesSomosComponent, DonarComponent, SidebarComponent, DashboardComponent, NuestraHistoriaComponent, MisionComponent,  VisionComponent, ScrollToDirective,   
+  declarations: [AppComponent, HomeComponent, BotonDePagoComponent, NavbarComponent, BannerComponent, QuienesSomosComponent, DonarComponent, SidebarComponent, DashboardComponent, NuestraHistoriaComponent, MisionComponent,  VisionComponent, ScrollToDirective, ValoresComponent,   
    ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, BrowserAnimationsModule, FontAwesomeModule, NgxPageScrollModule, MatDialogModule, NgxPageScrollCoreModule],
   providers: [HTMLElement, ScrollToService],
