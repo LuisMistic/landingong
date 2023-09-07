@@ -20,7 +20,7 @@ export class NavbarComponent implements OnInit {
   faBars = faBars;
   faPerson = faPerson
   faUsers = faUsers
-
+  isNavbarHidden = false;
   
   loadQuienesSomos() {
     this.sharedServiceService.currentComponent = 'quienesSomos';
@@ -57,9 +57,11 @@ export class NavbarComponent implements OnInit {
 
   // Agregar función para controlar la apertura y cierre del submenú
   toggleSubMenu() {
+    console.log('toggleSubMenu() se ejecutó.')
     this.isCollapsed = !this.isCollapsed;
+    
   }
-
+ 
   
   // Puedes agregar más métodos para cargar otros componentes según necesites
 }

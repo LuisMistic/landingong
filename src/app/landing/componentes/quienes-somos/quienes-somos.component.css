@@ -1,3 +1,17 @@
+* {
+  max-width: 100%;
+  height: auto;
+}
+
+.row {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+.section {
+  scroll-snap-align: start;
+}
+
 
 html, body { 
   scroll-behavior: smooth

@@ -1,3 +1,8 @@
+* {
+  max-width: 100%;
+  height: auto;
+}
+
 html { scroll-behavior: auto !important }
 #secc {
   scroll-margin-top: 50px;

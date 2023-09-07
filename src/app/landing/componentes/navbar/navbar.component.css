@@ -1,4 +1,7 @@
 .navbar {
+  position: fixed;
+ 
+  left: 0;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -8,7 +11,7 @@
 /* Estilos para el navbar en orientación horizontal */
 @media screen and (min-width: 768px) {
   nav.navbar {
-   
+  
     top: 0;
     z-index: 1000;
     width: 100%;
@@ -20,13 +23,12 @@
     position: absolute;
     z-index: 1001;
     /* Ajusta el top y left según sea necesario para que el submenu esté debajo del navbar */
-    top: 100%;
-    left: 0;
+    top: 170%;
+    left: 10;
     /* Ajusta el valor de width según tus necesidades */
     width: 200px;
   }
 }
-
 
 
 /* CSS */
@@ -35,7 +37,7 @@
   font-family: 'PT Sans', sans-serif;
   font-weight: 700;
   /* Ajusta el valor para obtener la apariencia deseada */
-  padding: 0;
+ 
   transition: all 0.2s;
   font-size: 18px !important;
   /* Color del texto */
@@ -45,10 +47,12 @@
   /* Quitar borde */
   border: none;
   /* Espacio entre el texto y el borde */
-  padding: 0px;
+  padding: 5px;
   /* Transición suave de 0.3 segundos */
   transition: 0.3s;
 }
+
+ 
 
 .casilla {
   font-size: 3rem;
@@ -139,9 +143,7 @@
 
 }
 
-
 /* boton adaptativo a formatos mas chicos*/
-
 
 .navbar {
   backdrop-filter: blur(40px);
@@ -150,10 +152,7 @@
   /* Prefijo para navegadores webkit */
   opacity: 0.9;
   /* Reducir la opacidad del navbar */
- 
 }
-
-
 
 
 /* Estilo para el ícono cuando se pasa el cursor por encima */
@@ -187,24 +186,45 @@
 }
 
 /*submenu distancia entre botones */
-.dropdown-menu {
-  border: 20px solid ;
-  margin-top: 0rem;
-  border: none;
-  background-color: rgb(255, 255, 255, 40%);
-  box-shadow:
-  100px 80px 5px rgba(185, 183, 183, 80.3),
-
-  /* Reducir la opacidad del navbar */
+@media (min-width: 992px) {
   
+  .dropdown-menu {
+    box-shadow:
+      1px 8.8px 4.6px -19px rgba(0, 0, 0, 0.156),
+      2.3px 20.5px 11.5px -19px rgba(0, 0, 0, 0.15),
+      4.7px 42.9px 21.9px -19px rgba(0, 0, 0, 0.146),
+      9.1px 82.3px 38.5px -19px rgba(0, 0, 0, 0.157),
+      13.4px 122px 67.7px -19px rgba(0, 0, 0, 0.186),
+      17.4px 157.8px 131.6px -19px rgba(0, 0, 0, 0.236),
+      21px 191px 363px -19px rgba(0, 0, 0, 0.31);
+    
+    /* Otros estilos */
+    background-color: rgba(104, 104, 8, 0.13);
+    backdrop-filter: blur(70px);
+    /* ... */
+   }
 }
 
+/* Estilos para pantallas pequeñas */
+@media (max-width: 991px) {
+   .dropdown-menu {
+     box-shadow:
+       /* Valores más suaves para el sombreado */
+       /* ... */
+  6px 32px 15px -19px rgba(0, 0, 0, 0.1)
+  ;;
+     backdrop-filter: blur(30px); /* Desenfoque más sutil */
+     /* Otros estilos */
+     /* ... */
+     background-color: rgba(104, 104, 8, 0.13);
+   }
+}
 
 /* velocidad de desplazmiento submenu*/
 .sub {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease-out;
+  transition: max-height 0.5s ease-out;
   visibility: hidden;
 
 }
@@ -217,12 +237,11 @@
 
 }
 
-#lineaSub { height: 4px; /* Ajusta el grosor de la línea según tus necesidades */ 
-  background-image: linear-gradient(to right, rgb(0, 0, 0, 0.1), transparent); /* Imagen degradada de dorado a transparente */
+#lineaSub { height: 6px; /* Ajusta el grosor de la línea según tus necesidades */ 
+  background-image: linear-gradient(to right, rgba(243, 238, 238, 9.8), transparent); /* Imagen degradada de dorado a transparente */
    background-position: 3 center left; /* Alinea el degradado a la izquierda */
     background-repeat: repeat-x; /* Repite el degradado horizontalmente */
-     margin-top: 15px; 
-
+    margin-top: 15px; 
   }
 
 button.navbar-nav {
@@ -231,7 +250,6 @@ button.navbar-nav {
   justify-content: center;
   /* Ajusta la alineación horizontal */
 }
-
 
 
 
@@ -270,6 +288,65 @@ button.navbar-nav {
   color: rgb(35, 35, 34); /* Cambia el color a dorado */
   margin-top: -10px; /* Ajusta el margen superior según tu preferencia */
 }
+
+/*animacion boton */
+@keyframes slideInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-10%);
+    margin-left: 36px;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    margin-left: 36px;
+  }
+}
+
+/* Aplica la animación a los elementos de menú */
+.dropdown-menu ,
+.nav1,
+.nav2,
+.nav3 {
+  animation: slideInFromTop 0.7s forwards 1;
+}
+
+/* Duración de la animación para pantallas grandes */
+@media (min-width: 992px) {
+ 
+  .nav1 {
+    animation-duration: 0.5s;
+  }
+  .nav2 {
+    animation-duration: 0.7s;
+  }
+  .nav3 {
+    animation-duration: 0.9s;
+  }
+}
+
+/* Duración de la animación para pantallas pequeñas */
+@media (max-width: 991px) {
+
+ 
+  .nav1 {
+    animation-duration: 1.3s;
+  }
+  .nav2 {
+    animation-duration: 1.6s;
+  }
+  .nav3 {
+    animation-duration: 1.8s;
+  }
+}
+
+.nav1,
+.nav2,
+.nav3 {
+  animation: slideInFromTop 1s forwards 1;
+  animation-fill-mode: forwards;
+}
+
 
 
 /*boton donar*/
@@ -381,3 +458,5 @@ font-weight: bolder;
   align-items: center;
   padding-bottom: 0;
 }
+
+

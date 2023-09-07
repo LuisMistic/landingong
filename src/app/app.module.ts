@@ -30,12 +30,13 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 import { ValoresComponent } from './landing/componentes/somos/valores/valores.component';
 import { ComisionComponent } from './landing/componentes/somos/comision/comision.component';
+import { BotonFlotanteComponent } from './landing/componentes/boton-flotante/boton-flotante.component';
 
 
 
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, BotonDePagoComponent, NavbarComponent, BannerComponent, QuienesSomosComponent, DonarComponent, SidebarComponent, DashboardComponent, NuestraHistoriaComponent, MisionComponent,  VisionComponent, ScrollToDirective, ValoresComponent, ComisionComponent,   
+  declarations: [AppComponent, HomeComponent, BotonDePagoComponent, NavbarComponent, BannerComponent, QuienesSomosComponent, DonarComponent, SidebarComponent, DashboardComponent, NuestraHistoriaComponent, MisionComponent,  VisionComponent, ScrollToDirective, ValoresComponent, ComisionComponent, BotonFlotanteComponent,   
    ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, BrowserAnimationsModule, FontAwesomeModule, NgxPageScrollModule, MatDialogModule, NgxPageScrollCoreModule],
   providers: [HTMLElement, ScrollToService],

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg"  >
+<nav class="navbar navbar-expand-lg " style=" position: sticky">
     <div class="container-fluid estilo">
         <a class="navbar-brand" href="#">
             <img src="../../../../assets/imagen/logo.png" alt="Logo de la ONG" class="logo-img">
@@ -16,23 +16,25 @@
 
                 <li class="nav-item dropdown ">
                     <button class="nav-link full-width-btn w-100" id="navbarDropdown1" data-bs-toggle="dropdown"
-                        data-bs-submenu aria-expanded="false" >
+                        data-bs-submenu aria-expanded="false">
                         <fa-icon [icon]="['fas', 'house']" id="icon-house"></fa-icon> <span>QUIENES SOMOS</span>
                     </button>
                     <div class="line-divider  d-md-none"></div>
                     <ul class="dropdown-menu sub nav-link" [ngClass]="{ collapse: isCollapsed }"
-                    aria-labelledby="navbarDropdown1" id="submenu">
+                        aria-labelledby="navbarDropdown1" id="submenu">
 
-                    <li><button class="nav-link" id="navbarDropdown1" data-bs-toggle="dropdown" data-bs-submenu
-                            aria-expanded="false"(click)="loadQuienesSomos(); isCollapsed = !isCollapsed">Sobre Nosotros</button></li>
-                    <div id="lineaSub"></div>
-                    <li><button class="nav-link" id="navbarDropdown1" data-bs-toggle="dropdown" data-bs-submenu
-                            aria-expanded="false" (click)="loadNuestraHistoria(); isCollapsed = !isCollapsed">Nuestra Historia</button>
-                    </li>
-                    <div id="lineaSub"></div>
-                    <li><button class="nav-link" id="navbarDropdown1" data-bs-toggle="dropdown" data-bs-submenu
-                            aria-expanded="false">item 3</button></li>
-                </ul>
+                        <li><button class="nav-link nav1" id="navbarDropdown1" data-bs-toggle="dropdown" data-bs-submenu
+                                aria-expanded="false" (click)="loadQuienesSomos(); isCollapsed = !isCollapsed">Sobre
+                                Nosotros</button></li>
+                        <div id="lineaSub"></div>
+                        <li><button class="nav-link nav2" id="myButton" id="navbarDropdown1" data-bs-toggle="dropdown"
+                                data-bs-submenu aria-expanded="false"
+                                (click)="loadNuestraHistoria(); isCollapsed = !isCollapsed">Nuestra Historia</button>
+                        </li>
+                        <div id="lineaSub"></div>
+                        <li><button class="nav-link nav3" id="navbarDropdown1" data-bs-toggle="dropdown" data-bs-submenu
+                                aria-expanded="false">item 3</button></li>
+                    </ul>
 
                 </li>
 
@@ -46,14 +48,14 @@
                     <ul class="dropdown-menu sub nav-link" [ngClass]="{ collapse: isCollapsed }"
                         aria-labelledby="navbarDropdown1" id="submenu">
 
-                        <li><button class="nav-link" id="navbarDropdown1" data-bs-toggle="dropdown" data-bs-submenu
+                        <li><button class="nav-link full-width-btn w-100 nav1" id="navbarDropdown1" data-bs-toggle="dropdown" data-bs-submenu
                                 aria-expanded="false">item 1</button></li>
                         <div id="lineaSub"></div>
-                        <li><button class="nav-link" id="navbarDropdown1" data-bs-toggle="dropdown" data-bs-submenu
+                        <li><button class="nav-link nav2" id="navbarDropdown1" data-bs-toggle="dropdown" data-bs-submenu
                                 aria-expanded="false" (click)="loadDonar(); isCollapsed = !isCollapsed">item 2</button>
                         </li>
                         <div id="lineaSub"></div>
-                        <li><button class="nav-link" id="navbarDropdown1" data-bs-toggle="dropdown" data-bs-submenu
+                        <li><button class="nav-link nav3" id="navbarDropdown1" data-bs-toggle="dropdown" data-bs-submenu
                                 aria-expanded="false">item 3</button></li>
                     </ul>
 
@@ -69,14 +71,14 @@
                     <div class="line-divider  d-md-none"></div>
                     <ul class="dropdown-menu sub nav-link" [ngClass]="{ collapse: isCollapsed }"
                         aria-labelledby="navbarDropdown2" id="submenu">
-                        <li><button class="nav-link" id="navbarDropdown1" data-bs-toggle="dropdown" data-bs-submenu
+                        <li><button class="nav-link nav3" id="navbarDropdown1" data-bs-toggle="dropdown" data-bs-submenu
                                 aria-expanded="false"
                                 (click)="loadQuienesSomos(); isCollapsed = !isCollapsed">Noticias</button></li>
                         <div id="lineaSub"></div>
-                        <li><button class="nav-link" id="navbarDropdown1" data-bs-toggle="dropdown" data-bs-submenu
+                        <li><button class="nav-link nav1" id="navbarDropdown1" data-bs-toggle="dropdown" data-bs-submenu
                                 aria-expanded="false">Participar</button></li>
                         <div id="lineaSub"></div>
-                        <li><button class="nav-link" id="navbarDropdown1" data-bs-toggle="dropdown" data-bs-submenu
+                        <li><button class="nav-link nav2" id="navbarDropdown1" data-bs-toggle="dropdown" data-bs-submenu
                                 aria-expanded="false" (click)="loadQuienesSomos(); isCollapsed = !isCollapsed">item
                                 2</button></li>
                         <div id="lineaSub"></div>
@@ -93,7 +95,9 @@
                 <div class="line-divider  d-md-none "></div>
             </ul>
             <form class="d-flex ml-auto">
-                <button class="donacion" (click)="loadDonar(); isCollapsed = !isCollapsed"><p id="estilob">DONAR AQUÍ</p></button>
+                <button class="donacion" (click)="loadDonar(); isCollapsed = !isCollapsed">
+                    <p id="estilob">DONAR AQUÍ</p>
+                </button>
             </form>
         </div>
     </div>

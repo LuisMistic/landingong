@@ -50,12 +50,12 @@ export class ComisionComponent {
   valoresScroll() {
     this.pageScrollService.scroll({
       document: document,
-      scrollTarget: '#va',
+      scrollTarget: '#valores',
     });
   }
 
  
-    visionScroll() {
+    nosotrosScroll() {
       this.pageScrollService.scroll({
         document: document,
         scrollTarget: '#nosotros',
