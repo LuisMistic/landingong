@@ -19,11 +19,50 @@
 .boton-flotante1 {
   position: fixed;
   bottom: 20px; /* Ajusta la posición inferior según tus necesidades */
-  left: 57%; /* Centrado horizontalmente */
+  left: 50%; /* Centrado horizontalmente */
   transform: translateX(-50%); /* Centrado horizontalmente */
   background-color: rgba(0, 0, 0, .7); /* Fondo semi transparente */
   color: white;
   padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.boton-flotante.hide {
+  opacity: 0; /* Oculta el botón */
+  visibility: hidden; /* Oculta el botón */
+}
+
+
+
+.boton-flotante2 {
+  position: fixed;
+  bottom: 20px; /* Ajusta la posición inferior según tus necesidades */
+  left: 90%; /* Centrado horizontalmente */
+  transform: translateX(-50%); /* Centrado horizontalmente */
+  background-color: rgba(0, 0, 0, .7); /* Fondo semi transparente */
+  color: white;
+  padding: 10px 20px;.boton-flotante1 {
+    position: fixed;
+    bottom: 20px; /* Ajusta la posición inferior según tus necesidades */
+    left: 57%; /* Centrado horizontalmente */
+    transform: translateX(-50%); /* Centrado horizontalmente */
+    background-color: rgba(0, 0, 0, .7); /* Fondo semi transparente */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: opacity 0.3s, visibility 0.3s;
+  }
+  
+  .boton-flotante.hide {
+    opacity: 0; /* Oculta el botón */
+    visibility: hidden; /* Oculta el botón */
+  }
+  
   border: none;
   border-radius: 5px;
   cursor: pointer;

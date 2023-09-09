@@ -1,20 +1,24 @@
-import { Component, HostListener, ViewEncapsulation } from '@angular/core';
+import { Component, HostListener, OnInit, ViewEncapsulation } from '@angular/core';
 import { PageScrollService } from 'ngx-page-scroll-core';
-
+import SmoothScroll from 'smooth-scroll';
 @Component({
   selector: 'app-valores',
   templateUrl: './valores.component.html',
   styleUrls: ['./valores.component.css'],
   encapsulation: ViewEncapsulation.Emulated
 })
-export class ValoresComponent {
+
+export class ValoresComponent implements OnInit {
 
   shouldAppear = false;
-  shouldDisappear = false; 
+  shouldDisappear = false;
   botonAparecer = false;
   botonDesaparecer = false;
   botonvDesaparecer = false;
   botonvAparecer = false;
+  element: any;
+  scroll: any;
+
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
@@ -22,13 +26,13 @@ export class ValoresComponent {
     console.log(scrollPosition); // Imprime el valor de scrollPosition en la consola
     this.botonDesaparecer = scrollPosition > 400;
     this.botonAparecer = scrollPosition <= 500;
-   
+
     this.botonvDesaparecer = scrollPosition > 3300;
     this.botonvAparecer = scrollPosition <= 2400;
-   
-   
+
+
     // Controla la aparición y desaparición basada en la posición del scroll
-    
+
     if (scrollPosition > 3300) {
       console.log(scrollPosition);
 
@@ -41,27 +45,41 @@ export class ValoresComponent {
       this.shouldDisappear = true;
       this.shouldAppear = false;
     }
-    
+
   }
-  
+
   constructor(private pageScrollService: PageScrollService) { }
 
-  visionScroll() {
-    this.pageScrollService.scroll({
-      document: document,
-      scrollTarget: '#vision',
+
+  ngAfterViewInit(): void {
+    this.scroll = new SmoothScroll('a[href*="#"]', {
+      speed: 900,
+
     });
+
+
   }
- comisionScroll() {
-      this.pageScrollService.scroll({
-        document: document,
-        scrollTarget: '#comision',
-      });
-    }
-    nosotrosScroll() {
-      this.pageScrollService.scroll({
-        document: document,
-        scrollTarget: '#nosotros',
-      });
+
+  ngOnInit() {
+    
+  }
+  scrollToElement(elementId: string): void {
+    const element = document.querySelector(`#${elementId}`);
+
+    if (element) {
+      if (window.matchMedia("(min-width: 768px)").matches) {
+        // El ancho del viewport es al menos de 768 píxeles, por lo que no es un dispositivo móvil
+        this.pageScrollService.scroll({
+          document: document,
+          scrollTarget: `#${elementId}`,
+          speed: 900,
+        });
+      } else {
+        // El ancho del viewport es menor o igual a 767 píxeles, por lo que es un dispositivo móvil
+        this.scroll.animateScroll(element, {
+          speed: 900,
+        });
+      }
     }
   }
+}

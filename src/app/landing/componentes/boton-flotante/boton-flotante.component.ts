@@ -1,47 +1,29 @@
-import { Component, HostListener } from '@angular/core';
-import { ViewportScroller } from '@angular/common';
-import { PageScrollService } from 'ngx-page-scroll-core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-boton-flotante',
   templateUrl: './boton-flotante.component.html',
   styleUrls: ['./boton-flotante.component.css']
 })
-export class BotonFlotanteComponent {
+export class BotonFlotanteComponent implements OnInit {
 
   mostrarBoton = false;
+  element: any;
 
-  constructor(private viewportScroller: ViewportScroller, private pageScrollService: PageScrollService) { }  
+  constructor() { }
 
-  
+  ngOnInit() {
+    // Obtener el elemento al que queremos desplazarnos
+    this.element = document.querySelector('#nosotros');
+  }
+
+  // Adaptar el código de scrollToElement()
   scrollToElement() {
-    this.viewportScroller.scrollToAnchor('nosotros');
-  }
-  
-
-  nosotrosScroll() {
-    this.pageScrollService.scroll({
-      document: document,
-      scrollTarget: '#nosotros',
-    });
-  }
-
-  
-  dosMetodosScroll() {
-    // Primero, intentamos usar el método de scroll suave
-    if (this.pageScrollService.scroll) {
-      this.pageScrollService.scroll({
-        document: document,
-        scrollTarget: '#nosotros',
+    // Desplazarse al elemento
+    if (this.element && this.element.getBoundingClientRect()) {
+      this.element.scrollIntoView({
+        behavior: 'smooth'
       });
-    } else {
-      // Si no está disponible, hacemos un desplazamiento simple
-      const element = document.querySelector('#nosotros');
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
     }
   }
 }
-
-  

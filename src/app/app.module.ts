@@ -34,7 +34,6 @@ import { BotonFlotanteComponent } from './landing/componentes/boton-flotante/bot
 
 
 
-
 @NgModule({
   declarations: [AppComponent, HomeComponent, BotonDePagoComponent, NavbarComponent, BannerComponent, QuienesSomosComponent, DonarComponent, SidebarComponent, DashboardComponent, NuestraHistoriaComponent, MisionComponent,  VisionComponent, ScrollToDirective, ValoresComponent, ComisionComponent, BotonFlotanteComponent,   
    ],
