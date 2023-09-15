@@ -1,0 +1,115 @@
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+h3 {
+    text-align: center;
+    font-size: 30px;
+    line-height: 1.5;
+    
+}
+
+.card {
+    border: radius 5px;
+    width: 10 rem;
+    opacity: 0; 
+    margin: 10.5rem;
+    box-shadow:
+        0 0 10px rgba(0, 0, 0, 0.3), /* Sombra sólida */
+        0 0 20px rgba(0, 0, 0, 0.2), /* Sombra adicional */
+        0 0 30px rgba(0, 0, 0, 0.1); /* Sombra adicional */
+    -webkit-animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-top 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@keyframes card {
+    from {
+      opacity: 0;
+      transform: translateX(-600px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+  .card {animation: card 0.9s forwards 1;
+  }
+  
+
+
+
+  
+.card-body {
+    padding: 1.25rem;
+    background-color:hsla(0,100%,50%,0.16);
+background-image:
+radial-gradient(at 40% 20%, hsla(28,100%,74%,1) 0px, transparent 50%),
+radial-gradient(at 96% 10%, hsla(33,100%,52%,0.27) 0px, transparent 50%),
+radial-gradient(at 81% 49%, hsla(339,100%,95%,0.24) 0px, transparent 50%),
+radial-gradient(at 0% 100%, hsla(22,100%,77%,1) 0px, transparent 50%),
+radial-gradient(at 80% 100%, hsla(240,100%,70%,0.48) 0px, transparent 50%),
+radial-gradient(at 0% 0%, hsla(336,100%,82%,0.39) 0px, transparent 50%);
+
+}
+
+.card-title {
+    text-align: center;
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.btn {
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.375rem 0.75rem;
+    border: none;
+    border-radius: 0.25rem;
+    background-color: transparent;
+    color: #212529;
+}
+
+.btn:hover {
+    text-decoration: none;
+}
+
+.fab {
+    font-size: 1.5rem;
+}
+
+/* Estilos para los íconos */
+.btn-icon {
+    font-size: 24px; /* Tamaño del ícono */
+    margin: 0 10px; /* Espacio entre los íconos (ajusta según tus preferencias) */
+    color: #000000; /* Color negro para todos los íconos */
+    transition: transform 0.2s ease, color 0.2s ease; /* Transiciones para transformación y color */
+  }
+  
+  
+  /* Efecto de iluminación al pasar el cursor */
+  .btn-icon:hover {
+    transform: scale(1.2); /* Hace que el ícono sea un poco más grande al pasar el cursor */
+    color: #f2eeee; /* Cambia el color del ícono al pasar el cursor (ajusta según tus preferencias) */
+  }
+  .custom-button {
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+    padding: 10px 20px; /* Añade relleno al botón */
+    border: none; /* Quita el borde del botón */
+    background-color: transparent; /* Fondo transparente */
+    color: #212529; /* Color del texto */
+    font-weight: bold; /* Texto en negrita */
+    transition: transform 0.3s ease, color 0.3s ease; /* Transiciones para efectos */
+  
+    /* Estilos para el efecto de iluminación al pasar el cursor */
+    &:hover {
+      /* Hace que el botón sea un poco más grande al pasar el cursor */
+      color: #f2eeee; /* Cambia el color del texto al pasar el cursor (ajusta según tus preferencias) */
+    }
+  }
+  
