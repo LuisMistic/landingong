@@ -24,33 +24,139 @@ h1 {
   background: -moz-linear-gradient(-45deg, #BCF6EF 0%, #F7FFEC 21%, #FFDBCE 100%);
   background: -webkit-linear-gradient(-45deg, #BCF6EF 0%, #F7FFEC 21%, #FFDBCE 100%);
   background: linear-gradient(135deg, #BCF6EF 0%, #F7FFEC 21%, #FFDBCE 100%);
-
   overflow: hidden;
-  padding: 5%;
+  padding: 15%;
   width: 100vw; /* 100% del ancho del viewport */
   height: 100vh; /* 100% de la altura del viewport */
   align-items: center;
 }
 
+
 /* Estilos para pantallas pequeñas (menos de 600px de ancho) */
 @media (max-width: 600px) {
   .img2 * {
-    font-size: 17px;
+    font-size: 50px;
   }
+  .row{
+    padding-top: 100px !important;
+    padding-left: 1px !important;
+    padding-right: 1px !important;
+    padding-bottom: 50px !important;
+   
+  }
+  .button {
+    position: relative;
+    padding: 5px 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    font-size: 18px;
+    margin: 1em 0.8em;
+  }
+  .p1{
+    font-size: 25px !important;
+  }
+
+  p {
+    padding-top: 8px !important;
+    line-height: 1.5;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .container.type1{
+    margin-bottom: 10px !important;
+  }
+
 }
+  
 
 /* Estilos para pantallas medianas (entre 600px y 900px de ancho) */
 @media (min-width: 600px) and (max-width: 900px) {
   .img2 * {
     font-size: 18px;
   }
+  .row{
+    padding-top: 100px !important;
+    padding-left: 1px !important;
+    padding-right: 1px !important;
+    padding-bottom: 50px !important;
+   
+  }
+
+  .button {
+    text-align: center;
+    position: relative;
+    padding: 10px 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    font-size: 18px;
+    margin: 2em 2.8em;
+  }
+
+  .p1{
+    font-size: 28px !important;
+  }
+
+  p {
+    line-height: 1.5;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    
+  }
 }
+
 
 /* Estilos para pantallas grandes (más de 900px de ancho) */
 @media (min-width: 900px) {
   .img2 * {
+ 
     font-size: 24px;
   }
+
+  .row{
+ 
+    padding-top: 120px !important;
+    padding-left: 35px !important;
+    padding-right: 1px !important;
+    padding-bottom: 50px !important;
+   
+  }
+
+  .button {
+
+    position: relative;
+    padding: 15px 15px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    font-size: 18px;
+   
+  
+  }
+
+
+
+
+  .p1{
+    text-align: center;
+    font-size: 35px !important;
+  }
+ p.a{padding: 40px;}
+  
+  p {
+   
+    padding-bottom: 50px;
+    line-height: 1.5;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+  }
+  
 }
 .texto {
   margin:20
@@ -184,14 +290,9 @@ h1 {
   background-color: #0056b3;
 }
 
-p {
-  font-size: 30px;
-}
 
-p {
-  line-height: 1.5;
-  font-family: 'Roboto', sans-serif;
-}
+
+
 H1{
 font-size: 40px;
 line-height: 1.5;
@@ -220,16 +321,10 @@ line-height: 1.5;
   /* alinear los elementos hijos en el centro verticalmente */
 }
 
-.img2 {
 
 
-  border-radius: 50px !important;
-  box-shadow: 3px 3px 10px 2px rgba(0,0,0,0.5);
-
-  width: 600px;
-  height: auto;
   
-}
+
 
 /*boton*/ 
 :root {
@@ -389,4 +484,57 @@ body {
   color: hwb(0 0% 100%); /* Color de texto personalizado */
   /* Otros estilos personalizados */
   background-color: rgb(0, 0, 0,2%);
+}
+
+
+/* Animación para aparecer con rotación en dispositivos medianos (4 grados) */
+@keyframes aparecer-rotacion-mediana {
+  from {
+    opacity: 0;
+    transform: translateX(600px) rotate(0deg);
+    border: 5px solid black;
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px) rotate(2deg);
+    border: 5px solid black;
+  }
+}
+
+/* Animación para aparecer con rotación en dispositivos móviles (1 grado) */
+@keyframes aparecer-rotacion-movil {
+  from {
+    opacity: 0;
+    transform: translateX(600px) rotate(0deg);
+    border: 5px solid black;
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px) rotate(1deg);
+    border: 5px solid black;
+  }
+}
+
+/* Aplicar la animación a elementos con clase .img1 */
+.img2 {
+  border: black 5px  solid;
+  animation: aparecer 1s forwards 1;
+  border-radius: 40px !important;
+  box-shadow: 3px 3px 10px 2px rgba(0, 0, 0, 0.5);
+  width: 600px;
+  height: auto;
+}
+
+/* Modificar la rotación en dispositivos medianos */
+@media (min-width: 577px) and (max-width: 992px) {
+  .img2 {
+    animation-name: aparecer-rotacion-mediana;
+  }
+}
+
+/* Modificar la rotación en dispositivos móviles */
+@media (max-width: 576px) {
+  .img2 {
+    animation-name: aparecer-rotacion-movil;
+  }
 }

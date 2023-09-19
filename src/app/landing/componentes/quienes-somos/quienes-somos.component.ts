@@ -26,8 +26,7 @@ export class QuienesSomosComponent {
     this.shouldAppear = scrollPosition <= 200;
        // Controla la aparición y desaparición del boton basada en la posición del scroll
       
-       this.botonDesaparecer = scrollPosition > 400;
-       this.botonAparecer = scrollPosition <= 500;
+    
   
        // Controla la aparición y desaparición del color de fondo en la posición del scroll
        this.colorFondoDesparecer = scrollPosition > 400;

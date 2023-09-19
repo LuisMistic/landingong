@@ -4,6 +4,11 @@ import { SharedServiceService } from '../shared-service.service';
 @Component({
   selector: 'app-banner',
   template: `
+
+<ng-container *ngIf="sharedServiceService.currentComponent === 'pres1' || sharedServiceService.currentComponent === 'default'">
+  <app-pres1></app-pres1>
+</ng-container>
+
     <ng-container *ngIf="sharedServiceService.currentComponent === 'quienesSomos'">
       <app-quienes-somos></app-quienes-somos>
     </ng-container>
@@ -20,5 +25,7 @@ import { SharedServiceService } from '../shared-service.service';
   
 })
 export class BannerComponent {
-  constructor(public sharedServiceService: SharedServiceService) {}
+  constructor(public sharedServiceService: SharedServiceService) {
+    this.sharedServiceService.currentComponent = 'pres1'; // Componente inicial
+  }
 }

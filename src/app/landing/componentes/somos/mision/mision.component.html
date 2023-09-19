@@ -1,19 +1,19 @@
 
 
-<div class="row uno colorFondo" [ngClass]="{'desaparecerColorFondo': shouldDisappear, 'aparecerColorFondo ': shouldAppear}" >
-    <div class="col-12 col-md-6">
+<div class="row uno colorFondo d-flex justify-content-center align-items-center"  [ngClass]="{'desaparecerColorFondo': shouldDisappear, 'aparecerColorFondo ': shouldAppear}" >
+    <div class="col-11 col-sm-10 col-md-9 col-lg-5">
         <!-- Texto sobre nosotros -->
         <div class="texto" [ngClass]="{'desaparecerTextoMision':shouldDisappear, 'aparecerTextoMision': shouldAppear }">
             <h1>MISION</h1>
-            <p>Trabajamos para que las infancias tengan un entorno de crecimiento feliz y seguro -libre de violencias- donde puedan desarrollar todas sus potencialidades y prepararse para el futuro. </p>
+            <p class="p">Trabajamos para que las infancias tengan un entorno de crecimiento feliz y seguro -libre de violencias- donde puedan desarrollar todas sus potencialidades y prepararse para el futuro. </p>
         </div>
     </div>
-    <div class="col-12 col-md-6" id="contfoto1"[ngClass]="{'desaparecerFondo':shouldDisappear, 'aparecerFondo': shouldAppear }">
+    <div class="col-10 col-sm-8 col-md-7 col-lg-5" id="contfoto1"[ngClass]="{'desaparecerFondo':shouldDisappear, 'aparecerFondo': shouldAppear }">
         <!-- Imagen con bordes redondeados -->
         <img src="../../../../../assets/quienesSomos/mision.JPG" alt="Imagen de la asociación" class="img-fluid img2" [ngClass]="{'desaparecer': shouldDisappear, 'aparecerImagenMision': shouldAppear }">
     </div>
    
-    <div class="col-12 col-md-1 container" >
+    <div class="col-12 col-sm-10 col-md-11 col-lg-12 container" >
         <button class="button type1 boton-volver" (click)="nosotrosScroll()" [ngClass]="{'botdesaparecer': botonvDesaparecer, 'botAparecer': botonvAparecer}">
             <i class="material-icons">keyboard_arrow_up</i>
           </button><button class="button type1"(click)="visionScroll()"[ngClass]="{'botdesaparecer': botonvDesaparecer, 'botAparecer':botonvAparecer}">

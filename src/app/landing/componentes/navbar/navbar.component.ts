@@ -37,6 +37,9 @@ export class NavbarComponent implements OnInit {
     this.sharedServiceService.currentComponent = 'quienesSomos';
   }
 
+  loadaAppComponent() {
+    this.sharedServiceService.currentComponent = 'pres1';
+  }
   isCollapsed = true;
   isSubMenuOpen = false; // Variable para controlar el estado del submenú
 

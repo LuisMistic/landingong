@@ -31,11 +31,12 @@ import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 import { ValoresComponent } from './landing/componentes/somos/valores/valores.component';
 import { ComisionComponent } from './landing/componentes/somos/comision/comision.component';
 import { BotonFlotanteComponent } from './landing/componentes/boton-flotante/boton-flotante.component';
+import { Pres1Component } from './landing/componentes/presentaciones/pres1/pres1.component';
 
 
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, BotonDePagoComponent, NavbarComponent, BannerComponent, QuienesSomosComponent, DonarComponent, SidebarComponent, DashboardComponent, NuestraHistoriaComponent, MisionComponent,  VisionComponent, ScrollToDirective, ValoresComponent, ComisionComponent, BotonFlotanteComponent,   
+  declarations: [AppComponent, HomeComponent, BotonDePagoComponent, NavbarComponent, BannerComponent, QuienesSomosComponent, DonarComponent, SidebarComponent, DashboardComponent, NuestraHistoriaComponent, MisionComponent,  VisionComponent, ScrollToDirective, ValoresComponent, ComisionComponent, BotonFlotanteComponent, Pres1Component,   
    ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, BrowserAnimationsModule, FontAwesomeModule, NgxPageScrollModule, MatDialogModule, NgxPageScrollCoreModule],
   providers: [HTMLElement, ScrollToService],

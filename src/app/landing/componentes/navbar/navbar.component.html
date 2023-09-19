@@ -1,14 +1,24 @@
-<nav class="navbar navbar-expand-lg " style=" position: sticky">
+<nav class="navbar navbar-expand-lg  fixed-top " id="deco" >
     <div class="container-fluid estilo">
-        <a class="navbar-brand" href="#">
-            <img src="../../../../assets/imagen/logo.png" alt="Logo de la ONG" class="logo-img">
-            <span class="association-link">ASOCIACION </span>
-            <span class="association-link1"> MISERICORDIA</span>
-        </a>
-
+        <a class="navbar-brand" role="button" (click)="loadaAppComponent()">
+            <div class="d-flex align-items-center">
+              <img src="../../../../assets/imagen/logo.png" alt="Logo de la ONG" class="logo-img">
+              <div class="d-none d-md-inline-block ml-2">
+                <span class="association-link">ASOCIACION</span>
+                <span class="association-link1">MISERICORDIA</span>
+              </div>
+            </div>
+          </a>
+         <div >
+           
+                <button class="donacion  d-md-none" (click)="loadDonar();">
+                    <p id="estiloA">DONAR AQUÍ</p>
+                </button>
+            </div>
         <div class="casilla d-md-none" role="button" (click)="toggleSubMenu()">
-            <fa-icon [icon]="faBars" class="custom-icon fa-fw"></fa-icon>
+                <fa-icon [icon]="faBars" class="custom-icon fa-fw"></fa-icon>
         </div>
+         
 
         <div class="collapse navbar-collapse" [ngClass]="{ collapse: isCollapsed }" id="navbarSupportedContent">
             <div class="line-divider  d-md-none"></div>
@@ -17,7 +27,7 @@
                 <li class="nav-item dropdown ">
                     <button class="nav-link full-width-btn w-100" id="navbarDropdown1" data-bs-toggle="dropdown"
                         data-bs-submenu aria-expanded="false">
-                        <fa-icon [icon]="['fas', 'house']" id="icon-house"></fa-icon> <span>QUIENES SOMOS</span>
+                        <fa-icon [icon]="['fas', 'house']" id="icon-house"></fa-icon> QUIENES SOMOS
                     </button>
                     <div class="line-divider  d-md-none"></div>
                     <ul class="dropdown-menu sub nav-link" [ngClass]="{ collapse: isCollapsed }"
@@ -62,7 +72,7 @@
                 </li>
                 <div class="line-divider  d-md-none"></div>
                 <li class="nav-item dropdown">
-                    <button class="nav-link full-width-btn w-100" href="#" id="navbarDropdown2" role="button"
+                    <button class="nav-link full-width-btn w-100" href="#"  id="navbarDropdown1" role="button"
                         data-bs-toggle="dropdown" data-bs-submenu aria-expanded="false"> <fa-icon [icon]="faPerson"
                             id="icon-faPerson"></fa-icon>
                         ACTIVIDAD
@@ -87,7 +97,7 @@
                 </li>
                 <div class="line-divider  d-md-none"></div>
                 <li class="nav-item">
-                    <a class="nav-link full-width-btn w-100" aria-current="page" href="#participar"
+                    <a class="nav-link full-width-btn w-100" aria-current="page" id="navbarDropdown1" href="#participar"
                         (click)="isCollapsed = !isCollapsed"><fa-icon [icon]="faUsers" class="fa-xs"
                             id="icon-faUsers"></fa-icon> CONTACTOS</a>
 

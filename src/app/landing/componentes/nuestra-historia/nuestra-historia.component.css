@@ -43,6 +43,7 @@ background: linear-gradient(to right, rgba(234, 245, 241, 0.5) 0%, rgba(49, 164,
     font-size: 24px;
   }
 }
+
 .texto{
   margin:20
 }
@@ -60,6 +61,14 @@ background: linear-gradient(to right, rgba(234, 245, 241, 0.5) 0%, rgba(49, 164,
 }
 .texto {animation: aparecerTexto 0.9s forwards 1;
 }
+
+
+
+/* Aplicar la animación de desaparecer cuando el elemento tiene la clase 'desaparecer' */
+.desaparecerTexto {
+  animation: desaparecerTexto 1s forwards;
+}
+
 
 /*control color fondo*/
 @keyframes aparecerColorFondo {
@@ -105,10 +114,6 @@ background: linear-gradient(to right, rgba(234, 245, 241, 0.5) 0%, rgba(49, 164,
 }
 
 
-/* Aplicar la animación de desaparecer cuando el elemento tiene la clase 'desaparecer' */
-.desaparecerTexto {
-  animation: desaparecerTexto 1s forwards;
-}
 
 /* Animación para aparecer */
 

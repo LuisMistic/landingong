@@ -44,10 +44,10 @@ export class ComisionComponent implements OnInit {
     this.botonvAparecer = scrollPosition <= 4200;
 
     // Controla la aparición y desaparición del color de fondo en la posición del scroll
-    if (scrollPosition > 4300) {
+    if (scrollPosition > 4000) {
       this.colorFondoDesaparecer = true;
       this.colorFondoAparecer = false;
-    } else if (scrollPosition <= 4300 && scrollPosition > 3400) {
+    } else if (scrollPosition <= 4000 && scrollPosition > 3400) {
       this.colorFondoDesaparecer = false;
       this.colorFondoAparecer = true;
     } else if (scrollPosition <= 3400) {
@@ -56,10 +56,10 @@ export class ComisionComponent implements OnInit {
     }
 
     // Controla la aparición y desaparición basada en la posición del scroll
-    if (scrollPosition > 4300) {
+    if (scrollPosition > 4000) {
       this.shouldDisappear = true;
       this.shouldAppear = false;
-    } else if (scrollPosition <= 4300 && scrollPosition > 3400) {
+    } else if (scrollPosition <= 4000 && scrollPosition > 3400) {
       this.shouldDisappear = false;
       this.shouldAppear = true;
     } else if (scrollPosition <= 3400) {
@@ -90,7 +90,7 @@ export class ComisionComponent implements OnInit {
 
   ngAfterViewInit(): void {
     this.scroll = new SmoothScroll('a[href*="#"]', {
-      speed: 900,
+     
 
     });
 
@@ -104,17 +104,17 @@ export class ComisionComponent implements OnInit {
     const element = document.querySelector(`#${elementId}`);
 
     if (element) {
-      if (window.matchMedia("(min-width: 768px)").matches) {
-        // El ancho del viewport es al menos de 768 píxeles, por lo que no es un dispositivo móvil
+      if (window.matchMedia("(min-width: 1500px)").matches) {
+        // El ancho del viewport es al menos de 1500 píxeles, por lo que no es un dispositivo móvil
         this.pageScrollService.scroll({
           document: document,
           scrollTarget: `#${elementId}`,
-          speed: 900,
+         
         });
       } else {
-        // El ancho del viewport es menor o igual a 767 píxeles, por lo que es un dispositivo móvil
+        // El ancho del viewport es menor o igual a 1500 píxeles, por lo que es un dispositivo móvil
         this.scroll.animateScroll(element, {
-          speed: 900,
+         
         });
       }
     }

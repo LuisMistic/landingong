@@ -26,11 +26,14 @@ html, body {
 h1{
   color:  rgb(212, 93, 9);;;
 }
+
 .row.uno {
  background: -moz-linear-gradient(left, rgba(255, 255, 255, 0.5) 0%, rgba(49, 164, 145, 0.3) 48%, rgba(255, 255, 255, 0.5) 0%);
 background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.5) 0%, rgba(49, 164, 145, 0.3) 48%, rgba(255, 255, 255, 0.5) 100%);
-background: linear-gradient(to right, rgba(234, 245, 241, 0.5) 0%, rgba(49, 164, 145, 0.3) 48%, rgba(250, 250, 250, 0.5) 100%);
-  padding: 5%;
+background: linear-gradient(to right, rgba(234, 245, 241, 0.5) 0%, rgba(49, 164, 145, 0.3) 48%, rgba(188, 134, 35, 0.541) 100%);
+ padding:10%;
+ padding-top: 10%;
+  margin: 0px;
   overflow: hidden;
   width: 100vw; /* 100% del ancho del viewport */
   height: 100vh; /* 100% de la altura del viewport */
@@ -40,28 +43,137 @@ background: linear-gradient(to right, rgba(234, 245, 241, 0.5) 0%, rgba(49, 164,
 /* Estilos para pantallas pequeñas (menos de 600px de ancho) */
 @media (max-width: 600px) {
   .img1 * {
-    font-size: 20px;
+    font-size: 50px;
   }
+  .row{
+    padding-top: 90px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    padding-bottom: 10px !important;
+   
+  }
+  .button {
+    position: relative;
+    padding: 5px 10px;
+    margin-bottom: 90px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    font-size: 18px;
+   
+  }
+  .p1{
+    font-size: 22px !important;
+  }
+
+  p {
+    padding-top: 8px !important;
+    line-height: 1.5;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    text-align: center;
+  }
+
+  .container.type1{
+    margin-bottom: 10px !important;
+  }
+
 }
+  
 
 /* Estilos para pantallas medianas (entre 600px y 900px de ancho) */
 @media (min-width: 600px) and (max-width: 900px) {
   .img1 * {
     font-size: 18px;
   }
+  .row{
+    padding-top: 100px !important;
+    padding-left: 1px !important;
+    padding-right: 1px !important;
+    padding-bottom: 50px !important;
+   
+  }
+
+  .button {
+    text-align: center;
+    position: relative;
+    padding: 10px 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    font-size: 18px;
+    margin: 2em 2.8em;
+  }
+
+  .p1{
+    font-size: 28px !important;
+  }
+
+  p {
+    line-height: 1.5;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    
+  }
 }
+
 
 /* Estilos para pantallas grandes (más de 900px de ancho) */
 @media (min-width: 900px) {
   .img1 * {
+ 
     font-size: 24px;
   }
+
+  .row{
+ 
+    padding-top: 100px !important;
+    padding-left: 30px !important;
+    padding-right: 1px !important;
+    padding-bottom: 50px !important;
+   
+  }
+
+  .button {
+
+    position: relative;
+    padding: 15px 15px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    font-size: 18px;
+   
+  
+  }
+
+
+
+
+  .p1{
+    text-align: center;
+    font-size: 35px !important;
+  }
+ p.a{padding: 40px;}
+  
+  p {
+   
+    padding-bottom: 50px;
+    line-height: 1.5;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+  }
+  
 }
 .texto{
-  margin:20
+  margin:20;
+  font-size: 30px !important;
+  
 }
 
-/* Animación para aparecer */
+/* Animación para aparecer el primer bloque de texto */
 @keyframes aparecerTexto {
   from {
     opacity: 0;
@@ -72,41 +184,9 @@ background: linear-gradient(to right, rgba(234, 245, 241, 0.5) 0%, rgba(49, 164,
     transform: translateX(0px);
   }
 }
-.texto {animation: aparecerTexto 0.9s forwards 1;
-}
+.texto { animation: aparecerTexto 0.9s forwards 1; }
 
-/*control color fondo*/
-@keyframes aparecerColorFondo {
-  from {
-    opacity: 0;
-   
-  }
-  to {
-    opacity: 1;
-   
-  }
-}
-.colorFondo {animation: aparecerColorFondo 1.9s forwards 1;
-}
-
-/* Animación para desaparecer */
-@keyframes desaparecerColorFondo {
-  from {
-    opacity: 1;
-    
-  }
-  to {
-    opacity: 0;
-    
-  }
-}
-
-
-/* Aplicar la animación de desaparecer cuando el elemento tiene la clase 'desaparecer' */
-.desaparecerColorFondo  {
-  animation: desaparecerColorFondo 1s forwards;
-}
-/* Animación para desaparecer */
+/* Animación para desaparecer el primer bloque de texto */
 @keyframes desaparecerTexto {
   from {
     opacity: 1;
@@ -117,16 +197,31 @@ background: linear-gradient(to right, rgba(234, 245, 241, 0.5) 0%, rgba(49, 164,
     transform: translateX(-600px);
   }
 }
+.desaparecerTexto { animation: desaparecerTexto 1s forwards; }
 
-
-/* Aplicar la animación de desaparecer cuando el elemento tiene la clase 'desaparecer' */
-.desaparecerTexto {
-  animation: desaparecerTexto 1s forwards;
+/* Control del color de fondo */
+@keyframes aparecerColorFondo {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
+.colorFondo { animation: aparecerColorFondo 1.9s forwards 1; }
 
-/* Animación para aparecer */
+/* Animación para desaparecer el color de fondo */
+@keyframes desaparecerColorFondo {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.desaparecerColorFondo { animation: desaparecerColorFondo 1s forwards; }
 
-
+/* Animación para aparecer el segundo bloque de texto */
 @keyframes aparecerTexto1 {
   from {
     opacity: 0;
@@ -137,12 +232,9 @@ background: linear-gradient(to right, rgba(234, 245, 241, 0.5) 0%, rgba(49, 164,
     transform: translateX(0px);
   }
 }
-.texto1 {animation: aparecerTexto1 1.3s forwards 1;
-}
+.texto1 { animation: aparecerTexto1 1.3s forwards 1; }
 
-
-
-/* Animación para desaparecer */
+/* Animación para desaparecer el segundo bloque de texto */
 @keyframes desaparecerTexto1 {
   from {
     opacity: 1;
@@ -153,30 +245,14 @@ background: linear-gradient(to right, rgba(234, 245, 241, 0.5) 0%, rgba(49, 164,
     transform: translateX(600px);
   }
 }
+.desaparecerTexto1 { animation: desaparecerTexto1 2s forwards; }
 
-
-/* Aplicar la animación de desaparecer cuando el elemento tiene la clase 'desaparecer' */
-.desaparecerTexto1 {
-  animation: desaparecerTexto1 2s forwards;
-}
-
-.img1 {
-
-
-  border-radius: 40px !important;
-  box-shadow: 3px 3px 10px 2px rgba(0,0,0,0.5);
-
-  width: 600px;
-  height: auto;
-  
-}
-/* animacion foto */
-
+/* Animación para aparecer la imagen y su borde */
+/* Animación para aparecer con rotación por defecto (7 grados) */
 @keyframes aparecer {
   from {
     opacity: 0;
     transform: translateX(600px) rotate(0deg);
-    /* inclinar la imagen 75 grados */
     border: 5px solid black;
   }
   to {
@@ -186,16 +262,62 @@ background: linear-gradient(to right, rgba(234, 245, 241, 0.5) 0%, rgba(49, 164,
   }
 }
 
-.img1 {
-  animation: aparecer 1s forwards 1;
+/* Animación para aparecer con rotación en dispositivos medianos (4 grados) */
+@keyframes aparecer-rotacion-mediana {
+  from {
+    opacity: 0;
+    transform: translateX(600px) rotate(0deg);
+    border: 5px solid black;
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px) rotate(2deg);
+    border: 5px solid black;
+  }
 }
 
+/* Animación para aparecer con rotación en dispositivos móviles (1 grado) */
+@keyframes aparecer-rotacion-movil {
+  from {
+    opacity: 0;
+    transform: translateX(600px) rotate(0deg);
+    border: 5px solid black;
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px) rotate(1deg);
+    border: 5px solid black;
+  }
+}
 
+/* Aplicar la animación a elementos con clase .img1 */
+.img1 {
+  animation: aparecer 1s forwards 1;
+  border-radius: 40px !important;
+  box-shadow: 3px 3px 10px 2px rgba(0, 0, 0, 0.5);
+  width: 600px;
+  height: auto;
+}
 
+/* Modificar la rotación en dispositivos medianos */
+@media (min-width: 577px) and (max-width: 992px) {
+  .img1 {
+    animation-name: aparecer-rotacion-mediana;
+  }
+}
+
+/* Modificar la rotación en dispositivos móviles */
+@media (max-width: 576px) {
+  .img1 {
+    animation-name: aparecer-rotacion-movil;
+  }
+}
+
+/* Animación para desaparecer la imagen */
 @keyframes desaparecer {
   from {
     opacity: 1;
-    transform: translateX(0px) rotate(7deg);
+    transform: translateX(0px) rotate(7deg) ;
   }
   to {
     opacity: 0;
@@ -207,47 +329,11 @@ background: linear-gradient(to right, rgba(234, 245, 241, 0.5) 0%, rgba(49, 164,
   animation: desaparecer 1s forwards;
 }
 
-/* animacion fondo */
+/* Animación para aparecer el fondo de imagen */
 @keyframes aparecerFondo {
   from {
     opacity: 0;
-    transform: translateX(-600px) rotate(0deg);
-    /* inclinar la imagen 75 grados */
-   
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0px) rotate(7deg);
-    border: 5px solid black;
-  }
-}
-.contfoto {
-  animation: aparecerFondo 0.4s forwards 1;
-}
-
-
-@keyframes desaparecerFondo {
-  from {
-    opacity: 1;
-    transform: translateX(0px)  rotate(7deg);
-  }
-  to {
-    opacity: 0;
-    transform: translateX(600px) rotate(0deg);
-  }
-}
-
-.desaparecerFondo {
-  animation: desaparecerFondo 2.6s forwards;
-}
-
-/*lina decortaiva*/
-
-@keyframes aparecerFondo {
-  from {
-    opacity: 0;
-    transform: translateX(600px) rotate(0deg);
-   
+    transform: translateX(600px);
   }
   to {
     opacity: 1;
@@ -255,24 +341,37 @@ background: linear-gradient(to right, rgba(234, 245, 241, 0.5) 0%, rgba(49, 164,
     border: 10px solid rgba(255, 255, 255, 0.1);
     border-bottom: 11px dashed rgb(28, 110, 164,08%);
     border-radius: 40px 33px 40px 133px;
-    
-    background-color:rgba(188, 189, 125, 0.3);
-    display: flex; /* crear un contenedor flexible */
-    justify-content: center; /* alinear los elementos hijos en el centro horizontalmente */
-    align-items: center; /* alinear los elementos hijos en el centro verticalmente */
+    background-color: rgba(188, 189, 125, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  }
-
-
-
-p{
-  font-size: 30px;
 }
+.contfoto { animation: aparecerFondo 0.4s forwards 1; }
+
+/* Animación para desaparecer el fondo de imagen */
+@keyframes desaparecerFondo {
+  from {
+    opacity: 1;
+    transform: translateX(0px) ;
+  }
+  to {
+    opacity: 0;
+    transform: translateX(600px) ;
+  }
+}
+.desaparecerFondo { animation: desaparecerFondo 2.6s forwards; }
+
+
+
+
+
 
 .dos {
   width: 100vw;
   height: 100vh;
 }
+
 /*titulos*/
 
 h1{
@@ -280,11 +379,6 @@ h1{
   line-height: 1.5;
 }
 
-p {
-  line-height: 1.5;
-  font-family: 'Roboto', sans-serif;
-  font-size: 25px;
-}
 
 
 .img-fluid {
@@ -348,16 +442,7 @@ p {
 
 
 
-  .button {
-    position: relative;
-    padding: 1em 1.5em;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    outline: none;
-    font-size: 18px;
-    margin: 1em 0.8em;
-  }
+ 
   
   .type1 {
     color: var(--color1);
@@ -403,8 +488,6 @@ p {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding-top: 0;
-    margin-top: 0;
   }
   
   .botAparecer {
@@ -412,6 +495,7 @@ p {
     opacity: 1;
     transform: translateX(0);
     transition: opacity 2s, transform 2s;
+    
   }
   
   
@@ -421,28 +505,3 @@ p {
     transition: opacity 2s, transform 2s;
    
   }
-  .botonera-lateral {
-    position: fixed;
-    top: 0;
-    right: 0;
-    background-color: #fff; /* Color de fondo */
-    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end; /* Coloca los botones a la derecha */
-    padding: 20px; /* Espaciado interior */
-  }
-  
-  .botonera-lateral button {
-    margin-bottom: 10px; /* Espacio entre botones */
-    padding: 10px; /* Espaciado dentro de los botones */
-    background-color: #007bff; /* Color de fondo del botón */
-    color: #fff; /* Color de texto del botón */
-    border: none;
-    cursor: pointer;
-  }
-  
-  .botonera-lateral button:hover {
-    background-color: #0056b3; /* Color de fondo en el hover */
-  }
-  

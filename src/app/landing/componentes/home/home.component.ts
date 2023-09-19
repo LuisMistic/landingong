@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-home',
@@ -7,9 +7,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
-  currentState = 'initial';
+  
 
-  constructor(private router: Router) {
-    // Si es apropiado inicializar propiedades aqui
-  }
 }

@@ -1,11 +1,11 @@
-.navbar {
-  position: fixed;
- 
-  left: 0;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}/* estilo navbar*/
+.my-custom-navbar {
+  height: 80px; /* Ajusta la altura de tu navbar según tus necesidades */
+}
+
+/* Agrega margen superior a las secciones de destino */
+.section-content {
+  margin-top: 80px; /* Asegúrate de que el margen coincida con la altura del navbar */
+}
 
 
 /* Estilos para el navbar en orientación horizontal */
@@ -23,7 +23,7 @@
     position: absolute;
     z-index: 1001;
     /* Ajusta el top y left según sea necesario para que el submenu esté debajo del navbar */
-    top: 170%;
+    top: 160%;
     left: 10;
     /* Ajusta el valor de width según tus necesidades */
     width: 200px;
@@ -55,25 +55,29 @@
  
 
 .casilla {
-  font-size: 3rem;
+  font-size: 1rem;
   /* Cambiar el tamaño del icono a 2rem */
-  border: 1 solid;
+  
+  padding: 0%;
   color: rgba(16, 16, 16, 0.8);
   /* Cambiar el color del icono a rojo (#ff0000) */
+  width: 40px;
+  display: flex;
+  align-items: center;
 
 }
 
 /* Ajusta tamaños de las líneas de los iconos menus */
 
 .custom-icon {
-  font-size: 45px;
+  font-size: 30px;
   /* Tamaño personalizado que desees */
   stroke-width: 1.5px;
   /* Grosor de las líneas, puedes ajustarlo según tu preferencia */
 }
 
 #icon-house {
-  font-size: 30px;
+  font-size: 25px;
   stroke-width: 1.5px;
   margin-right: 9px;
   /* espacio margen derecho*/
@@ -88,7 +92,7 @@
 
 
 #icon-Hourglass {
-  font-size: 30px;
+  font-size: 25px;
   padding-left: 5px;
   margin-right: 14px;
   /* espacio margen derecho*/
@@ -97,7 +101,7 @@
 }
 
 #icon-faPerson {
-  font-size: 30px;
+  font-size: 28px;
   padding-left: 5px;
   margin-right: 18px;
   /* espacio margen derecho*/
@@ -105,7 +109,7 @@
 }
 
 #icon-faUsers {
-  font-size: 32px;
+  font-size: 25px;
   padding-bottom: 0px;
   margin-right: 5px;
 
@@ -122,7 +126,7 @@
 
 
 .nav-link1 {
-  font-size: 18px !important;
+  font-size: 15x !important;
   /* Color del texto */
   color: black !important;
   /* Quitar color de fondo */
@@ -197,10 +201,9 @@
       13.4px 122px 67.7px -19px rgba(0, 0, 0, 0.186),
       17.4px 157.8px 131.6px -19px rgba(0, 0, 0, 0.236),
       21px 191px 363px -19px rgba(0, 0, 0, 0.31);
-    
-    /* Otros estilos */
-    background-color: rgba(104, 104, 8, 0.13);
-    backdrop-filter: blur(70px);
+
+      background-image: linear-gradient(2deg, #fc930062, hwb(30 33% 3% / 0.407), rgb(255, 254, 2500.1), rgba(186, 127, 38, 0.915))    /* Otros estilos */
+   
     /* ... */
    }
 }
@@ -211,12 +214,13 @@
      box-shadow:
        /* Valores más suaves para el sombreado */
        /* ... */
-  6px 32px 15px -19px rgba(0, 0, 0, 0.1)
-  ;;
+  6px 32px 15px -19px rgba(0, 0, 0, 0.1);
      backdrop-filter: blur(30px); /* Desenfoque más sutil */
      /* Otros estilos */
      /* ... */
      background-color: rgba(104, 104, 8, 0.13);
+  
+     
    }
 }
 
@@ -272,21 +276,24 @@ button.navbar-nav {
   line-height: 1.5;
   display: block;
   text-align: center;
-  font-size: 20px;
+  font-size: 15px;
   font-family: 'PT Sans', sans-serif;
   font-weight: 700;
   color: rgb(35, 35, 34); /* Cambia el color a dorado */
+  margin-left: 5px;
   margin-top: 0px; /* Ajusta el margen superior según tu preferencia */
 }
 .association-link1 {
   line-height: 1.5;
   display: block;
   text-align: center;
-  font-size: 20px;
+  font-size: 15px;
   font-family: 'PT Sans', sans-serif;
   font-weight: 700;
   color: rgb(35, 35, 34); /* Cambia el color a dorado */
+  margin-left: 20px;
   margin-top: -10px; /* Ajusta el margen superior según tu preferencia */
+
 }
 
 /*animacion boton */
@@ -356,10 +363,10 @@ button.navbar-nav {
   display: inline-block;
   margin: 20px;
   padding: 10px 10px;
-  font-size: 14px;
+  font-size: 16px;
   color: #fff;
-  background-color: rgba(194, 63, 23, 0.1);
-  border-radius: 20px;
+  background-color: rgb(80, 10, 10);
+  border-radius: 10px;
   border: none;
   text-align: center;
   animation: pulse 0s infinite;
@@ -367,6 +374,7 @@ button.navbar-nav {
   /* Ocultamos el contenido que se desborde */
   position: relative;
   /* Establecemos la posición relativa para los elementos hijos */
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -380,6 +388,7 @@ button.navbar-nav {
   height: 100%;
   background-image: linear-gradient(to right, rgba(255, 0, 0, 0.5), #fff, rgba(255, 255, 255, 0.5));
   animation: move-bar 1s infinite ease-in-out;
+
 }
 
 @keyframes move-bar {
@@ -444,12 +453,19 @@ button.navbar-nav {
 }
 
 /*estilo boton mercado pago */
+#estiloA{
+  font-size: 10px;
+  color:rgb(214, 137, 21);
+font-family: 'Lato', sans-serif;
+font-weight: bolder;
+}
 #estilob{
 
   
 color:rgb(214, 137, 21);
 font-family: 'Lato', sans-serif;
 font-weight: bolder;
+
 }
 
 .donacion{
@@ -460,3 +476,12 @@ font-weight: bolder;
 }
 
 
+#deco{
+  background-image: linear-gradient(2deg, #fc930062, hwb(30 33% 3% / 0.407), rgb(255, 254, 2500.1), rgba(186, 127, 38, 0.915))
+
+}
+
+#navbarDropdown1{
+ font-size: 17px !important;
+
+}

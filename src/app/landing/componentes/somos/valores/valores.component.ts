@@ -67,17 +67,17 @@ export class ValoresComponent implements OnInit {
     const element = document.querySelector(`#${elementId}`);
 
     if (element) {
-      if (window.matchMedia("(min-width: 768px)").matches) {
-        // El ancho del viewport es al menos de 768 píxeles, por lo que no es un dispositivo móvil
+      if (window.matchMedia("(min-width: 500px)").matches) {
+        // El ancho del viewport es al menos de 699 píxeles, por lo que no es un dispositivo móvil
         this.pageScrollService.scroll({
           document: document,
           scrollTarget: `#${elementId}`,
-          speed: 900,
+         
         });
       } else {
-        // El ancho del viewport es menor o igual a 767 píxeles, por lo que es un dispositivo móvil
+        // El ancho del viewport es menor o igual a 698 píxeles, por lo que es un dispositivo móvil
         this.scroll.animateScroll(element, {
-          speed: 900,
+          
         });
       }
     }

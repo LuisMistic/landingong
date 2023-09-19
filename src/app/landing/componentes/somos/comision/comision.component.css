@@ -2,7 +2,25 @@
   max-width: 100%;
   height: auto;
 }
+.row.uno {
+  position: -webkit-sticky; /* Para Safari */
+  position: sticky;
+  top: 0;
+  padding: 30%;
+ 
+}
+.texto, .texto1 {
+  font-size: 2vw; /* Ajusta este valor según sea necesario */
+}
 
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.button {
+  font-size: 1.5vw; /* Ajusta este valor según sea necesario */
+}
 html { scroll-behavior: auto !important }
 #secc {
   scroll-margin-top: 50px;
@@ -10,11 +28,17 @@ html { scroll-behavior: auto !important }
   height: 100vh;
 }
 
-
 h1 {
   color: rgb(212, 93, 9);
   font-size: 40px;
   line-height: 1.5;
+}
+
+/* Esto se aplicará si el ancho de la ventana de visualización es de 600px o menos */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 20px; /* La mitad del tamaño original */
+  }
 }
 
 @keyframes comisionAparecer {
@@ -46,24 +70,6 @@ h1 {
 .comisionDesaparecer{
   animation: comisionDesaparecer 1.4s forwards 1;
 }
-
-
-.row.uno {
-background-color: rgb(169, 169, 169,20%);
-  padding: 5%;
-  width: 100vw; /* 100% del ancho del viewport */
-  height: 100vh; /* 100% de la altura del viewport */
-  align-items: center;
-}
-
-
-
-/* Estilos para pantallas grandes (más de 900px de ancho) */
-/* @media (min-width: 900px) {
-  .row.uno  * {
-    
-  }
-} */
 
 
 
@@ -229,9 +235,6 @@ background-color: rgb(169, 169, 169,20%);
   }
   
   
-  
-
-
 
 
   @keyframes aparecerRevisor{
@@ -254,7 +257,14 @@ background-color: rgb(169, 169, 169,20%);
   
   
  
-
+  .row.uno {
+    background-color: rgb(169, 169, 169,20%);
+      padding: 5%;
+      width: 100vw; /* 100% del ancho del viewport */
+      height: 100vh; /* 100% de la altura del viewport */
+      align-items: center;
+    }
+    
 
 
 
@@ -380,73 +390,9 @@ body {
 
 
 
-/* Estilo para el árbol gerar */
-.tree {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.tree ul {
-    padding-top: 20px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px; /* Espacio entre las filas */
-}
-
-.tree li {
-    list-style-type: none;
-    position: relative;
-    text-align: center;
-    padding: 20px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
-
-.tree li::before,
-.tree li::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 50%;
-}
-
-.tree li::before {
-    border-top: solid #ccc;
-    border-width: thin;
-    width: calc(50% + var(--tree-row-padding, 0px));
-}
-
-.tree li::after {
-    border-left: solid #ccc;
-    border-width: thin;
-    height: calc(20px + var(--tree-row-padding, 0px));
-}
-
-.tree li:last-child::before {
-    width: calc(50% - var(--tree-row-padding, 0px));
-}
-
-.tree li:first-child::before {
-    width: calc(50% + var(--tree-row-padding, 0px));
-}
-
-.tree ul ul::before {
-    content: '';
-    position: absolute;
-    top: -20px;
-    left: calc(50% - var(--tree-row-padding, 0px));
-    border-left: solid #ccc;
-    border-width: thin;
-    height: calc(20px + var(--tree-row-padding, 0px));
-}
-
 /* Estilo para las tarjetas */
 .card {
+
   transition: all .3s ease-in-out;
   cursor: pointer;
   width: 100%;
@@ -503,12 +449,16 @@ body {
   }
 
   .row.uno .card {
-      max-width: 400px; /* Ajusta el valor según sea necesario */
+      max-width: 300px; /* Ajusta el valor según sea necesario */
       max-height: 80px;
-      margin: 3px; /* Ajusta el valor según sea necesario */
+      margin:2px; /* Ajusta el valor según sea necesario */
+      
   }
+}
 
-  .row.uno .card-body {
-
-  }
+.card-body1 {
+  overflow-wrap: break-word;  /* Permite que las palabras se rompan y pasen a la siguiente línea */
+  word-wrap: break-word;  /* Lo mismo que overflow-wrap, pero para navegadores más antiguos */
+  word-break: break-word;  /* Permite que las palabras se rompan si son demasiado largas para caber en su contenedor */
+ 
 }
