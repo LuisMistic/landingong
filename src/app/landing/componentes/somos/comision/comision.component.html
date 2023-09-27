@@ -1,11 +1,11 @@
 <div class="row uno text-center">
-    <div class="col-12 ">
+    <div class="col-12">
         <h1 class=" mb-4" [ngClass]="{'comisionDesaparecer': shouldDisappear, 'comisionAparecer': shouldAppear}">COMISION DIRECTIVA</h1>
     </div>
     <div >
         <ul>
          
-                <div class="row">
+                <div class="row ">
                     <!-- PRESIDENTA -->
                     <div class="col-md-12">
                         <div class="card" [ngClass]="{'desaparecerPresidenta': shouldDisappear, 'aparecerPresidenta': shouldAppear}">
@@ -80,13 +80,6 @@
            
         </ul>
     </div>
-    <div class="col-12 col-md-1 container">
-        <button class="button type1 boton-volver"(click)="scrollToElement('valores')" [ngClass]="{'botdesaparecer': botonvDesaparecer, 'botAparecer': botonvAparecer}">
-            <i class="material-icons">keyboard_arrow_up</i>
-        </button>
-        <button class="button type1" (click)="scrollToElement('nosotros')" [ngClass]="{'botdesaparecer': botonvDesaparecer, 'botAparecer': botonvAparecer}">
-            <i class="material-icons">home</i>
-        </button>
-    </div>
+   
 </div>
  

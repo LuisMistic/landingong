@@ -1,38 +1,25 @@
 
-<div class="row uno colorFondo" [ngClass]="{'desaparecerColorFondo': shouldDisappear, 'aparecerColorFondo ': shouldAppear}">
-  <div class="col-12 col-md-4">
+<div class="row uno colorFondo elemento siempre-visible  d-flex justify-content-center align-items-center" [ngClass]="{'desaparecerColorFondo': shouldDisappear, 'aparecerColorFondo ': shouldAppear}">
+  <div class="col-11 col-sm-10 col-md-9 col-lg-4">
       <!-- Texto sobre nosotros -->
       <div class="texto" [ngClass]="{'desaparecerTexto': shouldDisappear, 'aparecerTexto': shouldAppear}">
           <h1 id="sobre"[ngClass]="{'desaparecerTexto': shouldDisappear, 'aparecerTexto': shouldAppear}">VISION</h1>
-          <p>Trabajamos para que las infancias tengan un entorno de crecimiento feliz y seguro -libre de violencias- donde puedan desarrollar todas sus potencialidades y prepararse para el futuro. </p>
+          <p class="p">Trabajamos para que las infancias tengan un entorno de crecimiento feliz y seguro -libre de violencias- donde puedan desarrollar todas sus potencialidades y prepararse para el futuro. </p>
       </div>
   </div>
-  <div class="col-12 col-md-5" >
+  <div class="col-12 col-sm-7 col-md-5 col-lg-4" >
       <!-- Imagen con bordes redondeados -->
       <div class="contfoto"[ngClass]="{'desaparecerFondo': shouldDisappear, 'aparecerFondo': shouldAppear}" >
         <img src="../../../../../assets/quienesSomos/vision.jpg" alt="Imagen de la asociación" class="img-fluid img1" [ngClass]="{'desaparecer': shouldDisappear, 'aparecer': shouldAppear}">
       </div>
       </div>
-  <div class="col-12 col-md-3">
+  <div class="col-10 col-sm-7 col-md-4 col-lg-4">
   <div class="texto1" [ngClass]="{'desaparecerTexto1': shouldDisappear, 'aparecerTexto1': shouldAppear}">
          
-          <p> Nuestra obra está dirigida a toda la comunidad.</p>
+          <p class="p a"> Nuestra obra está dirigida a toda la comunidad.</p>
           
       </div></div>
        
-     
-    <div class="col-12 col-md-1 container" >
-      <button class="button type1 boton-volver" (click)="misionScroll()"[ngClass]="{'botdesaparecer': botonvDesaparecer, 'botAparecer':botonvAparecer}">
-        <i class="material-icons">keyboard_arrow_up</i>
-      </button><button class="button type1"(click)="valoresScroll()"[ngClass]="{'botdesaparecer': botonvDesaparecer, 'botAparecer':botonvAparecer}">
-        VALORES<i class="material-icons">keyboard_arrow_down</i>
-      </button>
-      <button class="button type1 boton-volver" (click)="nosotrosScroll()"[ngClass]="{'botdesaparecer': botonvDesaparecer, 'botAparecer':botonvAparecer}">
-        <i class="material-icons">home</i>
-      </button>
-    
-      <!-- (click)="toQuienessomos()" routerLink="/quienesomos" role="button" routerLinkActive="active" -->
-  </div>
 
   
 </div>

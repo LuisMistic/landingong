@@ -1,5 +1,7 @@
 import { Component, ElementRef, HostListener, ViewChild, ViewEncapsulation } from '@angular/core';
 import { PageScrollService } from 'ngx-page-scroll-core';
+import { ModalImgService } from '../../modal-img.service';
+import SmoothScroll from 'smooth-scroll';
 
 @Component({
   selector: 'app-quienes-somos',
@@ -15,7 +17,9 @@ export class QuienesSomosComponent {
   botonDesaparecer = false;
   colorFondoAparecer = false;
   colorFondoDesparecer = false;
-
+  show: boolean = false;
+  element: any;
+  scroll: any;
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
@@ -38,19 +42,50 @@ export class QuienesSomosComponent {
   }
 
   
- constructor(private pageScrollService: PageScrollService) { }
+ constructor(private pageScrollService: PageScrollService, private modalImgService: ModalImgService) { }
 
 
- smoothScroll() {
-   this.pageScrollService.scroll({
-     document: document,
-     scrollTarget: '#mision',
-   });
+ ngAfterViewInit(): void {
+  this.scroll = new SmoothScroll('a[href*="#"]', {
    
- }
 
+  });
+
+
+}
+ngOnInit() {
+  // Obtener el elemento al que queremos desplazarnos
+  // const element = document.getElementById("my-button");
+}
+scrollToElement(elementId: string): void {
+  const element = document.querySelector(`#${elementId}`);
+
+  if (element) {
+    if (window.matchMedia("(min-width: 1500px)").matches) {
+      // El ancho del viewport es al menos de 1500 píxeles, por lo que no es un dispositivo móvil
+      this.pageScrollService.scroll({
+        document: document,
+        scrollTarget: `#${elementId}`,
+       
+      });
+    } else {
+      // El ancho del viewport es menor o igual a 1500 píxeles, por lo que es un dispositivo móvil
+      this.scroll.animateScroll(element, {
+       
+      });
+    }
+  }
+}
+}
+
+
+ 
+
+
+
+ 
 
 //  toQuienessomos(){
 //   document.getElementById("quienessomos")?.scrollIntoView({ behavior: 'smooth' });
 // }
-}
+

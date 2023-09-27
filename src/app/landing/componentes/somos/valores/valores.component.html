@@ -1,21 +1,20 @@
 <!-- HTML -->
 <div class="row uno colorFondo" [ngClass]="{'desaparecerColorFondo': shouldDisappear, 'aparecerColorFondo ': shouldAppear}">
-  <div class="col-12 col-md-4">
+  <div class="col-12 col-sm-10 col-md-9 col-lg-4">
       <!-- Texto sobre nosotros -->
       <div class="texto" [ngClass]="{'desaparecerTexto': shouldDisappear, 'aparecerTexto': shouldAppear}">
           <h1 id="sobre"[ngClass]="{'desaparecerTexto': shouldDisappear, 'aparecerTexto': shouldAppear}"> VALORES</h1>
           <ul class="les lista-profesional">
               <P>
-              <li>Respeto por el interés superior de en el cumplimiento de todos sus derechos.</li>
-              <li>Profesionalismo y calidad en la implementación de nuestras acciones.</li>
+              <li>Respeto por el interés superior en el cumplimiento de todos sus derechos.</li>
               <li>Transparencia en la administración de los recursos.</li>
-              
+              <li>Profesionalismo y calidad en la implementación de nuestras acciones.</li>
           </P>
             </ul>
             
       </div>
   </div>
-  <div class="col-12 col-md-5" >
+  <div class="col-12 col-sm-7 col-md-5 col-lg-4 d-none d-md-block">
       <!-- Imagen con bordes redondeados -->
       <div class="contfoto"[ngClass]="{'desaparecerFondo': shouldDisappear, 'aparecerFondo': shouldAppear}" >
         <img src="../../../../../assets/quienesSomos/valores.jpg" alt="Imagen de la asociación" class="img-fluid img1" [ngClass]="{'desaparecer': shouldDisappear, 'aparecer': shouldAppear}">
@@ -30,19 +29,7 @@
       </div>
   </div>
      
-    <div class="col-12 col-md-1 container ">
-
-      <button class="button type1 boton-volver"(click)="scrollToElement('vision')"[ngClass]="{'botdesaparecer': botonvDesaparecer, 'botAparecer':botonvAparecer}">
-        <i class="material-icons">keyboard_arrow_up</i>
-    </button>
-   <button class="button type1"(click)="scrollToElement('comision')"[ngClass]="{'botdesaparecer': botonvDesaparecer, 'botAparecer':botonvAparecer}">
-          COMISION DIRECTIVA<i class="material-icons">keyboard_arrow_down</i>
-        </button>
-        <button class="button type1" (click)="scrollToElement('nosotros')"[ngClass]="{'botdesaparecer': botonvDesaparecer, 'botAparecer':botonvAparecer}" >
-          <i class="material-icons">home</i>
-      </button>
-      
-      </div>
+ 
 
   
 </div>

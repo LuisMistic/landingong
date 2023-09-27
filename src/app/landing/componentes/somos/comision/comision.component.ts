@@ -7,7 +7,7 @@ import SmoothScroll from 'smooth-scroll';
   templateUrl: './comision.component.html',
   styleUrls: ['./comision.component.css']
 })
-export class ComisionComponent implements OnInit {
+export class ComisionComponent  {
 
 
   shouldAppear = false;
@@ -18,24 +18,9 @@ export class ComisionComponent implements OnInit {
   botonvAparecer = false;
   colorFondoDesaparecer = false;
   colorFondoAparecer = false;
-  element: any;
-  scroll: any;
+ 
 
 
-
-
-
-
-
-  // Adaptar el código de scrollToElement()
-  // scrollToElement() {
-  //   // Desplazarse al elemento
-  //   if (this.element && this.element.getBoundingClientRect()) {
-  //     this.element.scrollIntoView({
-  //       behavior: 'smooth'
-  //     });
-  //   }
-  // }
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const scrollPosition = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
@@ -47,7 +32,7 @@ export class ComisionComponent implements OnInit {
     if (scrollPosition > 4000) {
       this.colorFondoDesaparecer = true;
       this.colorFondoAparecer = false;
-    } else if (scrollPosition <= 4000 && scrollPosition > 3400) {
+    } else if (scrollPosition <= 4000 && scrollPosition > 3200) {
       this.colorFondoDesaparecer = false;
       this.colorFondoAparecer = true;
     } else if (scrollPosition <= 3400) {
@@ -59,7 +44,7 @@ export class ComisionComponent implements OnInit {
     if (scrollPosition > 4000) {
       this.shouldDisappear = true;
       this.shouldAppear = false;
-    } else if (scrollPosition <= 4000 && scrollPosition > 3400) {
+    } else if (scrollPosition <= 4000 && scrollPosition > 3200) {
       this.shouldDisappear = false;
       this.shouldAppear = true;
     } else if (scrollPosition <= 3400) {
@@ -69,55 +54,5 @@ export class ComisionComponent implements OnInit {
   }
 
   constructor(private pageScrollService: PageScrollService) { }
-  // valoresScroll() {
-  //   this.pageScrollService.scroll({
-  //     document: document,
-  //     scrollTarget: '#valores',
-  //     duration: 100
-  //   });
-  // }
-
-
-  // nosotrosScroll() {
-  //   this.pageScrollService.scroll({
-  //     document: document,
-  //     scrollTarget: '#nosotros',
-
-
-  //   });
-  // }
-
-
-  ngAfterViewInit(): void {
-    this.scroll = new SmoothScroll('a[href*="#"]', {
-     
-
-    });
-
-
-  }
-  ngOnInit() {
-    // Obtener el elemento al que queremos desplazarnos
-    // const element = document.getElementById("my-button");
-  }
-  scrollToElement(elementId: string): void {
-    const element = document.querySelector(`#${elementId}`);
-
-    if (element) {
-      if (window.matchMedia("(min-width: 1500px)").matches) {
-        // El ancho del viewport es al menos de 1500 píxeles, por lo que no es un dispositivo móvil
-        this.pageScrollService.scroll({
-          document: document,
-          scrollTarget: `#${elementId}`,
-         
-        });
-      } else {
-        // El ancho del viewport es menor o igual a 1500 píxeles, por lo que es un dispositivo móvil
-        this.scroll.animateScroll(element, {
-         
-        });
-      }
-    }
-  }
-
+  
 }

@@ -1,6 +1,5 @@
 import { Component, HostListener, OnInit, ViewEncapsulation } from '@angular/core';
-import { PageScrollService } from 'ngx-page-scroll-core';
-import SmoothScroll from 'smooth-scroll';
+
 @Component({
   selector: 'app-valores',
   templateUrl: './valores.component.html',
@@ -24,8 +23,7 @@ export class ValoresComponent implements OnInit {
   onWindowScroll() {
     const scrollPosition = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
     console.log(scrollPosition); // Imprime el valor de scrollPosition en la consola
-    this.botonDesaparecer = scrollPosition > 400;
-    this.botonAparecer = scrollPosition <= 500;
+
 
     this.botonvDesaparecer = scrollPosition > 3300;
     this.botonvAparecer = scrollPosition <= 2400;
@@ -38,48 +36,21 @@ export class ValoresComponent implements OnInit {
 
       this.shouldDisappear = true;
       this.shouldAppear = false;
-    } else if (scrollPosition <= 3300 && scrollPosition > 2400) {
+    } else if (scrollPosition <= 3300 && scrollPosition > 2000) {
       this.shouldDisappear = false;
       this.shouldAppear = true;
-    } else if (scrollPosition <= 2400) {
+    } else if (scrollPosition <= 2000) {
       this.shouldDisappear = true;
       this.shouldAppear = false;
     }
 
   }
 
-  constructor(private pageScrollService: PageScrollService) { }
+  constructor() { }
 
-
-  ngAfterViewInit(): void {
-    this.scroll = new SmoothScroll('a[href*="#"]', {
-      speed: 900,
-
-    });
-
-
-  }
 
   ngOnInit() {
     
   }
-  scrollToElement(elementId: string): void {
-    const element = document.querySelector(`#${elementId}`);
-
-    if (element) {
-      if (window.matchMedia("(min-width: 500px)").matches) {
-        // El ancho del viewport es al menos de 699 píxeles, por lo que no es un dispositivo móvil
-        this.pageScrollService.scroll({
-          document: document,
-          scrollTarget: `#${elementId}`,
-         
-        });
-      } else {
-        // El ancho del viewport es menor o igual a 698 píxeles, por lo que es un dispositivo móvil
-        this.scroll.animateScroll(element, {
-          
-        });
-      }
-    }
-  }
+  
 }

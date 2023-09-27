@@ -32,14 +32,16 @@ import { ValoresComponent } from './landing/componentes/somos/valores/valores.co
 import { ComisionComponent } from './landing/componentes/somos/comision/comision.component';
 import { BotonFlotanteComponent } from './landing/componentes/boton-flotante/boton-flotante.component';
 import { Pres1Component } from './landing/componentes/presentaciones/pres1/pres1.component';
+import { ImgQuienesComponent } from './landing/componentes/imagenes/img-quienes/img-quienes.component';
+import { ModalImgService } from './landing/modal-img.service';
 
 
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, BotonDePagoComponent, NavbarComponent, BannerComponent, QuienesSomosComponent, DonarComponent, SidebarComponent, DashboardComponent, NuestraHistoriaComponent, MisionComponent,  VisionComponent, ScrollToDirective, ValoresComponent, ComisionComponent, BotonFlotanteComponent, Pres1Component,   
+  declarations: [AppComponent, HomeComponent, BotonDePagoComponent, NavbarComponent, BannerComponent, QuienesSomosComponent, DonarComponent, SidebarComponent, DashboardComponent, NuestraHistoriaComponent, MisionComponent,  VisionComponent, ScrollToDirective, ValoresComponent, ComisionComponent, BotonFlotanteComponent, Pres1Component, ImgQuienesComponent,   
    ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, BrowserAnimationsModule, FontAwesomeModule, NgxPageScrollModule, MatDialogModule, NgxPageScrollCoreModule],
-  providers: [HTMLElement, ScrollToService],
+  providers: [HTMLElement, ScrollToService, ModalImgService],
   bootstrap: [AppComponent],
  
 })

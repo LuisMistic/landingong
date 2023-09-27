@@ -15,7 +15,7 @@ html, body {
 }
 
 body{
-    height: 100vh;
+    
     background: var(--body-color);
     transition: var(--tran-05);
 }

@@ -1,75 +1,83 @@
-.boton-flotante {
-  position: fixed;
-  bottom: 20px; /* Ajusta la posición inferior según tus necesidades */
-  left: 10%; /* Centrado horizontalmente */
-  transform: translateX(-50%); /* Centrado horizontalmente */
-  background-color: rgba(0, 0, 0, .7); /* Fondo semi transparente */
-  color: white;
-  padding: 10px 20px;
+
+/*boton*/
+:root {
+  --color: black;
+  --body-color: #ecf0f1;
+  --color1: #f7f8fa !important;
+  --color2: #16a085;
+  --color3: #435a6b;
+  --color4: red;
+}
+
+
+
+.copyright {
+  position: absolute;
+  bottom: 0;
+}
+
+.copyright a {
+  text-decoration: none;
+  color: var(--color1);
+}
+
+.copyright a:hover {
+  text-decoration: underline;
+}
+
+
+
+.button {
+  color: rgb(223, 133, 15) !important;
+  text-align: center;
+  position: relative;
   border: none;
-  border-radius: 5px;
+  background-color: transparent;
   cursor: pointer;
-  transition: opacity 0.3s, visibility 0.3s;
-}
-
-.boton-flotante.hide {
-  opacity: 0; /* Oculta el botón */
-  visibility: hidden; /* Oculta el botón */
-}
-.boton-flotante1 {
-  position: fixed;
-  bottom: 20px; /* Ajusta la posición inferior según tus necesidades */
-  left: 50%; /* Centrado horizontalmente */
-  transform: translateX(-50%); /* Centrado horizontalmente */
-  background-color: rgba(0, 0, 0, .7); /* Fondo semi transparente */
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: opacity 0.3s, visibility 0.3s;
-}
-
-.boton-flotante.hide {
-  opacity: 0; /* Oculta el botón */
-  visibility: hidden; /* Oculta el botón */
-}
-
-
-
-.boton-flotante2 {
-  position: fixed;
-  bottom: 20px; /* Ajusta la posición inferior según tus necesidades */
-  left: 90%; /* Centrado horizontalmente */
-  transform: translateX(-50%); /* Centrado horizontalmente */
-  background-color: rgba(0, 0, 0, .7); /* Fondo semi transparente */
-  color: white;
-  padding: 10px 20px;.boton-flotante1 {
-    position: fixed;
-    bottom: 20px; /* Ajusta la posición inferior según tus necesidades */
-    left: 57%; /* Centrado horizontalmente */
-    transform: translateX(-50%); /* Centrado horizontalmente */
-    background-color: rgba(0, 0, 0, .7); /* Fondo semi transparente */
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: opacity 0.3s, visibility 0.3s;
-  }
+  outline: none;
+  font-size: 18px;
+  margin: 20px 9px;
   
-  .boton-flotante.hide {
-    opacity: 0; /* Oculta el botón */
-    visibility: hidden; /* Oculta el botón */
-  }
-  
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: opacity 0.3s, visibility 0.3s;
 }
 
-.boton-flotante.hide {
-  opacity: 0; /* Oculta el botón */
-  visibility: hidden; /* Oculta el botón */
+.type1 {
+  color: var(--color1);
 }
+
+.type1::after,
+.type1::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  border: 1px solid;
+  transition: all 1.6s ease;
+  border-radius: 5px;
+}
+
+.type1::after {
+  bottom: 0;
+  right: 0;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: var(--color1);
+  border-right-color: var(--color1);
+}
+
+.type1::before {
+  top: 0;
+  left: 0;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  border-top-color: var(--color1);
+  border-left-color: var(--color1);
+}
+
+.type1:hover::after,
+.type1:hover::before {
+  width: 100%;
+  height: 100%;
+}
+
+
