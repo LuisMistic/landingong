@@ -1,0 +1,47 @@
+
+<div class="row uno colorFondo  align-items-center" media="(orientation: landscape) and (min-device-width: 320px) and (max-device-width: 480px)"   id="atencion"[ngClass]="{'desaparecerColorFondo': colorFondoDesparecer, 'aparecerColorFondo ': colorFondoAparecer}">
+    <div class="col-12 col-xs-10 col-sm-10 col-md-11 col-lg-5">
+      <!-- Texto sobre nosotros -->
+      <div class="texto" [ngClass]="{'desaparecerTexto': shouldDisappear, 'aparecerTexto': shouldAppear}">
+        <h1 id="sobre" [ngClass]="{'desaparecerTexto': shouldDisappear, 'aparecerTexto': shouldAppear}"><p class="p1">ATENCIÓN</p>
+        </h1>
+        <p class="p"> Brindar un espacio a Niñas, Niños, y Adolescentes” procurando proveer la atención de sus necesidades básicas de alimentación, vivienda y vestimenta, según las posibilidades físicas y económicas de la Asociación</p>
+      </div>
+    </div>
+    <div class="col-12 col-sm-7 col-md-6 col-lg-7">
+      <!-- Imagen con bordes redondeados -->
+     
+        <div class="contfoto" [ngClass]="{'desaparecerFondo': shouldDisappear, 'aparecerFondo': shouldAppear}">
+          <img src="../../../../../assets/OBJETIVOS/IMG_1331.JPG" alt="Imagen de la asociación" class="img-fluid img1"
+            [ngClass]="{'desaparecer': shouldDisappear, 'aparecer': shouldAppear}">
+          
+        </div>
+      
+    </div>
+   
+    
+   
+  
+  
+  </div>
+  
+  <section class="" >
+    <app-familia id="familia"></app-familia>
+  </section>
+  
+  <section class="dos misions section-content" id="participar">
+    <app-participar></app-participar>
+  </section>
+  
+  <!-- 
+  <section class="dos misions section-content" id="valores">
+    <app-valores></app-valores>
+  </section>
+  
+  <section class="dos misions section-content" id="comision">
+    <app-comision> </app-comision>
+  </section> -->
+  
+  <div class="flotante">
+    <app-boton-flotante-objetivos></app-boton-flotante-objetivos>
+  </div>

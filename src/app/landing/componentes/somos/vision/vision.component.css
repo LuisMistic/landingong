@@ -1,7 +1,8 @@
 .row {
   scroll-snap-type: y mandatory;
-  overflow-y: scroll;
+  overflow-y: hidden;
 }
+
 
 .section {
   scroll-snap-align: start;

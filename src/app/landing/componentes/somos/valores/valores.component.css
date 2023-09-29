@@ -3,6 +3,10 @@
   height: auto;
 }
 
+.row {
+  scroll-snap-type: y mandatory;
+  overflow-y: hidden;
+}
 
 
  

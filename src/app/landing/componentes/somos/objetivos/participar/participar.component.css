@@ -1,0 +1,557 @@
+.row {
+    scroll-snap-type: y mandatory;
+    overflow-y: hidden;
+  }
+  
+  
+  .section {
+    scroll-snap-align: start;
+  }
+  
+  html,
+  body {
+    scroll-behavior: smooth
+  }
+  
+  
+  
+  
+  
+  /* Estilos para pantallas pequeñas (menos de 600px de ancho) */
+  @media (max-width: 600px) {
+    .img1 * {
+      font-size: 50px;
+      margin-top: auto;
+    }
+  
+    
+    .row.uno {
+     
+        margin: 0px;
+        
+        align-items: center;
+        padding-top: 85px !important;
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+        padding-bottom: 200px !important;
+        width: 100vw;
+        /* 100% del ancho del viewport */
+        height: 100vh;
+        /* 100% de la altura del viewport */
+      }
+    
+  
+   
+  
+    .p1 {
+      font-size: 26px !important;
+      margin-top: 50px;
+      margin-bottom: auto;
+      padding-bottom: 0%;
+    }
+  
+    h1 {
+      color: rgb(212, 93, 9);
+    
+    
+    }
+    
+  
+    p {
+      margin-top: -20px;
+      padding-top: 8px !important;
+      padding-right: 5px !important;
+      line-height: 1.5;
+      font-family: 'Roboto', sans-serif;
+      font-size: 20px;
+      text-align: center;
+     
+    }
+  
+    .container.type1 {
+      margin-bottom: 10px !important;
+    }
+  
+    .p.a {
+      margin-top: 10px;
+      text-align: center;
+    }
+  
+  }
+  @media (orientation: landscape) and (min-device-width: 320px) and (max-device-width: 480px) { 
+    .row {
+      padding-top: 100px !important;
+      padding-left: 1px !important;
+      padding-right: 1px !important;
+      padding-bottom: 50px !important;
+     
+    }
+  
+   }
+  
+  /* Estilos para pantallas medianas (entre 600px y 900px de ancho) */
+  @media (min-width: 600px) and (max-width: 900px) {
+    .img1 * {
+      font-size: 18px;
+    }
+  
+    .row {
+      padding-top: 100px !important;
+      padding-left: 1px !important;
+      padding-right: 1px !important;
+      padding-bottom: 50px !important;
+      width: 100vw;
+      /* 100% del ancho del viewport */
+      height: 100vh;
+      /* 100% de la altura del viewport */
+    }
+  
+    .button {
+      text-align: center;
+      position: relative;
+      padding: 10px 10px;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      outline: none;
+      font-size: 18px;
+      margin: 2em 2.8em;
+    }
+  
+    h1 {
+      color: rgb(212, 93, 9);
+    
+    
+    }
+    
+    .p1 {
+      font-size: 28px !important;
+    }
+  
+    p {
+      line-height: 1.5;
+      font-family: 'Roboto', sans-serif;
+      font-size: 25px;
+  
+    }
+  }
+  
+  
+  /* Estilos para pantallas grandes (más de 900px de ancho) */
+  @media (min-width: 900px) {
+    .img1 * {
+  
+      font-size: 24px;
+    }
+  
+    .row {
+  
+      padding-top: 100px !important;
+      padding-left: 30px !important;
+      padding-right: 1px !important;
+      padding-bottom: 50px !important;
+      width: 100vw;
+      /* 100% del ancho del viewport */
+      height: 100vh;
+      /* 100% de la altura del viewport */
+    }
+  
+    .button {
+  
+      position: relative;
+      padding: 15px 15px;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      outline: none;
+      font-size: 18px;
+  
+  
+    }
+  
+    h1 {
+      color: rgb(212, 93, 9);
+      
+      
+    }
+    
+  
+  
+    .p1 {
+      text-align: center;
+      font-size: 35px !important;
+    }
+  
+    p.a {
+      padding: 40px;
+    }
+  
+    p {
+  
+      padding-bottom: 50px;
+      line-height: 1.5;
+      font-family: 'Roboto', sans-serif;
+      font-size: 25px;
+    }
+  
+  }
+  
+  .texto {
+    margin: 20;
+    font-size: 30px !important;
+  
+  }
+  
+  /* Animación para aparecer el primer bloque de texto */
+  @keyframes aparecerTexto {
+    from {
+      opacity: 0;
+      transform: translateX(-600px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+  
+  .texto {
+    animation: aparecerTexto 0.9s forwards 1;
+  }
+  
+  /* Animación para desaparecer el primer bloque de texto */
+  @keyframes desaparecerTexto {
+    from {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  
+    to {
+      opacity: 0;
+      transform: translateX(-600px);
+    }
+  }
+  
+  .desaparecerTexto {
+    animation: desaparecerTexto 1s forwards;
+  }
+  
+  /* Control del color de fondo */
+  @keyframes aparecerColorFondo {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .colorFondo {
+    animation: aparecerColorFondo 1.9s forwards 1;
+  }
+  
+  /* Animación para desaparecer el color de fondo */
+  @keyframes desaparecerColorFondo {
+    from {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+    }
+  }
+  
+  .desaparecerColorFondo {
+    animation: desaparecerColorFondo 1s forwards;
+  }
+  
+  /* Animación para aparecer el segundo bloque de texto */
+  @keyframes aparecerTexto1 {
+    from {
+      opacity: 0;
+      transform: translateX(600px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+  
+  .texto1 {
+    animation: aparecerTexto1 1.3s forwards 1;
+  }
+  
+  /* Animación para desaparecer el segundo bloque de texto */
+  @keyframes desaparecerTexto1 {
+    from {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  
+    to {
+      opacity: 0;
+      transform: translateX(600px);
+    }
+  }
+  
+  .desaparecerTexto1 {
+    animation: desaparecerTexto1 2s forwards;
+  }
+  
+  /* Animación para aparecer la imagen y su borde */
+  /* Animación para aparecer con rotación por defecto (7 grados) */
+  @keyframes aparecer {
+    from {
+      opacity: 0;
+      transform: translateX(600px) rotate(0deg);
+      border: 5px solid black;
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateX(0px) rotate(7deg);
+      border: 5px solid black;
+    }
+  }
+  
+  /* Animación para aparecer con rotación en dispositivos medianos (4 grados) */
+  @keyframes aparecer-rotacion-mediana {
+    from {
+      opacity: 0;
+      transform: translateX(600px) rotate(0deg);
+      border: 5px solid black;
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateX(0px) rotate(2deg);
+      border: 5px solid black;
+    }
+  }
+  
+  /* Animación para aparecer con rotación en dispositivos móviles (1 grado) */
+  @keyframes aparecer-rotacion-movil {
+    from {
+      opacity: 0;
+      transform: translateX(600px) rotate(0deg);
+      border: 5px solid black;
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateX(0px) rotate(-5deg);
+      border: 5px solid black;
+    }
+  }
+  
+  /* Aplicar la animación a elementos con clase .img1 */
+  .img1 {
+    animation: aparecer 1s forwards 1;
+    border-radius: 40px !important;
+    box-shadow: 3px 3px 10px 2px rgba(0, 0, 0, 0.5);
+    width: 600px;
+    height: auto;
+  }
+  
+  /* Modificar la rotación en dispositivos medianos */
+  @media (min-width: 577px) and (max-width: 992px) {
+    .img1 {
+      animation-name: aparecer-rotacion-mediana;
+    }
+  }
+  
+  /* Modificar la rotación en dispositivos móviles */
+  @media (max-width: 576px) {
+    .img1 {
+      animation-name: aparecer-rotacion-movil;
+    }
+  }
+  
+  /* Animación para desaparecer la imagen */
+  @keyframes desaparecer {
+    from {
+      opacity: 1;
+      transform: translateX(0px) rotate(7deg);
+    }
+  
+    to {
+      opacity: 0;
+      transform: translateX(600px) rotate(0deg);
+    }
+  }
+  
+  .desaparecer {
+    animation: desaparecer 1s forwards;
+  }
+  
+  /* Animación para aparecer el fondo de imagen */
+  @keyframes aparecerFondo {
+    from {
+      opacity: 0;
+      transform: translateX(600px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateX(0px) rotate(7deg);
+      border: 10px solid rgba(255, 255, 255, 0.1);
+      border-bottom: 11px dashed rgb(28, 110, 164, 08%);
+      border-radius: 40px 33px 40px 133px;
+      background-color: rgba(188, 189, 125, 0.3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  
+  .contfoto {
+    animation: aparecerFondo 0.4s forwards 1;
+  }
+  
+  /* Animación para desaparecer el fondo de imagen */
+  @keyframes desaparecerFondo {
+    from {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  
+    to {
+      opacity: 0;
+      transform: translateX(600px);
+    }
+  }
+  
+  .desaparecerFondo {
+    animation: desaparecerFondo 2.6s forwards;
+  }
+  
+  
+  
+  
+  /*titulos*/
+  
+  h1 {
+    font-size: 40px;
+    line-height: 1.5;
+  }
+  
+  
+  .img-fluid {
+    -webkit-box-shadow: inset -1px 3px 8px 5px #1F87FF, 2px 5px 16px 0px #0B325E, 13px 10px 10px 11px rgba(0, 0, 0, 0.12);
+    box-shadow: inset -1px 3px 8px 5px #1F87FF, 2px 5px 16px 0px #0B325E, 13px 10px 10px 11px rgba(0, 0, 0, 0.12);
+    background: #1C6EA4;
+  }
+  
+  
+  
+  body#tinymce {
+    background: #FFFFFF
+  }
+  
+  /*boton*/
+  :root {
+    --color: black;
+    --body-color: #ecf0f1;
+    --color1: #566473;
+    --color2: #16a085;
+    --color3: #435a6b;
+    --color4: red;
+  }
+  
+  
+  
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: Raleway;
+    background-color: var(--body-color);
+  }
+  
+  .copyright {
+    position: absolute;
+    bottom: 0;
+  }
+  
+  .copyright a {
+    text-decoration: none;
+    color: var(--color2);
+  }
+  
+  .copyright a:hover {
+    text-decoration: underline;
+  }
+  
+  
+  
+  
+  
+  
+  .type1 {
+    color: var(--color1);
+  }
+  
+  .type1::after,
+  .type1::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    border: 2px solid;
+    transition: all 0.6s ease;
+    border-radius: 2px;
+  }
+  
+  .type1::after {
+    bottom: 0;
+    right: 0;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: var(--color1);
+    border-right-color: var(--color1);
+  }
+  
+  .type1::before {
+    top: 0;
+    left: 0;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    border-top-color: var(--color1);
+    border-left-color: var(--color1);
+  }
+  
+  .type1:hover::after,
+  .type1:hover::before {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .botAparecer {
+  
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 2s, transform 2s;
+  
+  }
+  
+  
+  .botdesaparecer {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 2s, transform 2s;
+  
+  }
