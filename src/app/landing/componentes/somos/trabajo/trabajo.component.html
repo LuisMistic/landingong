@@ -1,0 +1,81 @@
+<div class="row uno colorFondo  align-items-center"
+    media="(orientation: landscape) and (min-device-width: 320px) and (max-device-width: 480px)" id="trabajo"
+    [ngClass]="{'desaparecerColorFondo': colorFondoDesparecer, 'aparecerColorFondo ': colorFondoAparecer}">
+    <div class="col-12 col-xs-10 col-sm-10 col-md-11 col-lg-6">
+        <!-- Texto sobre nosotros -->
+        <div class="texto" [ngClass]="{'desaparecerTexto': shouldDisappear, 'aparecerTexto': shouldAppear}">
+            <h1 id="sobre" [ngClass]="{'desaparecerTexto': shouldDisappear, 'aparecerTexto': shouldAppear}">
+                <p class="p1">NUESTRO TRABAJO</p>
+            </h1>
+            <p class="p"> En estos 30 años asistimos a más de 1500 niños en situación de riesgo. Actualmente, En un
+                espacio sano y afectivo le entregamos lo necesario para cubrir sus necesidades básicas, alimentación,
+                educación y recreación, a través del desempeño de docentes, auxiliares y un equipo técnico integrado por
+                Trabajadora Social, psicóloga, psicomotricista.</p>
+        </div>
+    </div>
+    <div class="col-8 col-sm-7 col-md-6 col-lg-6">
+        <!-- Imagen con bordes redondeados -->
+
+       >
+        <div id="carouselExampleCaptions" class="carousel slide img-fluid img1 contfoto" data-bs-ride="carousel" [ngClass]="{'desaparecerFondo': shouldDisappear, 'aparecerFondo': shouldAppear}">
+            <div class="carousel-indicators">
+              <!-- <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button> -->
+              <!-- <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button> -->
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <video src="../../../../../assets/trabajos/entrada.mp4" style="border-radius: 30px; border: 5px solid;" muted controls  id="video" class="d-block w-100 " alt="..."  autoplay muted ></video>
+                <div class="carousel-caption d-none d-md-block">
+                  <h5></h5>
+                  <p></p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <!-- <img src="../../../../assets/imagen/padre.JPG" class="d-block w-100" alt="..."> -->
+                <!-- <div class="carousel-caption d-none d-md-block">
+                  <h5>Second slide label</h5>
+                  <p>Some representative placeholder content for the second slide.</p>
+                </div> -->
+              </div>
+              <div class="carousel-item">
+                <!-- <img src="../../../../assets/imagen/padre.JPG" class="d-block w-100" alt="..."> -->
+                <!-- <div class="carousel-caption d-none d-md-block">
+                  <h5>Third slide label</h5>
+                  <p>Some representative placeholder content for the third slide.</p>
+                </div> -->
+              </div>
+            </div>
+            <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button> -->
+            <!-- <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button> -->
+          </div>
+    </div>
+
+</div>
+
+<section class="">
+    <app-odontologia id="odontología"></app-odontologia>
+</section>
+
+<!-- <section class="dos misions section-content" id="vision">
+    <app-vision></app-vision>
+  </section>
+  
+  
+  <section class="dos misions section-content" id="valores">
+    <app-valores></app-valores>
+  </section>
+  
+  <section class="dos misions section-content" id="comision">
+    <app-comision> </app-comision>
+  </section> -->
+
+<div class="flotante">
+    <app-boton-flotante-trabajo></app-boton-flotante-trabajo>
+</div>

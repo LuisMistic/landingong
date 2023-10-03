@@ -42,6 +42,7 @@ h1 {
   color: rgb(212, 93, 9);
   font-size: 40px;
   line-height: 1.5;
+  margin-top: 0px !important;
 }
 
 /* Esto se aplicará si el ancho de la ventana de visualización es de 600px o menos */
@@ -49,7 +50,14 @@ h1 {
   h1 {
     font-size: 38px; /* La mitad del tamaño original */
     margin-bottom: -600px !important;
+    
   }
+  h1 {
+  color: rgb(212, 93, 9);
+  font-size: 28px;
+  line-height: 1.5;
+  margin-top: 50px !important;
+}
 }
 
 @keyframes comisionAparecer {

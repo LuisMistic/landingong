@@ -18,10 +18,7 @@ export class VisionComponent {
 
   @HostListener('window:scroll', []) onWindowScroll() { const scrollPosition = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0; console.log(scrollPosition); // Imprime el valor de scrollPosition en la consola
   
-  // Añade esta línea para obtener la altura de la pantalla const screenHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-  
-  // Añade esta condición para ejecutar el código del ts solo si la altura de la pantalla es mayor que 400 píxeles if (screenHeight > 400) { // Mantén las líneas que tienes para controlar los botones this.botonDesaparecer = scrollPosition > 400; this.botonAparecer = scrollPosition <= 500;
-  
+
   this.botonvDesaparecer = scrollPosition > 2200;
   this.botonvAparecer = scrollPosition <= 1400;
   

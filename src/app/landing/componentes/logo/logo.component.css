@@ -1,0 +1,250 @@
+/* logo */
+
+
+.row {
+    width: 100vw !important;
+    height: 100vh !important;
+    
+  }
+  
+.logo-img {
+    display: flex;
+    padding-top: 10%;
+    margin-top: 10px;
+    max-width: 15%;
+    max-height: 29%;
+    height: auto;
+    padding-bottom: 0%;
+    background-color: transparent;
+  }
+  /* texto logo*/
+  .association-link {
+    line-height: 1.5;
+    display: block;
+    text-align: center;
+    font-size: 27px;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 700;
+    color: rgb(35, 35, 34); /* Cambia el color a dorado */
+    
+    padding-bottom: 0px; /* Ajusta el margen superior según tu preferencia */
+  }
+
+
+  .logo-img {
+
+    -webkit-animation: logo-img 5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: logo-img 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  }
+
+  .association-link {
+
+    -webkit-animation: association-link 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: association-link 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  }
+
+
+
+
+  @-webkit-keyframes logo-img {
+    0% {
+      letter-spacing: 1em;
+      -webkit-transform: translateZ(100px);
+              transform: translateZ(100px);
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateZ(12px);
+              transform: translateZ(12px);
+      -webkit-filter: blur(0);
+              filter: blur(0);
+      opacity: 1;
+    }
+  }
+  @keyframes logo-img {
+    0% {
+      letter-spacing: 1em;
+      -webkit-transform: translateZ(100px);
+              transform: translateZ(100px);
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateZ(12px);
+              transform: translateZ(12px);
+      -webkit-filter: blur(0);
+              filter: blur(0);
+      opacity: 1;
+    }
+  }
+
+  
+  @-webkit-keyframes association-link {
+    0% {
+      letter-spacing: 0.2em;
+      -webkit-transform: translateZ(20px);
+              transform: translateZ(20px);
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateZ(10px);
+              transform: translateZ(10px);
+      -webkit-filter: blur(0);
+              filter: blur(0);
+      opacity: 1;
+    }
+  }
+  @keyframes association-link {
+    0% {
+      letter-spacing: 0.2em;
+      -webkit-transform: translateZ(10px);
+              transform: translateZ(10px);
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateZ(10px);
+              transform: translateZ(10px);
+      -webkit-filter: blur(0);
+              filter: blur(0);
+      opacity: 1;
+    }
+  }
+
+
+  @media (max-width: 600px) {
+
+    .logo-img {
+        display: flex;
+        padding-top: 50%;
+        margin-top: 50px;
+        max-width: 35%;
+        max-height: 39%;
+        height: auto;
+        margin-left: 40px;
+        
+        background-color: transparent;
+      }
+
+
+      /* texto logo*/
+      .association-link {
+        
+        line-height: 1.5;
+        display: block;
+        text-align: center;
+        font-size: 20px;
+        font-family: 'PT Sans', sans-serif;
+        font-weight: 700;
+        color: rgb(35, 35, 34); /* Cambia el color a dorado */
+        
+        /* Ajusta el margen superior según tu preferencia */
+      }
+      .redes {
+        margin-left: 40px;
+      }
+      .ti {
+        margin-left: 40px;
+      }
+      .flecha {
+        margin-left: 40px;
+      }
+  }
+
+  
+
+  .logo-container {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .logo-img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .light-point {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 70%);
+    border-radius: 50%;
+    animation: moveLight 3s linear infinite;
+  }
+  
+  @keyframes moveLight {
+    0% {
+      top: -10px;
+      left: -10px;
+    }
+    25% {
+      top: -10px;
+      left: calc(100% - 10px);
+    }
+    50% {
+      top: calc(100% - 10px);
+      left: calc(100% - 10px);
+    }
+    75% {
+      top: calc(100% - 10px);
+      left: -10px;
+    }
+    100% {
+      top: -10px;
+      left: -10px;
+    }
+  }
+  .btn {
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.375rem 0.75rem;
+    border: none;
+    border-radius: 0.25rem;
+    background-color: transparent;
+    color: #212529;
+}
+
+.btn:hover {
+    text-decoration: none;
+}
+
+.fab {
+    font-size: 1.5rem;
+}
+
+/* Estilos para los íconos */
+.btn-icon {
+    font-size: 24px; /* Tamaño del ícono */
+    margin: 0 10px; /* Espacio entre los íconos (ajusta según tus preferencias) */
+    color: #000000; /* Color negro para todos los íconos */
+    transition: transform 0.2s ease, color 0.2s ease; /* Transiciones para transformación y color */
+  }
+  
+  
+  /* Efecto de iluminación al pasar el cursor */
+  .btn-icon:hover {
+    transform: scale(1.2); /* Hace que el ícono sea un poco más grande al pasar el cursor */
+    color: #f2eeee; /* Cambia el color del ícono al pasar el cursor (ajusta según tus preferencias) */
+  }
+
+
+.redes {
+    position: relative;
+  top: 0px; /* Ajusta el valor según cuánto quieras moverlo hacia arriba */
+}
+
+.flecha {
+
+    position: relative;
+  top: -300px; 
+  
+}
+

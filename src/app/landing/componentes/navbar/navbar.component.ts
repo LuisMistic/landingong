@@ -29,6 +29,9 @@ export class NavbarComponent implements OnInit {
   loadNuestraHistoria() {
      this.sharedServiceService.currentComponent = 'historia'
   }
+  loadObjetivos() {
+    this.sharedServiceService.currentComponent = 'objetivos'
+  }
 
   loadDonar() {
     this.sharedServiceService.currentComponent = 'donar';
@@ -39,7 +42,16 @@ export class NavbarComponent implements OnInit {
 
   loadaAppComponent() {
     this.sharedServiceService.currentComponent = 'pres1';
+  } 
+
+  loadTrabajo (){
+    this.sharedServiceService.currentComponent = 'trabajo'
   }
+
+
+
+
+
   isCollapsed = true;
   isSubMenuOpen = false; // Variable para controlar el estado del submenú
 

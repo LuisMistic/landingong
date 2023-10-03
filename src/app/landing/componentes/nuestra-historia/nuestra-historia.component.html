@@ -1,48 +1,53 @@
 
-<div class="row uno colorFondo" id="nosotros" [ngClass]="{'desaparecerColorFondo': colorFondoDesparecer, 'aparecerColorFondo ': colorFondoAparecer}">
-  <div class="col-12 col-md-4" >
-      <!-- Texto sobre nosotros -->
-      <div class="texto" [ngClass]="{'desaparecerTexto': shouldDisappear, 'aparecerTexto': shouldAppear}">
-          <h1 id="sobre"[ngClass]="{'desaparecerTexto': shouldDisappear, 'aparecerTexto': shouldAppear}">SOBRE NOSOTROS</h1>
-          <p>La Asociación Misericordia es una asociación civil sin fines de lucro que tiene como objetivo principal brindar asistencia y garantizar derechos a niños en situación de riesgo, ya sean de bajos recursos, abandonados o excluidos de sus familias.</p>
-      </div>
-  </div>
-  <div class="col-12 col-md-5" >
-      <!-- Imagen con bordes redondeados -->
-      <div class="contfoto"[ngClass]="{'desaparecerFondo': shouldDisappear, 'aparecerFondo': shouldAppear}" >
-        <img src="../../../../assets/quienesSomos/nosotros.JPG" alt="Imagen de la asociación" class="img-fluid img1" [ngClass]="{'desaparecer': shouldDisappear, 'aparecer': shouldAppear}">
-      </div>
-      </div>
-  <div class="col-12 col-md-3">
-  <div class="texto1" [ngClass]="{'desaparecerTexto1': shouldDisappear, 'aparecerTexto1': shouldAppear}">
-         
-          <p>Nuestra obra está dirigida a toda la comunidad.</p>
-          
-      </div></div>
-       
-      <div class="col-12 col-md-1 container"(click)="smoothScroll()"[ngClass]="{'botdesaparecer': botonDesaparecer, 'botAparecer':botonAparecer}" >
-        <button class="button type1">
-          MISION
-        </button>
-      
-        <!-- (click)="toQuienessomos()" routerLink="/quienesomos" role="button" routerLinkActive="active" -->
+<div class="row uno colorFondo  align-items-center" media="(orientation: landscape) and (min-device-width: 320px) and (max-device-width: 480px)"   id="historia"[ngClass]="{'desaparecerColorFondo': colorFondoDesparecer, 'aparecerColorFondo ': colorFondoAparecer}">
+  <div class="col-12 col-xs-10 col-sm-10 col-md-11 col-lg-4">
+    <!-- Texto sobre nosotros -->
+    <div class="texto" [ngClass]="{'desaparecerTexto': shouldDisappear, 'aparecerTexto': shouldAppear}">
+      <h1 id="sobre" [ngClass]="{'desaparecerTexto': shouldDisappear, 'aparecerTexto': shouldAppear}"><p class="p1">NUESTRA HISTORIA</p>
+      </h1>
+      <p class="p"> Contar nuestra historia es poner de manifiesto una suma de vocaciones personales que, mancomunadas por un mismo ideal solidario, trabajan día a día por una niñez más justa y digna.</p>
     </div>
+  </div>
+  <div class="col-12 col-sm-7 col-md-6 col-lg-4">
+    <!-- Imagen con bordes redondeados -->
+   
+      <div class="contfoto" [ngClass]="{'desaparecerFondo': shouldDisappear, 'aparecerFondo': shouldAppear}">
+        <img src="../../../../assets/imagen/padre.JPG" alt="Imagen de la asociación" class="img-fluid img1"
+          [ngClass]="{'desaparecer': shouldDisappear, 'aparecer': shouldAppear}">
+        
+      </div>
+    
+  </div>
+  <div class="col-12 col-sm-10 col-md-10 col-lg-3">
+    <div class="texto1" [ngClass]="{'desaparecerTexto1': shouldDisappear, 'aparecerTexto1': shouldAppear}">
 
+      <p class="p a">La Asociación Misericordia (Asociación sin fines de lucro) fue fundada en el año 1993 por el Padre Khalil Henaoui, con el objetivo de crear un hogar para niños en situación de vulnerabilidad a fin de ofrecerles la asistencia necesaria para su desarrollo.</p>
+   
+    </div>
+  </div>
   
+ 
+
+
 </div>
 
-<section class="dos misions" id="mision" >
-  <app-mision ></app-mision>
-
+<section class="" >
+  <app-fundacion id="fundacion"></app-fundacion>
 </section>
 
-<section class="dos misions" id="vision">
+<!-- <section class="dos misions section-content" id="vision">
   <app-vision></app-vision>
 </section>
 
 
-<section class="dos misions" id="valores">
+<section class="dos misions section-content" id="valores">
   <app-valores></app-valores>
 </section>
 
+<section class="dos misions section-content" id="comision">
+  <app-comision> </app-comision>
+</section> -->
 
+<div class="flotante">
+  <app-boton-flotante-historia></app-boton-flotante-historia>
+</div>

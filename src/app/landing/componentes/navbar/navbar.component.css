@@ -270,7 +270,7 @@
 }
 
 .sub.show {
-  max-height: 10rem;
+  max-height: 12rem;
   /* o cualquier valor que cubra todo el contenido del submenu */
   visibility: visible;
 

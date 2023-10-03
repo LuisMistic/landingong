@@ -1,0 +1,19 @@
+
+
+<div class="row uno colorFondo elemento siempre-visible  d-flex justify-content-center align-items-center"  media="(orientation: landscape) and (min-device-width: 320px) and (max-device-width: 480px)"   [ngClass]="{'desaparecerColorFondo': shouldDisappear, 'aparecerColorFondo ': shouldAppear}" >
+    <div class="col-10 col-sm-10 col-md-9 col-lg-4">
+        <!-- Texto sobre nosotros -->
+        <div class="texto" [ngClass]="{'desaparecerTexto':shouldDisappear, 'aparecerTexto': shouldAppear }">
+            <h1 class="p1">FUNDACIÓN</h1>
+            <p class="p">En el año 1994 nació el Hogar Misericordia y en el año 2002 nació el Hogar Madre de Misericordia, creciendo por la necesidad de otro espacio para niños. En el año 2011 nació el CPI Medalla Milagrosa y a lo largo de estos 30 años hemos recibido en nuestros hogares a más de 1500 niños.</p>
+        </div>
+    </div>
+    <div class="col-8 col-sm-7 col-md-6 col-lg-4" id="contfoto1"[ngClass]="{'desaparecerFondo':shouldDisappear, 'aparecerFondo': shouldAppear }">
+        <!-- Imagen con bordes redondeados -->
+        <img src="../../../../../assets/nuestra historia/IMG_1357.JPG" alt="Imagen de la asociación" class="img-fluid img1" [ngClass]="{'desaparecer': shouldDisappear, 'aparecerImagenMision': shouldAppear }">
+    </div>
+   
+   
+      
+</div>
+  

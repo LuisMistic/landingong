@@ -17,9 +17,19 @@ import { SharedServiceService } from '../shared-service.service';
       <app-boton-de-pago></app-boton-de-pago>
     </ng-container>
 
+    <ng-container *ngIf="sharedServiceService.currentComponent === 'trabajo'">
+      <app-trabajo></app-trabajo>
+    </ng-container>
+
+
     <ng-container *ngIf="sharedServiceService.currentComponent === 'historia'">
       <app-nuestra-historia></app-nuestra-historia>
     </ng-container>
+
+    <ng-container *ngIf="sharedServiceService.currentComponent === 'objetivos'">
+      <app-objetivos></app-objetivos>
+    </ng-container>
+
     <!-- Puedes agregar más componentes según los botones del menú -->
   `,
   

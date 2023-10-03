@@ -1,13 +1,11 @@
-import { Component, HostListener, ViewEncapsulation } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
-  selector: 'app-mision',
-  templateUrl: './mision.component.html',
-  styleUrls: ['./mision.component.css'],
-  encapsulation: ViewEncapsulation.Emulated
+  selector: 'app-fundacion',
+  templateUrl: './fundacion.component.html',
+  styleUrls: ['./fundacion.component.css']
 })
-export class MisionComponent {
-
+export class FundacionComponent {
   shouldAppear = false;
   shouldDisappear = false;
   botonAparecer = false;
@@ -30,9 +28,5 @@ export class MisionComponent {
            { this.shouldDisappear = true; this.shouldAppear = false; 
           } 
       } 
-  }
-
-
-
-
+ }
 

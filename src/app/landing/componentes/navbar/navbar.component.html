@@ -13,7 +13,7 @@
          <div>
            
                 <button class="donacion  d-lg-none" (click)="loadDonar();">
-                    <p id="estiloA">DONAR AQUÍ</p>
+                    <p id="estiloA">DONAR </p>
                 </button>
             </div>
         <div class="casilla d-lg-none" role="button" (click)="toggleSubMenu()">
@@ -35,16 +35,28 @@
                         aria-labelledby="navbarDropdown1" id="submenu">
 
                         <li><button class="nav-link nav1" id="navbarDropdown1" data-bs-toggle="dropdown" data-bs-submenu
-                                aria-expanded="false" (click)="loadQuienesSomos(); isCollapsed = !isCollapsed">Sobre
+                                aria-expanded="false" (click)="loadQuienesSomos(); isCollapsed = !isCollapsed">
                                 Nosotros</button></li>
+                               <div id="lineaSub"></div>
+                      <li><button class="nav-link nav3" id="navbarDropdown1" data-bs-toggle="dropdown" data-bs-submenu
+                                aria-expanded="false"
+                                (click)="loadTrabajo(); isCollapsed = !isCollapsed"
+                                >Trabajo</button></li>
+
+
+
                         <div id="lineaSub"></div>
                         <li><button class="nav-link nav2" id="myButton" id="navbarDropdown1" data-bs-toggle="dropdown"
                                 data-bs-submenu aria-expanded="false"
-                                (click)="loadNuestraHistoria(); isCollapsed = !isCollapsed">Nuestra Historia</button>
+                                (click)="loadNuestraHistoria(); isCollapsed = !isCollapsed">
+                                 Historia</button>
                         </li>
                         <div id="lineaSub"></div>
                         <li><button class="nav-link nav3" id="navbarDropdown1" data-bs-toggle="dropdown" data-bs-submenu
-                                aria-expanded="false">item 3</button></li>
+                                aria-expanded="false"
+                                (click)="loadObjetivos(); isCollapsed = !isCollapsed"
+                                >Objetivos</button></li>
+                                
                     </ul>
 
                 </li>

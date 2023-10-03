@@ -44,10 +44,10 @@ export class ComisionComponent  {
     if (scrollPosition > 4000) {
       this.shouldDisappear = true;
       this.shouldAppear = false;
-    } else if (scrollPosition <= 4000 && scrollPosition > 3200) {
+    } else if (scrollPosition <= 4000 && scrollPosition > 2000) {
       this.shouldDisappear = false;
       this.shouldAppear = true;
-    } else if (scrollPosition <= 3400) {
+    } else if (scrollPosition <= 2000) {
       this.shouldDisappear = true;
       this.shouldAppear = false;
     }

@@ -21,12 +21,12 @@
       font-size: 40px;
     }
      .texto1 {
-      margin-top: -200px; /* Ajusta este valor según sea necesario */
-      padding-top:0 ;
+      /* Ajusta este valor según sea necesario */
+      padding-bottom: 220PX ;
     }
 
     .row.uno {
-      padding-top: 95px !important;
+      padding-top: 115px !important;
       background-color: rgba(255, 116, 23, 0.23);
       padding: 10%;
       overflow: hidden;

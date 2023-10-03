@@ -1,28 +1,24 @@
 
 
-.row {
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top:190px;
     
 }
 
 h3 {
     text-align: center;
-    font-size: 20px;
+    font-size: 30px;
     line-height: 1.5;
     
 }
 
 .card {
-    
-    background-image: linear-gradient(25deg, #f8a30549, #967a08, #ac640658, #fabf00a1);
+    border: radius 5px;
+    width: 10 rem;
     opacity: 0; 
-    border: solid 3px  rgba(255, 251, 240, 0) !important;
-    padding: 0 !important;
-    margin-bottom: 50rem;
-    margin-right: 10px;
+    margin: 10.5rem;
     box-shadow:
         0 0 10px rgba(0, 0, 0, 0.3), /* Sombra sólida */
         0 0 20px rgba(0, 0, 0, 0.2), /* Sombra adicional */
@@ -31,25 +27,7 @@ h3 {
     animation: slide-top 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
-@media (max-width: 600px) {
 
-  .card {
-
-    margin-bottom: 10px !important;
-  }
-
-}
-
-@media (max-width: 600px) and (max-width: 900px) {
-
-
-  .card {
-
-    margin-bottom: 50rem;
-  }
-
-
-}
 
 
 @keyframes card {
@@ -62,16 +40,12 @@ h3 {
       transform: translateX(0px);
     }
   }
-
-
-
-
   .card {animation: card 0.9s forwards 1;
   }
   
 
 .card-body1 {
-    background-image: linear-gradient(25deg, #4d3609, #99683a, #9b6825, #301909ab)}
+    background-image: linear-gradient(25deg, #4d3609, #99683a, #9b6825, #301909)}
 
   
 .card-body {
@@ -91,7 +65,7 @@ h3 {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-   
+    padding: 0.375rem 0.75rem;
     border: none;
     border-radius: 0.25rem;
     background-color: transparent;
@@ -137,7 +111,7 @@ h3 {
   }
   
 
-  .row {
+  .container {
     -webkit-animation: shadow-drop-2-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     animation: shadow-drop-2-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 
@@ -200,14 +174,4 @@ h3 {
       left: -10px;
       opacity: 1; /* Opacidad máxima */
     }
-}
-.card-body1 {
-  /* Agrega una sombra con un desplazamiento horizontal y vertical negativo */
-  box-shadow: -2px -2px 10px #000000;
-}
-
-/* Cambia la sombra al pasar el cursor */
-.card-body1:hover {
-  /* Quita la sombra para crear el efecto de relieve */
-  box-shadow: none;
 }

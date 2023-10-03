@@ -27,19 +27,6 @@
 
 
 
-.button {
-  color: rgb(223, 133, 15) !important;
-  text-align: center;
-  position: relative;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  outline: none;
-  font-size: 18px;
-  margin: 20px 9px;
-  
-}
-
 .type1 {
   color: var(--color1);
 }
@@ -49,11 +36,12 @@
   content: '';
   display: block;
   position: absolute;
-  width: 30%;
+  width: 35%;
   height: 30%;
-  border: 1px solid;
+  border: 0.1px solid;
   transition: all 1.6s ease;
-  border-radius: 5px;
+  border-radius: 3px;
+ ;
 }
 
 .type1::after {
@@ -81,3 +69,63 @@
 }
 
 
+@media (max-width: 600px) { 
+
+  .button {
+    color: rgb(223, 133, 15) !important;
+    text-align: center;
+    position: relative;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    font-size: 18px;
+    margin: 20px 7px 20px 3px !important;
+    padding: 2px 2px 2px 2px;
+    
+  }
+}
+
+
+
+
+
+
+
+@media (min-width: 600px) and (max-width: 900px) {
+
+  .button {
+    color: rgb(223, 133, 15) !important;
+    text-align: center;
+    position: relative;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    font-size: 18px;
+    margin: 20px 7px 20px 3px !important;
+    padding: 5px 5px 5px 5px;
+    
+  }
+}
+
+
+
+
+
+@media (min-width: 900px) {
+
+  .button {
+    color: rgb(223, 133, 15) !important;
+    text-align: center;
+    position: relative;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    font-size: 18px;
+    margin: 20px 7px 20px 20px !important;
+    padding: 2px 4px 4px 2px;
+    
+  }
+}

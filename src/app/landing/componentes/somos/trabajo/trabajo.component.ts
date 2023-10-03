@@ -1,15 +1,14 @@
-import { Component, ElementRef, HostListener, ViewChild, ViewEncapsulation } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { PageScrollService } from 'ngx-page-scroll-core';
-import { ModalImgService } from '../../modal-img.service';
-import SmoothScroll from 'smooth-scroll';
+import { ModalImgService } from 'src/app/landing/modal-img.service';
 
 @Component({
-  selector: 'app-quienes-somos',
-  templateUrl: './quienes-somos.component.html',
-  styleUrls: ['./quienes-somos.component.css'],
-  encapsulation: ViewEncapsulation.Emulated
+  selector: 'app-trabajo',
+  templateUrl: './trabajo.component.html',
+  styleUrls: ['./trabajo.component.css']
 })
-export class QuienesSomosComponent {
+export class TrabajoComponent {
+
 
   shouldAppear = false;
   shouldDisappear = false;
@@ -17,9 +16,8 @@ export class QuienesSomosComponent {
   botonDesaparecer = false;
   colorFondoAparecer = false;
   colorFondoDesparecer = false;
-  show: boolean = false;
-  element: any;
-  scroll: any;
+  
+  
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
@@ -45,30 +43,9 @@ export class QuienesSomosComponent {
  constructor(private pageScrollService: PageScrollService, private modalImgService: ModalImgService) { }
 
 
- ngAfterViewInit(): void {
-  this.scroll = new SmoothScroll('a[href*="#"]', {
-   
 
-  });
-
-
-}
 ngOnInit(): void {
   window.scrollTo(0, 0); // Desplázate al principio de la página cuando se carga el componente
 }
 
-
 }
-
-
-
- 
-
-
-
- 
-
-//  toQuienessomos(){
-//   document.getElementById("quienessomos")?.scrollIntoView({ behavior: 'smooth' });
-// }
-
