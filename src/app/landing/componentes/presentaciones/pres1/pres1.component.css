@@ -144,14 +144,7 @@ h3 {
   }
 
 
-  .light-point {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 10%, rgba(255, 255, 255, 0) 28%);
-    border-radius: 50%;
-    animation: moveLight 3s linear infinite;
-  }
+ 
   
   @keyframes moveLight {
     /* Añadimos la propiedad opacity con diferentes valores */
@@ -210,4 +203,71 @@ h3 {
 .card-body1:hover {
   /* Quita la sombra para crear el efecto de relieve */
   box-shadow: none;
+}
+.quienes {
+  font-size: 26px; /* Tamaño de fuente deseado */
+  /* Fuente en negrita para un efecto más pronunciado */
+  text-transform: uppercase; /* Convertir el texto a mayúsculas para mejorar el efecto */
+  position: relative; /* Añade posición relativa para los elementos secundarios */
+  animation: glow 1.5s ease-in-out infinite; /* Animación de parpadeo */
+}
+
+.quienes1 {
+  font-size: 26px; /* Tamaño de fuente deseado */
+  /* Fuente en negrita para un efecto más pronunciado */
+  text-transform: uppercase; /* Convertir el texto a mayúsculas para mejorar el efecto */
+  position: relative; /* Añade posición relativa para los elementos secundarios */
+  animation: glow 2.5s ease-in-out infinite; /* Animación de parpadeo */
+}
+.quienes2 {
+  font-size: 26px; /* Tamaño de fuente deseado */
+  /* Fuente en negrita para un efecto más pronunciado */
+  text-transform: uppercase; /* Convertir el texto a mayúsculas para mejorar el efecto */
+  position: relative; /* Añade posición relativa para los elementos secundarios */
+  animation: glow 3.5s ease-in-out infinite; /* Animación de parpadeo */
+}
+@keyframes glow {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7); /* Sombra luminosa alrededor del texto */
+  }
+  50% {
+    text-shadow: none; /* Sin sombra en el punto medio para el parpadeo */
+  }
+}
+
+.transition-out {
+  animation: slide-up 0.5s ease forwards, fade-out 0.5s ease forwards;
+  background-color:hsla(0,31%,47%,1);
+background-image:
+radial-gradient(at 81% 54%, hsla(36,80%,37%,0.93) 0px, transparent 50%),
+radial-gradient(at 36% 54%, hsla(30,91%,41%,1) 0px, transparent 50%),
+radial-gradient(at 0% 95%, hsla(26,88%,50%,1) 0px, transparent 50%),
+radial-gradient(at 91% 58%, hsla(60,40%,64%,0) 0px, transparent 50%),
+radial-gradient(at 0% 100%, hsla(22,100%,77%,1) 0px, transparent 50%),
+radial-gradient(at 100% 100%, hsla(38,82%,31%,1) 0px, transparent 50%),
+radial-gradient(at 25% 3%, hsla(30,77%,24%,1) 0px, transparent 50%);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(12%);
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+  }
 }

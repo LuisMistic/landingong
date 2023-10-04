@@ -1,11 +1,12 @@
 
 <app-logo></app-logo>
+<div *ngIf="showTransition" class="transition-out"><app-logotarnsition></app-logotarnsition></div>
 <div class="row fondo d-flex justify-content-center align-items-center" id="quienes">
 
     <div class=" col-8 col-sm-10 col-md-8 col-lg-2 card ">
         
         <button class="card-body1 custom-button" (click)="loadQuienesSomos()">
-    <h3 class="quienes"><div class="light-point"></div>QUIENES SOMOS</h3>
+    <h3 class="quienes2"><div class="light-point"></div>QUIENES SOMOS</h3>
         
         <img src="../../../../../assets/presentacion/pres3.jpg" class="card-img-top img-fluid rounded-top border shadow-sm mb-0" alt="Jelo 1">
     </button>
@@ -22,7 +23,7 @@
             <div class=" col-8 col-sm-10 col-md-8 col-lg-2 card ">
         
                 <button class="card-body1 custom-button" (click)="loadObjetivos()">
-            <h3 class="quienes"><div class="light-point"></div>OBJETIVOS</h3>
+            <h3 class="quienes1"><div class="light-point"></div>OBJETIVOS</h3>
                 
                 <img src="../../../../../assets/presentacion/pres2.jpg" class="card-img-top img-fluid rounded-top border shadow-sm mb-0" alt="Jelo 1">
             </button>
@@ -33,7 +34,7 @@
                     <button class="card-body1 custom-button" (click)="loadTrabajo()">
                 <h3 class="quienes"><div class="light-point"></div>TRABAJO</h3>
                     
-                    <img src="../../../../../assets/presentacion/pres2.jpg" class="card-img-top img-fluid rounded-top border shadow-sm mb-0" alt="Jelo 1">
+                    <img src="../../../../../assets/presentacion/pres4.jpg" class="card-img-top img-fluid rounded-top border shadow-sm mb-0" alt="Jelo 1">
                 </button>
                 
                     </div>

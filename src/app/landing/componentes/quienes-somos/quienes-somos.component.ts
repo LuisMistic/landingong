@@ -1,15 +1,28 @@
-import { Component, ElementRef, HostListener, ViewChild, ViewEncapsulation } from '@angular/core';
+import { Component, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
 import { PageScrollService } from 'ngx-page-scroll-core';
-import { ModalImgService } from '../../modal-img.service';
 import SmoothScroll from 'smooth-scroll';
+import { Subject, takeUntil } from 'rxjs';
+import { animate, state, style, transition, trigger } from '@angular/animations';
+import { SharedServiceService } from '../shared-service.service';
 
 @Component({
   selector: 'app-quienes-somos',
   templateUrl: './quienes-somos.component.html',
   styleUrls: ['./quienes-somos.component.css'],
-  encapsulation: ViewEncapsulation.Emulated
+  encapsulation: ViewEncapsulation.Emulated,
+  animations: [
+    trigger('cierreComponente', [
+      state('cerrado', style({ opacity: 0, transform: 'translateY(-100%)' })),
+      transition('* => cerrado', [
+        animate('0.5s')
+      ])
+    ])
+  ]
 })
-export class QuienesSomosComponent {
+export class QuienesSomosComponent implements OnInit, OnDestroy {
+  private destroy$ = new Subject<void>();
+  animacionCierreActiva: boolean = false; // Variable para controlar la animación de cierre
+  estadoAnimacion: string = 'abierto'; // Estado inicial, puede ser 'abierto' o 'cerrado'
 
   shouldAppear = false;
   shouldDisappear = false;
@@ -20,55 +33,58 @@ export class QuienesSomosComponent {
   show: boolean = false;
   element: any;
   scroll: any;
-
-  @HostListener('window:scroll', [])
-  onWindowScroll() {
-    const scrollPosition = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
- 
-    // Controla la aparición y desaparición basada en la posición del scroll
-    this.shouldDisappear = scrollPosition > 400;
-    this.shouldAppear = scrollPosition <= 200;
-       // Controla la aparición y desaparición del boton basada en la posición del scroll
-      
+  showTransition: boolean = false;
+  mostrarAnimacionCierre: boolean = false;
+  constructor(
+    private sharedServiceService: SharedServiceService,
     
-  
-       // Controla la aparición y desaparición del color de fondo en la posición del scroll
-       this.colorFondoDesparecer = scrollPosition > 400;
-       this.colorFondoAparecer = scrollPosition <= 200;
-    
-       
-    
-    
+  ) {
+    // Suscríbete al Observable para recibir la notificación de cierre
+    this.sharedServiceService.obtenerNotificacionCierre()
+      .pipe(takeUntil(this.destroy$))
+      .subscribe((cierre: boolean) => {
+        // Realiza acciones cuando se recibe una notificación de cierre
+        if (cierre) {
+          // Activa la animación de cierre o realiza otras acciones necesarias
+          this.iniciarAnimacionCierre();
+        }
+      });
   }
 
-  
- constructor(private pageScrollService: PageScrollService, private modalImgService: ModalImgService) { }
+  ngAfterViewInit(): void {
+    this.scroll = new SmoothScroll('a[href*="#"]', {
+      // Configuración de SmoothScroll si es necesario
+    });
+  }
 
-
- ngAfterViewInit(): void {
-  this.scroll = new SmoothScroll('a[href*="#"]', {
+  ngOnInit(): void {
+    window.scrollTo(0, 0); // Desplázate al principio de la página cuando se carga el componente
    
+    this.showTransition = true;
+    this.animacionCierreActiva = false; // Inicializado como false
+    this.estadoAnimacion = 'abierto'; // Inicializado como 'abierto'
+    setTimeout(() => {
+      this.showTransition = false;
+    }, 1000); // 1000 milisegundos = 1 segundo
+  }
 
-  });
+  iniciarAnimacionCierre() {
+    if (!this.animacionCierreActiva) {
+      this.mostrarAnimacionCierre = true;
+      this.estadoAnimacion = 'cerrado'; // Cambia el estado para activar la animación
 
+      // Ajusta la duración de la animación de cierre según tus necesidades
+      setTimeout(() => {
+        this.animacionCierreActiva = false;
+        console.log('animacion activada'); // Aquí agregué la consola de registro
+        this.estadoAnimacion = 'abierto'; // Vuelve al estado inicial
+        // Realiza otras acciones después de completar la animación de cierre
+      }, 3000); // 3000 milisegundos = 3 segundos (ajusta el valor según tu animación)
+    }
+  }
 
+  ngOnDestroy(): void {
+    this.destroy$.next();
+    this.destroy$.complete();
+  }
 }
-ngOnInit(): void {
-  window.scrollTo(0, 0); // Desplázate al principio de la página cuando se carga el componente
-}
-
-
-}
-
-
-
- 
-
-
-
- 
-
-//  toQuienessomos(){
-//   document.getElementById("quienessomos")?.scrollIntoView({ behavior: 'smooth' });
-// }
-

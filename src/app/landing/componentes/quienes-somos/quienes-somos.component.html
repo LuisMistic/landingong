@@ -1,4 +1,9 @@
 
+<div *ngIf="showTransition"   class="transition-out"><app-logotarnsition></app-logotarnsition></div>
+<div *ngIf="mostrarAnimacionCierre" class="cierreFinal">
+  <app-logotarnsition></app-logotarnsition>
+</div>
+
 <div class="row uno colorFondo  align-items-center" media="(orientation: landscape) and (min-device-width: 320px) and (max-device-width: 480px)"   id="nosotros"[ngClass]="{'desaparecerColorFondo': colorFondoDesparecer, 'aparecerColorFondo ': colorFondoAparecer}">
   <div class="col-12 col-xs-10 col-sm-10 col-md-11 col-lg-4">
     <!-- Texto sobre nosotros -->

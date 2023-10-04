@@ -7,11 +7,15 @@ import { SharedServiceService } from '../../shared-service.service';
   styleUrls: ['./pres1.component.css']
 })
 export class Pres1Component  {
+  showTransition: boolean = false;
 
   constructor(private sharedServiceService: SharedServiceService) {}
   loadQuienesSomos() {
+    this.showTransition = true;
+    setTimeout(() => {
     this.sharedServiceService.currentComponent = 'quienesSomos';
-  }
+  }, 1000);
+}
   loadNuestraHistoria() {
     this.sharedServiceService.currentComponent = 'historia'
  }

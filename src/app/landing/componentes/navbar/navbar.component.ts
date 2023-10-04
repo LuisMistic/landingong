@@ -2,7 +2,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
 import { SharedServiceService } from '../shared-service.service';
 
 import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
-import { faBars, faHourglassEnd,faHouse,faPerson,faUsers } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faHourglassEnd, faHouse, faPerson, faUsers } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -11,41 +11,51 @@ import { faBars, faHourglassEnd,faHouse,faPerson,faUsers } from '@fortawesome/fr
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  constructor(private  sharedServiceService: SharedServiceService, private library: FaIconLibrary,) {
-    library.addIcons(faBars, faHouse, faHourglassEnd, faPerson,faUsers );
-  } 
-    lastScrollTop = 0;
+  constructor(private sharedServiceService: SharedServiceService, private library: FaIconLibrary,) {
+
+    library.addIcons(faBars, faHouse, faHourglassEnd, faPerson, faUsers);
+  }
+
+  lastScrollTop = 0;
 
   faHourglassEnd = faHourglassEnd;
   faBars = faBars;
   faPerson = faPerson
   faUsers = faUsers
   isNavbarHidden = false;
-  
+
   loadQuienesSomos() {
+    this.sharedServiceService.notificarAnimacionesCierre();
     this.sharedServiceService.currentComponent = 'quienesSomos';
   }
 
   loadNuestraHistoria() {
-     this.sharedServiceService.currentComponent = 'historia'
+    
+    this.sharedServiceService.notificarAnimacionesCierre();
+    this.sharedServiceService.currentComponent = 'historia';
   }
   loadObjetivos() {
-    this.sharedServiceService.currentComponent = 'objetivos'
+    this.sharedServiceService.notificarAnimacionesCierre();
+    this.sharedServiceService.currentComponent = 'objetivos';
   }
 
   loadDonar() {
-    this.sharedServiceService.currentComponent = 'donar';
+    this.sharedServiceService.notificarAnimacionesCierre();
+    this.sharedServiceService.currentComponent = 'dontar';
   }
   loadActividadQuienesSomos() {
+    this.sharedServiceService.notificarAnimacionesCierre();
     this.sharedServiceService.currentComponent = 'quienesSomos';
   }
 
   loadaAppComponent() {
+    this.sharedServiceService.notificarAnimacionesCierre();
     this.sharedServiceService.currentComponent = 'pres1';
-  } 
+  }
 
-  loadTrabajo (){
-    this.sharedServiceService.currentComponent = 'trabajo'
+  loadTrabajo() {
+    this.sharedServiceService.notificarAnimacionesCierre();
+    this.sharedServiceService.currentComponent = 'trabajo';
   }
 
 
@@ -55,9 +65,9 @@ export class NavbarComponent implements OnInit {
   isCollapsed = true;
   isSubMenuOpen = false; // Variable para controlar el estado del submenú
 
-  ngOnInit(): void { 
-   
-  } 
+  ngOnInit(): void {
+
+  }
 
   isSmallScreen = false;
 
@@ -74,9 +84,16 @@ export class NavbarComponent implements OnInit {
   toggleSubMenu() {
     console.log('toggleSubMenu() se ejecutó.')
     this.isCollapsed = !this.isCollapsed;
-    
+
   }
- 
-  
+  cargarComponente(componente: string) {
+    // Notifica que se debe cerrar cualquier componente
+
+    console.log('Recibida notificación de cierre');
+
+    // Cambia al componente deseado
+    this.sharedServiceService.currentComponent = componente;
+  }
+
   // Puedes agregar más métodos para cargar otros componentes según necesites
 }
