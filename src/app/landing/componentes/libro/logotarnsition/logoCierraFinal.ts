@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-logotarnsition',
+  selector: 'app-logocierreFinal',
   templateUrl: './logotarnsition.component.html',
   styleUrls: ['./logotarnsition.component.css']
 })
