@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-
+import { SharedServiceService } from '../shared-service.service';
+import { Subject, skip, takeUntil } from 'rxjs';
 declare var MercadoPago: any;
 
 @Component({
@@ -16,10 +17,28 @@ export class BotonDePagoComponent {
   beerCount: number = 0;
   amountInput: number = 0;
 
-  constructor() {
+  mostrarAnimacionCierre: boolean = false;
+  mostrarAnimacionInicial: boolean = true;
+
+  constructor(private sharedServiceService: SharedServiceService ) {
     // Inicializar propiedades si es necesario
   }
-
+  ngOnInit() {
+  {
+    // Suscribirse al objeto componenteCierreSubject del servicio usando skip(1)
+    this.sharedServiceService.obtenerNotificacionCierre().pipe(skip(1)).subscribe(cierre => {
+      // Cambiar el valor de la variable mostrarAnimacionCierre según el valor emitido
+      this.mostrarAnimacionCierre = cierre;
+    });
+    // Suscribirse también al objeto animacionInicialSubject del servicio usando skip(1)
+    this.sharedServiceService.obtenerNotificacionAnimacionInicial().pipe(skip(1)).subscribe(animacion => {
+      // Cambiar el valor de la variable mostrarAnimacionInicial según el valor emitido
+      this.mostrarAnimacionInicial = animacion;
+    });
+  }}
+  mostrarNavbarConAnimacion() {
+    throw new Error('Method not implemented.');
+  }
   updateTotalAmount() {
     if (this.amountInput) {
       this.totalAmount = this.amountInput;

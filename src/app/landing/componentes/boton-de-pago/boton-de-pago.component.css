@@ -1,25 +1,32 @@
-.row {
- width: 100vh;
+body, html {
   height: 100%;
-  margin-top: 100px;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
-
 
 .main-section {
   margin: 0;
   position: relative;
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 100vh;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7f7f7; /* Fondo gris claro similar al sitio de ejemplo */
 }
 
 .main-content {
-  background-color: #f0f0f0;
+  background-color: #fff; /* Fondo blanco */
   font-size: 1.5rem;
-  width: 41%;
+  width: 70%;
+  max-width: 400px;
   line-height: 2.6rem;
   font-weight: 400;
   position: relative;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
 }
 
 section {
@@ -29,43 +36,43 @@ section {
 }
 
 h2 {
-  font-size: 16px !important;
+  font-size: 1.5rem !important;
   font-weight: 900 !important;
-  color: #ef4135;
+  color: #ef4135; /* Rojo similar al sitio de ejemplo */
   text-transform: uppercase;
   border-bottom: none !important;
-  text-align: start;
+  text-align: left; /* Alineación izquierda similar al sitio de ejemplo */
 }
 
-input {
-  width: 100%;
-  height: 75%;
-  font-size: 15px !important;
-}
-
+input,
 select {
   width: 100%;
-  height: 75%;
-  font-weight: 350;
+  height: 45px;
   font-size: 15px !important;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
 }
 
 .donacion {
   margin: 10px 0;
   position: relative;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
 .text-donation {
-  width: 65%;
-  height: 50px !important;
-  line-height: 50px !important;
+  width: 60%;
+  height: 45px !important;
+  line-height: 45px !important;
   display: inline-block;
-  background-color: #fff !important;
-  color: #ef4135 !important;
-  border-top-left-radius: 25px !important;
-  border-bottom-left-radius: 25px !important;
-  border: #fff 1px solid !important;
+  background-color: #333; /* Fondo negro similar al sitio de ejemplo */
+  color: #fff;
+  border-top-left-radius: 5px !important;
+  border-bottom-left-radius: 5px !important;
+  border: 1px solid #333;
   border-right: none;
   text-align: center;
   font-weight: 800;
@@ -74,14 +81,14 @@ select {
 
 .amount-donation {
   width: 35%;
-  height: 50px !important;
-  line-height: 50px !important;
+  height: 45px !important;
+  line-height: 45px !important;
   display: inline-block;
-  background-color: #ef4135 !important;
+  background-color: #666; /* Fondo gris oscuro similar al sitio de ejemplo */
   color: #fff;
-  border-top-right-radius: 25px !important;
-  border-bottom-right-radius: 25px !important;
-  border: #ef4135 1px solid !important;
+  border-top-right-radius: 5px !important;
+  border-bottom-right-radius: 5px !important;
+  border: 1px solid #666;
   border-left: none;
   text-align: center;
   font-weight: 800;
@@ -89,20 +96,151 @@ select {
 }
 
 .button-checkout {
-  padding: 0 !important;
   width: 100%;
-  background-color: #ef4135 !important;
+  background-color: #ef4135;
   font-size: 16px;
   line-height: 50px;
-  border-radius: 25px;
+  border-radius: 5px;
   font-size: 16px !important;
+  color: #fff;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
 }
 
 .donate-now {
   font-size: 16px !important;
   font-weight: 900 !important;
-  color: white;
+  color: #fff;
   text-transform: uppercase;
   border-bottom: none !important;
-  text-align: start;
+  text-align: left; /* Alineación izquierda similar al sitio de ejemplo */
+}
+
+.icon-mercado-pago {
+  /* Agrega la ruta correcta a tu icono de Mercado Pago aquí */
+  background-image: url('../../../../assets/Mercado-Pago-Logo.png');
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  margin-left: 5px;
+}
+.donacion1 {
+  display: flex;
+  align-items: center;
+  display: inline-block;
+  margin-right: 30px;
+  padding: 10px 10px;
+  font-size: 16px;
+  color: #fff;
+  background-color: rgb(80, 10, 10);
+  border-radius: 10px;
+  border: none;
+  text-align: center;
+  animation: pulse 0s infinite;
+  overflow: hidden;
+  /* Ocultamos el contenido que se desborde */
+  position: relative;
+  /* Establecemos la posición relativa para los elementos hijos */
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.donacion1:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background-image: linear-gradient(to right, rgba(255, 0, 0, 0.2), rgba(255, 255, 255, 0.131), rgba(255, 255, 255, 0.1));
+  animation: move-bar 1s infinite ease-in-out;
+
+}
+
+@keyframes move-bar {
+  50% {
+    transform: translateX(5);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+
+  50% {
+    transform: translateX(300%);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateX(-300%);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateX(-100%);
+  }
+
+  0% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+
+  0%,
+  50% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1);
+  }
+
+  20%,
+  0% {
+    box-shadow: 0 0 0 10px rgba(40, 167, 69, 0);
+  }
+
+  90%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(232, 248, 7, 0);
+  }
+
+}
+
+
+.donacion1:hover:after,
+.donacion1:focus:after {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  border-radius: 50%;
+  animation: pulse 9s infinite;
+  opacity: 0;
+}
+
+/*estilo boton mercado pago */
+#estiloA{
+  font-size: 10px;
+  color:rgb(214, 137, 21);
+font-family: 'Lato', sans-serif;
+font-weight: bolder;
+}
+#estilob{
+
+  
+color:rgb(214, 137, 21);
+font-family: 'Lato', sans-serif;
+font-weight: bolder;
+
+}
+
+.donacion1{
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 0;
 }

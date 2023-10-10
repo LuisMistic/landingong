@@ -19,7 +19,9 @@ body {
   padding: 0;
 }
 
-
+.ini {
+  padding: 0;
+}
 
 /* Estilos para pantallas pequeñas (menos de 600px de ancho) */
 @media (max-width: 600px) {
@@ -379,7 +381,9 @@ body {
     align-items: center;
   }
 }
-
+.ini {
+  width: 100vw !important;
+}
 .contfoto {
   animation: aparecerFondo 0.4s forwards 1;
 }
@@ -454,91 +458,18 @@ body#tinymce {
 ;
 }
 
-
-.transition-in {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background-color:hsla(0,31%,47%,1);
-background-image:
-radial-gradient(at 81% 54%, hsla(36,80%,37%,0.93) 0px, transparent 50%),
-radial-gradient(at 36% 54%, hsla(30,91%,41%,1) 0px, transparent 50%),
-radial-gradient(at 0% 95%, hsla(26,88%,50%,1) 0px, transparent 50%),
-radial-gradient(at 91% 58%, hsla(60,40%,64%,0) 0px, transparent 50%),
-radial-gradient(at 0% 100%, hsla(22,100%,77%,1) 0px, transparent 50%),
-radial-gradient(at 100% 100%, hsla(38,82%,31%,1) 0px, transparent 50%),
-radial-gradient(at 25% 3%, hsla(30,77%,24%,1) 0px, transparent 50%);
-  top: 0; /* La posición inicial es la parte superior */
-  animation: slide-down 0.5s ease-in-out forwards; /* Usamos una animación llamada slide-down */
-  z-index: 1000; /* Asegura que esté por encima de todo */
-  animation-fill-mode: forwards; /* Mantiene el estado final de la animación */
-}
-
-.transition-out {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background-color:hsla(0,31%,47%,1);
-  background-image:
-  radial-gradient(at 81% 54%, hsla(36,80%,37%,0.93) 0px, transparent 50%),
-  radial-gradient(at 36% 54%, hsla(30,91%,41%,1) 0px, transparent 50%),
-  radial-gradient(at 0% 95%, hsla(26,88%,50%,1) 0px, transparent 50%),
-  radial-gradient(at 91% 58%, hsla(60,40%,64%,0) 0px, transparent 50%),
-  radial-gradient(at 0% 100%, hsla(22,100%,77%,1) 0px, transparent 50%),
-  radial-gradient(at 100% 100%, hsla(38,82%,31%,1) 0px, transparent 50%),
-  radial-gradient(at 25% 3%, hsla(30,77%,24%,1) 0px, transparent 50%);
-  top: 1; /* Inicialmente, el div está en la parte superior */
-  animation: slide-up 0.5s ease-in-out forwards, fade-out 0.5s ease-in-out forwards; /* Usamos dos animaciones */
-  z-index: 1000; /* Asegura que esté por encima de todo */
-  animation-fill-mode: forwards; /* Mantiene el estado final de la animación */
-}
-
-@keyframes slide-down {
+/* Define la animación */
+@keyframes slideDown {
   from {
-    top: 12%; /* Comienza desde arriba de la pantalla */
+    transform: translateY(-10%);
   }
   to {
-    top: 12%; /* Termina en la parte superior */
+    transform: translateY(100);
   }
 }
 
-@keyframes slide-up {
-  from {
-    top: 12%; /* Comienza en la parte superior */
-  }
-  to {
-    top: 100%; /* Termina abajo de la pantalla */
-  }
+/* Aplica la animación a tu componente */
+.app-navbar-con-animacion {
+  animation: slideDown 0.5s ease-in;
 }
 
-@keyframes fade-out {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-
-
-
-.cierreFinal {
-  position: fixed; /* Fija el elemento en la pantalla */
-  top: 0;
-  left: 0;
-  width: 100%; /* Ancho completo */
-  height: 100%; /* Altura completa */
-  background-color: #000; /* Color de fondo (puedes cambiarlo según tu preferencia) */
-  z-index: 9999; /* Coloca el div por encima de otros elementos */
-  animation: desplazamiento 0.5s ease-in-out; /* Configura la animación */
-}
-
-@keyframes desplazamiento {
-  0% {
-    transform: translateY(100%); /* Comienza desde la parte inferior */
-  }
-  50% {
-    transform: translateY(0); /* Termina en la parte superior */
-  }
-}

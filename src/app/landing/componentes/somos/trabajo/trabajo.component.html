@@ -1,3 +1,6 @@
+
+<div *ngIf="mostrarAnimacionInicial"> <app-logo-inicial></app-logo-inicial></div> 
+<div *ngIf="mostrarAnimacionCierre" >  <app-logocierreFinal></app-logocierreFinal></div>
 <div class="row uno colorFondo  align-items-center"
     media="(orientation: landscape) and (min-device-width: 320px) and (max-device-width: 480px)" id="trabajo"
     [ngClass]="{'desaparecerColorFondo': colorFondoDesparecer, 'aparecerColorFondo ': colorFondoAparecer}">

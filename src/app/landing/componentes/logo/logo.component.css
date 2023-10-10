@@ -33,8 +33,8 @@
 
   .logo-img {
 
-    -webkit-animation: logo-img 5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: logo-img 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    -webkit-animation: logo-img 2s cubic-bezier(0.250, 0.460, 0.450, 5.940) both;
+	        animation: logo-img 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   }
 
   .association-link {
@@ -173,9 +173,9 @@
     position: absolute;
     width: 20px;
     height: 20px;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 70%);
+    background: radial-gradient(circle, rgba(248, 246, 246, 0.8) 0%, rgba(255, 255, 255, 0) 70%);
     border-radius: 50%;
-    animation: moveLight 3s linear infinite;
+    animation: moveLight 1s linear infinite;
   }
   
   @keyframes moveLight {
@@ -232,7 +232,7 @@
   /* Efecto de iluminación al pasar el cursor */
   .btn-icon:hover {
     transform: scale(1.2); /* Hace que el ícono sea un poco más grande al pasar el cursor */
-    color: #f2eeee; /* Cambia el color del ícono al pasar el cursor (ajusta según tus preferencias) */
+    color: #332121; /* Cambia el color del ícono al pasar el cursor (ajusta según tus preferencias) */
   }
 
 

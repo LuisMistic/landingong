@@ -1,7 +1,8 @@
 import { Component, HostListener, ViewEncapsulation } from '@angular/core';
 import { PageScrollService } from 'ngx-page-scroll-core';
 import { ModalImgService } from '../../modal-img.service';
-
+import { SharedServiceService } from '../shared-service.service';
+import { skip } from 'rxjs';
 @Component({
   selector: 'app-nuestra-historia',
   templateUrl: './nuestra-historia.component.html',
@@ -15,7 +16,8 @@ export class NuestraHistoriaComponent  {
     botonDesaparecer = false;
     colorFondoAparecer = false;
     colorFondoDesparecer = false;
-    
+    mostrarAnimacionCierre: boolean = false;
+    mostrarAnimacionInicial: boolean = true;
     
   
     @HostListener('window:scroll', [])
@@ -39,14 +41,22 @@ export class NuestraHistoriaComponent  {
     }
   
     
-   constructor(private pageScrollService: PageScrollService, private modalImgService: ModalImgService) { }
+   constructor(private pageScrollService: PageScrollService, private modalImgService: ModalImgService, private sharedServiceService: SharedServiceService) { }
   
   
- 
-  ngOnInit(): void {
-    window.scrollTo(0, 0); // Desplázate al principio de la página cuando se carga el componente
+   ngOnInit() {
+    window.scrollTo(0, 0); 
+    // Suscribirse al objeto componenteCierreSubject del servicio usando skip(1)
+    this.sharedServiceService.obtenerNotificacionCierre().pipe(skip(1)).subscribe(cierre => {
+      // Cambiar el valor de la variable mostrarAnimacionCierre según el valor emitido
+      this.mostrarAnimacionCierre = cierre;
+    });
+    // Suscribirse también al objeto animacionInicialSubject del servicio usando skip(1)
+    this.sharedServiceService.obtenerNotificacionAnimacionInicial().pipe(skip(1)).subscribe(animacion => {
+      // Cambiar el valor de la variable mostrarAnimacionInicial según el valor emitido
+      this.mostrarAnimacionInicial = animacion;
+    });
   }
-  
-  
+
   }
   

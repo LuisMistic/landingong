@@ -18,7 +18,11 @@
   }
 }
 
-
+nav.navbar {
+  top: 0;
+  z-index: 1100 !important;
+  width: 100%;
+}
 
 
 
@@ -189,11 +193,11 @@
 /* boton adaptativo a formatos mas chicos*/
 
 .navbar {
-  backdrop-filter: blur(40px);
+  backdrop-filter: blur(70px);
   /* Aplicar un desenfoque de 5px */
   -webkit-backdrop-filter: blur(5px);
   /* Prefijo para navegadores webkit */
-  opacity: 0.9;
+  opacity: 10.9;
   /* Reducir la opacidad del navbar */
 }
 
@@ -523,4 +527,27 @@ font-weight: bolder;
 #navbarDropdown1{
  font-size: 17px !important;
 
+}
+/* Define la animación */
+
+/* Define la animación */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Clase para ocultar el Navbar */
+.hidden {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Clase para mostrar el Navbar */
+.visible {
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out;
 }

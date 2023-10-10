@@ -6,18 +6,7 @@
     height: 100vh !important;
     
   }
-  
-.logo-img {
-    display: flex;
-    padding-top: 0%;
-    margin-top: 0px;
- 
-    max-width: 15%;
-    max-height: 29%;
-    height: auto;
-    padding-bottom: 0%;
-    background-color: transparent;
-  }
+
   /* texto logo*/
   .association-link {
     line-height: 1.5;
@@ -45,21 +34,34 @@
   }
 
 
+  @media (min-width: 900px) {
+    .logo-img {
+      display: flex;
+      padding-top: 10% !important;
+      padding-bottom: 0%;
+      margin-top: 90px !important;
+      max-width: 15%;
+      max-height: 39%;
+      height: auto;
+      margin-left: 20px;
+    }
+
+  }
 
 
 
   @media (max-width: 600px) {
 
     .logo-img {
-        display: flex;
-        padding-top: -100% !important;
-        padding-bottom: 80%;
-        margin-top: 0px !important;
-        max-width: 35%;
-        max-height: 39%;
-        height: auto;
-        margin-left: 20px;
-        
+      display: flex;
+      padding-top: 50% !important;
+      padding-bottom: 80%;
+      margin-top: 0px !important;
+      max-width: 35%;
+      max-height: 39%;
+      height: auto;
+      margin-left: 20px;
+      
         background-color: transparent;
       }
 
@@ -181,8 +183,10 @@
 
 .cierreFinal {
     position: fixed;
-    width: 100%;
+   
+    width: 100vw !important;
     height: 100%;
+  
     background-color:hsla(0,31%,47%,1);
   background-image:
   radial-gradient(at 81% 54%, hsla(36,80%,37%,0.93) 0px, transparent 50%),
@@ -193,14 +197,16 @@
   radial-gradient(at 100% 100%, hsla(38,82%,31%,1) 0px, transparent 50%),
   radial-gradient(at 25% 3%, hsla(30,77%,24%,1) 0px, transparent 50%);
     top: 0; /* La posición inicial es la parte superior */
-    animation: subir 0.5s ease-in-out forwards; /* Usamos una animación llamada slide-down */
+    animation: subir 1s ease-in-out forwards; /* Usamos una animación llamada slide-down */
     z-index: 1000; /* Asegura que esté por encima de todo */
     animation-fill-mode: forwards; /* Mantiene el estado final de la animación */
+    box-shadow: 10px 10px 20px rgb(70, 70, 70);
+    box-shadow: inset 10px 10px 20px rgb(65, 64, 64)
   }
   
   @keyframes subir {
     from {
-      top: 11%; /* Comienza desde abajo */
+      top: 10%; /* Comienza desde abajo */
     }
     to {
       top: 100%; /* Termina en la parte superior */
