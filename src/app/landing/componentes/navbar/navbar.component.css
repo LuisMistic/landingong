@@ -543,11 +543,11 @@ font-weight: bolder;
 /* Clase para ocultar el Navbar */
 .hidden {
   transform: translateY(-100%);
-  transition: transform 0.3s ease-in-out;
+  transition: transform 1.3s ease-in-out;
 }
 
 /* Clase para mostrar el Navbar */
 .visible {
   transform: translateY(0);
-  transition: transform 0.3s ease-in-out;
+  transition: transform 1.3s ease-in-out;
 }
