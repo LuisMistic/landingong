@@ -16,6 +16,27 @@
     margin-top: 7px; /* Ajusta la altura de tu navbar para dispositivos móviles */
     
   }
+  .nav-link {
+    font-size: 32px !important;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 700;
+    /* Ajusta el valor para obtener la apariencia deseada */
+   
+    transition: all 0.2s;
+   
+    /* Color del texto */
+    color: rgb(48, 43, 2) !important;
+    /* Quitar color de fondo */
+    background-color: transparent;
+    /* Quitar borde */
+    border: none;
+    /* Espacio entre el texto y el borde */
+    padding: 15px;
+    /* Transición suave de 0.3 segundos */
+    transition: 0.3s;
+    margin-left: 0px;
+  }
+  
 }
 
 nav.navbar {
@@ -30,18 +51,18 @@ nav.navbar {
 
 @keyframes parpadeo {
   0% {
-    opacity: 0.5; /* Empieza con una opacidad reducida */
+    opacity: 8.5; /* Empieza con una opacidad reducida */
   }
   50% {
     opacity: 1; /* Aumenta la opacidad a la mitad de la animación */
   }
   100% {
-    opacity: 0.5; /* Vuelve a reducir la opacidad al final de la animación */
+    opacity: 50.5; /* Vuelve a reducir la opacidad al final de la animación */
   }
 }
 
 .logo-img {
-  animation: parpadeo 10s infinite; /* Aplica la animación al logo */
+  animation: parpadeo 5s infinite; /* Aplica la animación al logo */
   filter: drop-shadow(4 3 10px rgba(rgb(255, 255, 255))); /* Sombra en relieve */
   
 }
@@ -67,28 +88,68 @@ nav.navbar {
     width: 200px;
   }
 }
+.logo-img  {
+  position: relative;
+  animation: pulse 2s linear infinite;
+
+  border-radius: 10px;
+  padding: 5px;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+
+
+.logo-img  {
+  position: relative;
+  animation: pulse 2s linear infinite;
+  border: 1px solid rgb(12, 12, 12);
+  border-radius: 10px;
+  padding: 5px;
+}
+
+@keyframes pulse {
+  95%, 100% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+        
+
+to {
+opacity: 1;
+}
+
+
+
+.logo-img  {
+position: relative;
+animation: pulse 2s linear infinite;
+
+border-radius: 10px;
+padding: 5px;
+}
+
+@keyframes pulse {
+80%, 100% {
+transform: scale(1);
+}
+100% {
+transform: scale(1.1);
+}
+}
 
 
 /* CSS */
-.nav-link {
-  font-size: 18px !important;
-  font-family: 'PT Sans', sans-serif;
-  font-weight: 700;
-  /* Ajusta el valor para obtener la apariencia deseada */
- 
-  transition: all 0.2s;
-  font-size: 18px !important;
-  /* Color del texto */
-  color: rgb(48, 43, 2) !important;
-  /* Quitar color de fondo */
-  background-color: transparent;
-  /* Quitar borde */
-  border: none;
-  /* Espacio entre el texto y el borde */
-  padding: 5px;
-  /* Transición suave de 0.3 segundos */
-  transition: 0.3s;
-}
 
  
 
@@ -166,7 +227,7 @@ nav.navbar {
 .nav-link1 {
   font-size: 15x !important;
   /* Color del texto */
-  color: black !important;
+  color: rgb(255, 255, 255) !important;
   /* Quitar color de fondo */
   background-color: transparent;
   /* Quitar borde */
@@ -234,6 +295,25 @@ nav.navbar {
 
 /*submenu distancia entre botones */
 @media (min-width: 992px) {
+  .nav-link {
+    font-size: 32px !important;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 700;
+    /* Ajusta el valor para obtener la apariencia deseada */
+   
+    transition: all 0.2s;
+   
+    /* Color del texto */
+    color: rgb(48, 43, 2) !important;
+    /* Quitar color de fondo */
+    background-color: transparent;
+    /* Quitar borde */
+    border: none;
+    /* Espacio entre el texto y el borde */
+    padding: 5px;
+    /* Transición suave de 0.3 segundos */
+    transition: 0.3s;
+  }
   
   .dropdown-menu {
     box-shadow:
@@ -247,24 +327,7 @@ nav.navbar {
 
       background-image: linear-gradient(0deg, #cf6938, #d17e39, #d3923a, #d4a63a)
    }
-}
-
-/* Estilos para pantallas pequeñas */
-@media (max-width: 991px) {
-   .dropdown-menu {
-     box-shadow:
-       /* Valores más suaves para el sombreado */
-       /* ... */
-  6px 32px 15px -19px rgba(0, 0, 0, 0.1);
-     backdrop-filter: blur(30px); /* Desenfoque más sutil */
-     /* Otros estilos */
-     /* ... */
-     background-image: linear-gradient(0deg, #cf6938, #d17e39, #d3923a, #d4a63a)  
-     
-   }
-}
-
-/* velocidad de desplazmiento submenu*/
+   /* velocidad de desplazmiento submenu*/
 .sub {
   max-height: 0;
   overflow: hidden;
@@ -281,11 +344,11 @@ nav.navbar {
 
 }
 
-#lineaSub { height: 6px; /* Ajusta el grosor de la línea según tus necesidades */ 
+#lineaSub { height: 2px; /* Ajusta el grosor de la línea según tus necesidades */ 
   background-image: linear-gradient(to right, rgba(243, 238, 238, 9.8), transparent); /* Imagen degradada de dorado a transparente */
-   background-position: 3 center left; /* Alinea el degradado a la izquierda */
+   background-position:  center left; /* Alinea el degradado a la izquierda */
     background-repeat: repeat-x; /* Repite el degradado horizontalmente */
-    margin-top: 15px; 
+    margin-top: 3px; 
   }
 
 button.navbar-nav {
@@ -295,14 +358,77 @@ button.navbar-nav {
   /* Ajusta la alineación horizontal */
 }
 
-
+#navbarDropdown1{
+  font-size: 19px !important;
+ 
+ }
 
 /* separacion de menu  */
 .vr-blurry {
-  width: 3px;
+  width: 50px ;
   height: 100%;
+ 
+}
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 991px) {
+   .dropdown-menu {
+     box-shadow:
+       /* Valores más suaves para el sombreado */
+       /* ... */
+  6px 32px 15px -19px rgba(0, 0, 0, 0.1);
+     backdrop-filter: blur(30px); /* Desenfoque más sutil */
+     /* Otros estilos */
+     /* ... */
+     background-image: linear-gradient(0deg, #cf6938, #d17e39, #d3923a, #d4a63a)  
+     
+   }
+
+   /* velocidad de desplazmiento submenu*/
+.sub {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+  visibility: hidden;
+
+}
+
+.sub.show {
+  max-height: 50rem;
+  /* o cualquier valor que cubra todo el contenido del submenu */
+  visibility: visible;
+
+
+}
+#navbarDropdown1{
+  font-size: 20px !important;
+ 
+ }
+
+#lineaSub { height: 10px; /* Ajusta el grosor de la línea según tus necesidades */ 
+  background-image: linear-gradient(to right, rgba(243, 238, 238, 1.8), transparent); /* Imagen degradada de dorado a transparente */
+   background-position:  center left; /* Alinea el degradado a la izquierda */
+    background-repeat: repeat-x; /* Repite el degradado horizontalmente */
+    margin-top: 25px; 
+  }
+
+button.navbar-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* Ajusta la alineación horizontal */
+}
+/* separacion de menu  */
+.vr-blurry {
+  width: 50px ;
+  height: 150%;
   background-image: linear-gradient(to bottom, transparent, #ccc, transparent);
 }
+}
+
+
+
 
 /* logo */
 .logo-img {
@@ -524,10 +650,7 @@ font-weight: bolder;
 }
   
 
-#navbarDropdown1{
- font-size: 17px !important;
 
-}
 /* Define la animación */
 
 /* Define la animación */

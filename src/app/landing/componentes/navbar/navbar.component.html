@@ -61,7 +61,7 @@
 
                 </li>
 
-                <div class="line-divider  d-lg-none"></div>
+                <!-- <div class="line-divider  d-lg-none"></div>
                 <li class="nav-item dropdown ">
                     <a class="nav-link" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown"
                         data-bs-submenu aria-expanded="false"><fa-icon [icon]="faHourglassEnd"
@@ -80,39 +80,39 @@
                         <div id="lineaSub"></div>
                         <li><button class="nav-link nav3" id="navbarDropdown1" data-bs-toggle="dropdown" data-bs-submenu
                                 aria-expanded="false">item 3</button></li>
-                    </ul>
+                    </ul> -->
+<!-- 
+                </li> -->
+                <div class="line-divider  d-lg-none"></div>
+                <li class="nav-item">
+                    <a class="nav-link full-width-btn w-100" aria-current="page" id="navbarDropdown1" role="button"
+                    (click)="cambiarComponente('actividad'); isCollapsed = !isCollapsed"><fa-icon [icon]="faUsers" class="fa-xs"
+                            id="icon-faUsers" ></fa-icon> EN ACCION</a>
 
                 </li>
-                <div class="line-divider  d-lg-none"></div>
-                <li class="nav-item dropdown">
-                    <button class="nav-link full-width-btn w-100" href="#"  id="navbarDropdown1" role="button"
-                        data-bs-toggle="dropdown" data-bs-submenu aria-expanded="false"> <fa-icon [icon]="faPerson"
-                            id="icon-faPerson"></fa-icon>
-                        ACTIVIDAD
-                    </button>
 
-                    <div class="line-divider  d-lg-none"></div>
+                    <!-- <div class="line-divider  d-lg-none"></div>
                     <ul class="dropdown-menu sub nav-link " [ngClass]="{ collapse: isCollapsed }"
                         aria-labelledby="navbarDropdown2 " id="submenu">
                         <li><button class="nav-link nav3" id="navbarDropdown1" data-bs-toggle="dropdown" data-bs-submenu
                                 aria-expanded="false"
-                                (click)="cambiarComponente('quienesSomos'); isCollapsed = !isCollapsed">Noticias</button></li>
-                        <div id="lineaSub"></div>
+                                (click)="cambiarComponente('actividad'); isCollapsed = !isCollapsed">Actividad</button></li> -->
+                        <!-- <div id="lineaSub"></div>
                         <li><button class="nav-link nav1" id="navbarDropdown1" data-bs-toggle="dropdown" data-bs-submenu
                                 aria-expanded="false">Participar</button></li>
                         <div id="lineaSub"></div>
                         <li><button class="nav-link nav2" id="navbarDropdown1" data-bs-toggle="dropdown" data-bs-submenu
                                 aria-expanded="false" (click)="cambiarComponente('quienesSomos'); isCollapsed = !isCollapsed">item
                                 2</button></li>
-                        <div id="lineaSub"></div>
-                    </ul>
+                        <div id="lineaSub"></div> -->
+                    <!-- </ul>
 
-                </li>
+                </li> -->
                 <div class="line-divider  d-lg-none"></div>
                 <li class="nav-item">
-                    <a class="nav-link full-width-btn w-100" aria-current="page" id="navbarDropdown1" href="#participar"
-                        (click)="isCollapsed = !isCollapsed"><fa-icon [icon]="faUsers" class="fa-xs"
-                            id="icon-faUsers"></fa-icon> CONTACTOS</a>
+                    <a class="nav-link full-width-btn w-100" aria-current="page" id="navbarDropdown1" role="button"
+                    (click)="cambiarComponente('contacto'); isCollapsed = !isCollapsed"><fa-icon [icon]="faUsers" class="fa-xs"
+                            id="icon-faUsers" ></fa-icon> CONTACTOS</a>
 
                 </li>
                 <div class="line-divider  d-lg-none "></div>

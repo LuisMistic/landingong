@@ -127,7 +127,7 @@
         max-width: 35%;
         max-height: 39%;
         height: auto;
-        margin-left: 20px;
+        margin-left: 1px;
         
         background-color: transparent;
       }
@@ -246,5 +246,46 @@
     position: relative;
   top: -300px; 
   
+}
+#typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  font-size: 26px;
+  
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+
+
+.centered {
+  text-align: center;
+  font-size: 26px; /* Aumentar el tamaño del texto */
+}
+
+.bold {
+  font-weight: 400; /* Reduce el peso de la tipografía */
+  font-size:  27px; /* Ajusta el tamaño de la fuente según tus preferencias */
+  font-family: 'Lato', sans-serif;
+font-family: 'Oswald', sans-serif !important;
+}
+
+
+.cursor {
+  animation: cursor-blink 1s step-end infinite;
+  color: rgb(29, 24, 7);
+}
+
+@keyframes cursor-blink {
+  from, to { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+.hidden {
+  display: none;
 }
 

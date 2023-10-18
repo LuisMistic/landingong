@@ -36,7 +36,9 @@ this.sharedServiceService.cambiarVisibilidadNavbar(false);
  loadTrabajo(){
   this.sharedServiceService.currentComponent = 'trabajo'
  }
- 
+ loadDonar(){
+  this.sharedServiceService.currentComponent = 'donar'
+ }
   cambiarComponente(nombre: string) {
    
     this.sharedServiceService.cambiarComponente(nombre);

@@ -2,7 +2,14 @@
     <div class="col-12 d-flex flex-column align-items-center logo-container">
       <img src="../../../../assets/imagen/logo.png" alt="Logo de la ONG" class="logo-img">
       <div class="light-point"></div>
-      <span class="association-link ti">ASOCIACION MISERICORDIA</span>
+      <div id="typewriter">
+        <p class="bold" id="text" [ngClass]="{'centered': !animationCompleted}">{{ message }}<span class="cursor" [ngStyle]="{'display': animationCompleted ? 'none' : 'inline'}">|</span></p>
+      
+      </div>
+      
+      
+      
+      
     
     <div class=" d-flex redes justify-content-center align-items-center">
       <div class="icon-container association-link">
