@@ -1,0 +1,71 @@
+
+<div *ngIf="mostrarAnimacionInicial"> <app-logo-inicial></app-logo-inicial></div> 
+<div *ngIf="mostrarAnimacionCierre" >  <app-logocierreFinal></app-logocierreFinal></div>
+
+<div class="row uno colorFondo  align-items-center" media="(orientation: landscape) and (min-device-width: 320px) and (max-device-width: 480px)"   id="actividad"[ngClass]="{'desaparecerColorFondo': colorFondoDesparecer, 'aparecerColorFondo ': colorFondoAparecer}">
+  <div class="col-12 col-xs-10 col-sm-10 col-md-11 col-lg-3">
+    <!-- Texto sobre nosotros -->
+    <div class="texto" [ngClass]="{'desaparecerTexto': shouldDisappear, 'aparecerTexto': shouldAppear}">
+      <h1 id="sobre" [ngClass]="{'desaparecerTexto': shouldDisappear, 'aparecerTexto': shouldAppear}"><p class="p1">ACTIVIDAD</p>
+      </h1>
+      <p class="p"> En la Asociación Misericordia, nos enorgullece llevar a cabo diversas actividades para marcar una diferencia positiva en la vida de los niños desfavorecidos. Algunas de nuestras actividades</p>
+    </div>
+  </div>
+  <div class="col-12 col-sm-7 col-md-6 col-lg-4">
+    <!-- Imagen con bordes redondeados -->
+   
+      <div class="" [ngClass]="{'desaparecerFondo': shouldDisappear, 'aparecerFondo': shouldAppear}">
+        <p class="p" [ngClass]="{'desaparecer': shouldDisappear, 'aparecer': shouldAppear}"> * Programa de Educación y Desarrollo: Nuestro programa educativo ofrece acceso a
+
+            una educación de calidad y promueve el desarrollo integral de los niños. Ofrecemos
+            
+            talleres, clases de apoyo y actividades extracurriculares para fomentar el aprendizaje
+            
+            y el crecimiento personal.</p>
+
+        
+        
+      </div>
+    
+  </div>
+  <div class="col-12 col-sm-10 col-md-10 col-lg-5">
+    <div class="" [ngClass]="{'desaparecerFondo': shouldDisappear, 'aparecerFondo': shouldAppear}">
+    <div class="texto1" [ngClass]="{'desaparecerTexto1': shouldDisappear, 'aparecerTexto1': shouldAppear}">
+
+      <p class="p ">* Eventos de Recaudación de Fondos: Regularmente organizamos eventos especiales
+
+        para recaudar fondos y generar conciencia sobre los desafíos que enfrentan los niños
+        
+        más vulnerables. Estos eventos incluyen galas benéficas, subastas, carreras solidarias
+        
+        y mucho más. Tu participación y apoyo son fundamentales para alcanzar nuestros</p>
+   
+    </div>
+</div>
+  </div>
+  
+ 
+
+
+</div>
+
+<section class="" >
+  <app-voluntariado id="voluntad"></app-voluntariado>
+</section>
+
+<!-- <section class="dos misions section-content" id="vision">
+  <app-vision></app-vision>
+</section>
+
+
+<section class="dos misions section-content" id="valores">
+  <app-valores></app-valores>
+</section>
+
+<section class="dos misions section-content" id="comision">
+  <app-comision> </app-comision>
+</section> -->
+
+<div class="flotante">
+  <app-boton-flotante-en-accion></app-boton-flotante-en-accion>
+</div>

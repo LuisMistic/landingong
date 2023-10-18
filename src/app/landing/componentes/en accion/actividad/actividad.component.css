@@ -1,0 +1,482 @@
+.row.uno {
+    background: -moz-linear-gradient(left, rgba(255, 255, 255, 0.5) 0%, rgba(49, 164, 145, 0.3) 48%, rgba(255, 255, 255, 0.5) 0%);
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.5) 0%, rgba(49, 164, 145, 0.3) 48%, rgba(224, 203, 11, 0.5) 100%);
+    background: linear-gradient(to right, rgba(234, 245, 241, 0.5) 0%, rgba(49, 164, 145, 0.3) 48%, rgba(221, 84, 84, 0.541) 100%);
+  }
+  .row {
+    scroll-snap-type: y mandatory;
+    overflow-y: hidden;
+  }
+  
+  .section {
+    scroll-snap-align: start;
+  }
+  
+  html,
+  body {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  
+  /* Estilos para pantallas pequeñas (menos de 600px de ancho) */
+  @media (max-width: 600px) {
+    .img1 * {
+      font-size: 20px;
+      margin-top: 0px;
+      padding-top: -50px !important;
+  
+    }
+  
+    .contfoto {
+      width: 50%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      margin-left: 110px;
+    }
+  
+    .row.uno { 
+      margin: 0px;
+      overflow: hidden;
+      align-items: center;
+      padding-top: 70px !important;
+      padding-left: 8px !important;
+      padding-right: 8px !important;
+      padding-bottom: 150px !important;
+      width: 100vw;
+      /* 100% del ancho del viewport */
+      height: 100vh;
+      /* 100% de la altura del viewport */
+    }
+  
+    .p1 {
+      font-size: 28px !important;
+      margin-top: 17px;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+     .flecha{
+      margin-top: 0px !important;
+      padding-top: 0px !important;
+     }
+  
+    h1 {
+      color: rgb(212, 93, 9);
+      font-size: 15px !important;
+    }
+    
+    p {
+      margin-top: -20px;
+      padding-top: 8px !important;
+      padding-right: 5px !important;
+      line-height: 1.5;
+      font-family: 'Roboto', sans-serif;
+      font-size: 17px;
+      text-align: center;
+     
+    }
+  
+    .p.a {
+      text-align: center;
+    }
+  
+  }
+  
+  
+  @media (orientation: landscape) and (min-device-width: 320px) and (max-device-width: 480px) { 
+    .row {
+      padding-top: 100px !important;
+      padding-left: 1px !important;
+      padding-right: 1px !important;
+      padding-bottom: 50px !important;
+     
+    }
+  
+   }
+  
+  /* Estilos para pantallas medianas (entre 600px y 900px de ancho) */
+  @media (min-width: 600px) and (max-width: 900px) {
+    .img1 * {
+      font-size: 18px;
+    }
+  
+    .row {
+      padding-top: 100px !important;
+      padding-left: 1px !important;
+      padding-right: 1px !important;
+      padding-bottom: 50px !important;
+      width: 100vw;
+      /* 100% del ancho del viewport */
+      height: 100vh;
+      /* 100% de la altura del viewport */
+    }
+  
+   
+  
+    h1 {
+      color: rgb(212, 93, 9);
+    
+    
+    }
+    
+    .p1 {
+      font-size: 28px !important;
+    }
+  
+    p {
+      line-height: 1.5;
+      font-family: 'Roboto', sans-serif;
+      font-size: 25px;
+  
+    }
+  }
+  
+  
+  /* Estilos para pantallas grandes (más de 900px de ancho) */
+  @media (min-width: 900px) {
+    .img1 * {
+  
+      font-size: 24px;
+    }
+  
+    .row {
+  
+      padding-top: 60px !important;
+      padding-left: 30px !important;
+      padding-right: 1px !important;
+      padding-bottom: 50px !important;
+      width: 100vw;
+      /* 100% del ancho del viewport */
+      height: 100vh;
+      /* 100% de la altura del viewport */
+    }
+  
+   
+    h1 {
+      color: rgb(212, 93, 9);
+      
+      
+    }
+    .flecha{
+      margin-top: 0px !important;
+      padding-top: 0px !important;
+     }
+    .contfoto {
+      width: 60%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      margin-left: 50px;
+    }
+  
+    .p1 {
+      text-align: center;
+      font-size: 35px !important;
+    }
+  
+    p.a {
+      padding: 40px;
+    }
+  
+    p {
+  
+      padding-bottom: 50px;
+      line-height: 1.5;
+      font-family: 'Roboto', sans-serif;
+      font-size: 25px;
+    }
+  
+  
+  }
+  
+  .texto {
+    margin: 20;
+    font-size: 30px !important;
+  
+  }
+  
+  /* Animación para aparecer el primer bloque de texto */
+  @keyframes aparecerTexto {
+    from {
+      opacity: 0;
+      transform: translateX(-600px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+  
+  .texto {
+    animation: aparecerTexto 0.9s forwards 1;
+  }
+  
+  /* Animación para desaparecer el primer bloque de texto */
+  @keyframes desaparecerTexto {
+    from {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  
+    to {
+      opacity: 0;
+      transform: translateX(-600px);
+    }
+  }
+  
+  .desaparecerTexto {
+    animation: desaparecerTexto 1s forwards;
+  }
+  
+  /* Control del color de fondo */
+  @keyframes aparecerColorFondo {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .colorFondo {
+    animation: aparecerColorFondo 1.9s forwards 1;
+  }
+  
+  /* Animación para desaparecer el color de fondo */
+  @keyframes desaparecerColorFondo {
+    from {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+    }
+  }
+  
+  .desaparecerColorFondo {
+    animation: desaparecerColorFondo 1s forwards;
+  }
+  
+  /* Animación para aparecer el segundo bloque de texto */
+  @keyframes aparecerTexto1 {
+    from {
+      opacity: 0;
+      transform: translateX(600px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+  
+  .texto1 {
+    animation: aparecerTexto1 1.3s forwards 1;
+  }
+  
+  /* Animación para desaparecer el segundo bloque de texto */
+  @keyframes desaparecerTexto1 {
+    from {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  
+    to {
+      opacity: 0;
+      transform: translateX(600px);
+    }
+  }
+  
+  .desaparecerTexto1 {
+    animation: desaparecerTexto1 2s forwards;
+  }
+  
+  /* Animación para aparecer la imagen y su borde */
+  /* Animación para aparecer con rotación por defecto (7 grados) */
+  @keyframes aparecer {
+    from {
+      opacity: 0;
+      transform: translateX(600px) rotate(0deg);
+      border: 5px solid black;
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateX(0px) rotate(7deg);
+      border: 5px solid black;
+    }
+  }
+  
+  /* Animación para aparecer con rotación en dispositivos medianos (4 grados) */
+  @keyframes aparecer-rotacion-mediana {
+    from {
+      opacity: 0;
+      transform: translateX(600px) rotate(0deg);
+      border: 5px solid black;
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateX(0px) rotate(2deg);
+      border: 5px solid black;
+    }
+  }
+  
+  /* Animación para aparecer con rotación en dispositivos móviles (1 grado) */
+  @keyframes aparecer-rotacion-movil {
+    from {
+      opacity: 0;
+      transform: translateX(600px) rotate(0deg);
+      border: 5px solid black;
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateX(0px) rotate(-5deg);
+      border: 5px solid black;
+    }
+  }
+  
+  /* Aplicar la animación a elementos con clase .img1 */
+  .img1 {
+    animation: aparecer 1s forwards 1;
+    border-radius: 40px !important;
+    box-shadow: 3px 3px 10px 2px rgba(0, 0, 0, 0.5);
+    width: 600px;
+    height: auto;
+  }
+  
+  /* Modificar la rotación en dispositivos medianos */
+  @media (min-width: 577px) and (max-width: 992px) {
+    .img1 {
+      animation-name: aparecer-rotacion-mediana;
+    }
+  }
+  
+  /* Modificar la rotación en dispositivos móviles */
+  @media (max-width: 576px) {
+    .img1 {
+      animation-name: aparecer-rotacion-movil;
+    }
+  }
+  
+  /* Animación para desaparecer la imagen */
+  @keyframes desaparecer {
+    from {
+      opacity: 1;
+      transform: translateX(0px) rotate(7deg);
+    }
+  
+    to {
+      opacity: 0;
+      transform: translateX(600px) rotate(0deg);
+    }
+  }
+  
+  .desaparecer {
+    animation: desaparecer 1s forwards;
+  }
+  
+  /* Animación para aparecer el fondo de imagen */
+  @keyframes aparecerFondo {
+    from {
+      opacity: 0;
+      transform: translateX(600px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateX(0px) rotate(7deg);
+      border: 10px solid rgba(255, 255, 255, 0.1);
+      border-bottom: 11px dashed rgb(28, 110, 164, 08%);
+      border-radius: 40px 33px 40px 133px;
+      background-color: rgba(188, 189, 125, 0.3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  
+  .contfoto {
+    animation: aparecerFondo 0.4s forwards 1;
+  }
+  
+  /* Animación para desaparecer el fondo de imagen */
+  @keyframes desaparecerFondo {
+    from {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  
+    to {
+      opacity: 0;
+      transform: translateX(600px);
+    }
+  }
+  
+  .desaparecerFondo {
+    animation: desaparecerFondo 2.6s forwards;
+  }
+  
+  
+  
+  
+  /*titulos*/
+  
+  h1 {
+    font-size: 40px;
+    line-height: 1.5;
+  }
+  
+  
+  .img-fluid {
+    -webkit-box-shadow: inset -1px 3px 8px 5px #1F87FF, 2px 5px 16px 0px #0B325E, 13px 10px 10px 11px rgba(0, 0, 0, 0.12);
+    box-shadow: inset -1px 3px 8px 5px #1F87FF, 2px 5px 16px 0px #0B325E, 13px 10px 10px 11px rgba(0, 0, 0, 0.12);
+    background: #1C6EA4;
+  }
+  
+  
+  
+  body#tinymce {
+    background: #FFFFFF
+  }
+  
+  
+   
+  
+  .flotante  {
+     background-color: rgba(21, 21, 21, 90%);
+    position: fixed;
+    bottom: 0;
+    /* otras propiedades */
+    display: flex;
+    /* Centrar horizontalmente */
+    margin: 0 auto;
+    text-align: center;
+  
+    /* Centrar verticalmente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    /* Ocupar todo el ancho de la pantalla */
+    width: 100vw;
+    box-shadow:
+    0px -14.7px 8.4px -8px rgba(0, 0, 0, 0.177),
+    0px -20.8px 20.2px -8px rgba(0, 0, 0, 0.203),
+    0px -22px 40.4px -8px rgba(0, 0, 0, 0.209),
+    0px -18.3px 91.2px -8px rgba(0, 0, 0, 0.209),
+    0px -7.2px 90.8px -8px rgba(0, 0, 0, 0.211),
+    0px 41px 84px -8px rgba(0, 0, 0, 0.22)
+  ;
+  }
+  
+  
+  
