@@ -1,0 +1,20 @@
+
+
+<div class="row uno colorFondo elemento siempre-visible  d-flex justify-content-center align-items-center"  media="(orientation: landscape) and (min-device-width: 320px) and (max-device-width: 480px)"   [ngClass]="{'desaparecerColorFondo': shouldDisappear, 'aparecerColorFondo ': shouldAppear}" >
+    <div class="col-10 col-sm-10 col-md-9 col-lg-4">
+        <!-- Texto sobre nosotros -->
+        <div class="texto" [ngClass]="{'desaparecerTexto':shouldDisappear, 'aparecerTexto': shouldAppear }">
+            <h1>SiSTEMA DE SOCIOS </h1>
+            <p class="p">  Sistema de Socios: Además de participar en nuestras actividades, los socios que colaboran por única vez o mensualmente según sus posibilidades mediante depósitos bancarios o transferencias, forman parte de una red de personas comprometidas con el bienestar común y el fortalecimiento de una educacoin mas justa en nuestra comunidad. </p>
+        </div>
+    </div>
+    <div class="col-8 col-sm-7 col-md-6 col-lg-4" id="contfoto1"[ngClass]="{'desaparecerFondo':shouldDisappear, 'aparecerFondo': shouldAppear }">
+        <!-- Imagen con bordes redondeados -->
+        <img src="../../../../../assets/educacion/socio.png" alt="Imagen de la asociación" class="img-fluid img1" [ngClass]="{'desaparecer': shouldDisappear, 'aparecerImagenMision': shouldAppear }">
+    </div>
+   
+   
+      
+</div>
+  
+

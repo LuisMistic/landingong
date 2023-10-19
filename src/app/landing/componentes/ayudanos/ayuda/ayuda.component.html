@@ -1,0 +1,63 @@
+
+<div *ngIf="mostrarAnimacionInicial" class="ini"> <app-logo-inicial ></app-logo-inicial></div> 
+<div *ngIf="mostrarAnimacionCierre" class="ini">  <app-logocierreFinal></app-logocierreFinal></div>
+
+<app-donar></app-donar>
+<div class="row uno colorFondo  align-items-center" media="(orientation: landscape) and (min-device-width: 320px) and (max-device-width: 480px)"   id="ayuda"[ngClass]="{'desaparecerColorFondo': colorFondoDesparecer, 'aparecerColorFondo ': colorFondoAparecer}">
+  <div class="col-12 col-xs-10 col-sm-10 col-md-11 col-lg-8">
+    <!-- Texto sobre nosotros -->
+    <div class="texto" [ngClass]="{'desaparecerTexto': shouldDisappear, 'aparecerTexto': shouldAppear}">
+      <h1 id="sobre" [ngClass]="{'desaparecerTexto': shouldDisappear, 'aparecerTexto': shouldAppear}"><p class="p1">Necesidades</p>
+      </h1>
+      <p class="p"> En la actualidad, existen muchas problemáticas y desafíos que enfrenta la niñez más marginada y desatendida por la sociedad. En este contexto, la Asociación Misericordia busca velar por los principios fundacionales y mantener siempre vivo el ideal solidario para el que fue creada. Nuestra meta es ampliar el alcance de nuestra Asociación a través de la apertura de un nuevo espacio: Hogar San José.
+
+        Estas iniciativas nos permitirán ofrecer a más niños la posibilidad de crecer y desarrollarse plenamente en un entorno adecuado. Tu apoyo es fundamental para lograrlo.
+        
+        Cómo Puedes Ayudar Como asociación sin fines de lucro, la Asociación Misericordia se
+        
+        sostiene principalmente gracias a las contribuciones y donaciones voluntarias de particulares
+        
+        y empresas. Hay varias formas en las que puedes brindar tu apoyo:.</p>
+    </div>
+  </div>
+  <div class="col-12 col-sm-7 col-md-6 col-lg-3">
+    <!-- Imagen con bordes redondeados -->
+   
+      <div class="contfoto" [ngClass]="{'desaparecerFondo': shouldDisappear, 'aparecerFondo': shouldAppear}">
+        <img src="../../../../../assets/AYUDANOS/IMG_1331kjhl.png" alt="Imagen de la asociación" class="img-fluid img1"
+          [ngClass]="{'desaparecer': shouldDisappear, 'aparecer': shouldAppear}">
+        <app-img-quienes *ngIf="show"></app-img-quienes>
+      </div>
+    
+  </div>
+
+  
+ 
+
+</div>
+
+<section class="" >
+  <app-socios id="socios"></app-socios>
+
+
+
+
+
+</section>
+
+<section class="dos misions section-content" id="insumos">
+  <app-insumos></app-insumos>
+</section>
+
+
+<section class="dos misions section-content" id="valores">
+  <app-valores></app-valores>
+</section>
+
+<section class="dos misions section-content" id="comision">
+  <app-comision> </app-comision>
+</section>
+
+<div class="flotante">
+  <app-boton-de-ayuda></app-boton-de-ayuda>
+</div>
