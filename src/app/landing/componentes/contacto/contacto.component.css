@@ -474,4 +474,71 @@
     animation: slideDown 0.5s ease-in;
   }
   
-  
+  /* Estilos para la sección de contacto */
+.contact-section {
+  padding: 40px 0;
+}
+
+.contact-section h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-top: 0;
+}
+
+.contact-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.contact-section li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #555; /* Color de texto gris oscuro */
+}
+
+.contact-section p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #555; /* Color de texto gris oscuro */
+}
+
+/* Estilos para la información de contacto */
+.contact-section .col-md-6:last-child {
+  background-color: rgba(239, 65, 53, 0.8); /* Rojo semi transparente */
+  color: #fff; /* Color de texto blanco */
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.contact-section .col-md-6:last-child h2 {
+  color: #fff; /* Color de texto blanco */
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.contact-section .col-md-6:last-child p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.contact-section a {
+  color: #fff; /* Color de texto blanco para enlaces */
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-section a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 767px) {
+  .contact-section .col-md-6 {
+    margin-bottom: 20px;
+  }
+
+  .contact-section .col-md-6:last-child {
+    padding: 20px;
+  }
+}

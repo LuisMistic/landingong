@@ -3,16 +3,42 @@
 <div *ngIf="mostrarAnimacionCierre" class="ini">  <app-logocierreFinal></app-logocierreFinal></div>
 
 
-<div class="row uno colorFondo  align-items-center" media="(orientation: landscape) and (min-device-width: 320px) and (max-device-width: 480px)"   id="nosotros"[ngClass]="{'desaparecerColorFondo': colorFondoDesparecer, 'aparecerColorFondo ': colorFondoAparecer}">
+<div class="row uno colorFondo align-items-center" media="(orientation: landscape) and (min-device-width: 320px) and (max-device-width: 480px)" id="nosotros" [ngClass]="{'desaparecerColorFondo': colorFondoDesparecer, 'aparecerColorFondo': colorFondoAparecer}">
   <div class="col-12 col-xs-10 col-sm-10 col-md-11 col-lg-12">
     <!-- Texto sobre nosotros -->
     <div class="texto" [ngClass]="{'desaparecerTexto': shouldDisappear, 'aparecerTexto': shouldAppear}">
-      <h1 id="sobre" [ngClass]="{'desaparecerTexto': shouldDisappear, 'aparecerTexto': shouldAppear}"><p class="p1">CONTACTO</p>
+      <h1 id="sobre" [ngClass]="{'desaparecerTexto': shouldDisappear, 'aparecerTexto': shouldAppear}">
+        <p class="p1">CONTACTO</p>
       </h1>
-      <p class="p"> Seccion en desarrollo</p>
+      <div style="text-align: center;">
+        <ul style="list-style: none;">
+          <li style="letter-spacing: 2px;">
+            <i class=""></i> Asociación Misericordia
+          </li><br>
+          
+          <li style="letter-spacing: 2px;">
+            <a href="https://wa.me/5491136858647" target="_blank" style="color: black;"><i class="fab fa-whatsapp" style="color: black;"></i> TEL 54 9 11 3685-8647</a>
+          </li><br>
+          
+          <li style="letter-spacing: 2px;">
+            <div class="icon-container association-link">
+              <a href="mailto:A.civil.misericordia@gmail.com" class="btn-icon" target="_blank" style="color: black; text-decoration: none;">
+                <i class="fas fa-envelope" style="color: black;"></i> Correo Electrónico
+              </a>
+            </div>
+          </li><br>
+          <li style="letter-spacing: 2px;">
+            <i class="fas fa-map-marker-alt"></i> Alberti 1674 CABA
+          </li><br>
+        </ul>
+        <!-- Mapa -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.0030951604012!2d-58.40201132362255!3d-34.629362072945135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb196fe76fb1%3A0x20e8d58865eae5b3!2sAlberti%201674%2C%20C1247AAJ%20CABA!5e0!3m2!1ses-419!2sar!4v1698079034641!5m2!1ses-419!2sar"
+          width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
     </div>
   </div>
- 
+
+
   <!-- <div class="col-12 col-sm-10 col-md-10 col-lg-3">
     <div class="texto1" [ngClass]="{'desaparecerTexto1': shouldDisappear, 'aparecerTexto1': shouldAppear}">
 

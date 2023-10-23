@@ -61,38 +61,38 @@
 
                 </li>
 
-                <!-- <div class="line-divider  d-lg-none"></div>
+               <div class="line-divider  d-lg-none"></div>
                 <li class="nav-item dropdown ">
                     <a class="nav-link" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown"
                         data-bs-submenu aria-expanded="false"><fa-icon [icon]="faHourglassEnd"
-                            id="icon-Hourglass"></fa-icon> TRABAJOS
+                            id="icon-Hourglass"></fa-icon> EDUCACIÓN
                     </a>
                     <div class="line-divider  d-lg-none "></div>
                     <ul class="dropdown-menu sub nav-link" [ngClass]="{ collapse: isCollapsed }"
                         aria-labelledby="navbarDropdown1" id="submenu">
 
                         <li><button class="nav-link full-width-btn w-100 nav1" id="navbarDropdown1" data-bs-toggle="dropdown" data-bs-submenu
-                                aria-expanded="false">item 1</button></li>
+                                aria-expanded="false" (click)="cambiarComponente('actividad'); isCollapsed = !isCollapsed" >Programa</button></li>
                         <div id="lineaSub"></div>
                         <li><button class="nav-link nav2" id="navbarDropdown1" data-bs-toggle="dropdown" data-bs-submenu
-                                aria-expanded="false" (click)="cambiarComponente('donar'); isCollapsed = !isCollapsed">item 2</button>
+                                aria-expanded="false" (click)="cambiarComponente('ayuda'); isCollapsed = !isCollapsed">Participar</button>
                         </li>
-                        <div id="lineaSub"></div>
+                        <!-- <div id="lineaSub"></div>
                         <li><button class="nav-link nav3" id="navbarDropdown1" data-bs-toggle="dropdown" data-bs-submenu
-                                aria-expanded="false">item 3</button></li>
-                    </ul> -->
-<!-- 
+                                aria-expanded="false">item 3</button></li> -->
+                    </ul> 
+<!--
                 </li> -->
-                <div class="line-divider  d-lg-none"></div>
-                <li class="nav-item">
+                <div class="line-divider  d-lg-none" ></div>
+                <!-- <li class="nav-item">
                     <a class="nav-link full-width-btn w-100" aria-current="page" id="navbarDropdown1" role="button"
                     (click)="cambiarComponente('actividad'); isCollapsed = !isCollapsed"><fa-icon [icon]="faUsers" class="fa-xs"
-                            id="icon-faUsers" ></fa-icon> EN ACCION</a>
+                            id="icon-faUsers" ></fa-icon> EDUCACIÓN</a>
 
-                </li>
+                </li> -->
 
-                    <!-- <div class="line-divider  d-lg-none"></div>
-                    <ul class="dropdown-menu sub nav-link " [ngClass]="{ collapse: isCollapsed }"
+                    <div class="line-divider  d-lg-none"></div>
+                    <!-- <ul class="dropdown-menu sub nav-link " [ngClass]="{ collapse: isCollapsed }"
                         aria-labelledby="navbarDropdown2 " id="submenu">
                         <li><button class="nav-link nav3" id="navbarDropdown1" data-bs-toggle="dropdown" data-bs-submenu
                                 aria-expanded="false"

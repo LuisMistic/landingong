@@ -1,59 +1,75 @@
-
-<div *ngIf="mostrarAnimacionInicial"> <app-logo-inicial></app-logo-inicial></div> 
-<div *ngIf="mostrarAnimacionCierre" >  <app-logocierreFinal></app-logocierreFinal></div>
+<div *ngIf="mostrarAnimacionInicial">
+  <app-logo-inicial></app-logo-inicial>
+</div>
+<div *ngIf="mostrarAnimacionCierre">
+  <app-logocierreFinal></app-logocierreFinal>
+</div>
 <div class="main-section container slide-top col-12 col-xs-10 col-sm-10 col-md-11 col-lg-12">
-  <!-- Caja Principal -->
-  <div class="main-content">
-    <!-- Contenido Principal -->
-    <section class="container fixed-content">
-      <h2>DONACIÓN</h2>
-      <div class="row">
-        <div class="col-md-6">
-          <input
-            type="number"
-            id="amount-input"
-            [(ngModel)]="amountInput"
-            (input)="updateBeerCount()"
-            min="0"
-          />
+  <div class="row">
+    <div class="col-lg-6 col-md-6">
+      <!-- Contenido Principal -->
+      <section class="container fixed-content">
+        <div class="title-logo-container">
+          <h2>DONACIÓN</h2>
+          <img src="../../../../assets/educacion/mercado.png" class="mercado-logo">
         </div>
-        <div class="col-md-6">
-          <select
-            [(ngModel)]="beerCount"
-            (change)="updateAmountInput()"
-            name=""
-            id=""
-          >
-            <option value="3">3</option>
-            <option value="5">5</option>
-            <option value="10">10</option>
-          </select>
+        <div class="row">
+          <div class="col-md-6">
+            <input
+              type="number"
+              id="amount-input"
+              [(ngModel)]="amountInput"
+              (input)="updateBeerCount()"
+              min="0"
+            />
+          </div>
+          <div class="col-md-6">
+            <select
+              [(ngModel)]="beerCount"
+              (change)="updateAmountInput()"
+              name=""
+              id=""
+            >
+              <option value="3">3</option>
+              <option value="5">5</option>
+              <option value="10">10</option>
+            </select>
+          </div>
         </div>
-      </div>
-      <div class="donacion">
-        <p>
-          <span class="text-donationT">Donacion Total:</span>
-          <span class="amount-donation" id="total-amount">
-            {{ getTotalAmount() | currency }}
-          </span>
-        </p>
-      </div>
+        <div class="donacion">
+          <p>
+            <span class="text-donationT">Donación Total:</span>
+            <span class="amount-donation" id="total-amount">
+              {{ getTotalAmount() | currency }}
+            </span>
+          </p>
+        </div>
 
-      <div class="button-checkout">
-        <button
-          class=" button-checkout donacion1"
-          id="checkout-btn "
-          (click)="checkoutButtonClicked()"
-        >
-          <span class="donate-now ">DONAR AQUÍ</span>
-        </button>
-        <div id="button-checkout"></div>
+        <div class="button-checkout">
+          <button
+            class="button-checkout donacion1"
+            id="checkout-btn"
+            (click)="checkoutButtonClicked()"
+          >
+            <span class="donate-now">DONAR AQUÍ</span>
+          </button>
+          <div id="button-checkout"></div>
+        </div>
+        <!-- Footer donacion -->
+      </section>
+    </div>
+    <div class="col-lg-6 col-md-6">
+      <div class="donacion-details">
+        <p>Detalles para realizar donaciones:</p>
+        <ul>
+          <li>Depósito bancario: Banco Ciudad, Cuenta Corriente en pesos N ° 0003861/8</li>
+          <li>Transferencia: CBU N º 0290016200000000386182 ALIAS: PASTEL.PASADO.BOLA</li>
+          <li>MERCADO PAGO CVU N º 0000003100008913863129 ALIAS: Misericordia0023</li>
+          <li>CUIT del titular: 30677299793.</li>
+        </ul>
+        <p>Tu generosidad y apoyo nos permiten continuar brindando ayuda y esperanza a aquellos que más lo necesitan. Juntos, podemos marcar la diferencia y construir un futuro mejor.</p>
+        <p><span class="text-important">IMPORTANTE</span> Utiliza el botón de donación para hacer una contribución a través de Mercado Pago.</p>
       </div>
-      <!-- Footer donacion -->
-    </section>
-  </div>
-  <!-- Fin Contenido Principal -->
-  <div>
-    <!-- Fin Caja Principal -->
+    </div>
   </div>
 </div>

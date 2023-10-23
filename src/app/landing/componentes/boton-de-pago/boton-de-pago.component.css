@@ -9,7 +9,9 @@ body, html {
 
 .main-section {
   
-  position: relative;
+  
+  padding-top: 450px;
+  padding-bottom: -300px;
   width: 100% !important;
   height: 100vh; /* Ajusta la altura para ocupar toda la pantalla */
   display: flex;
@@ -21,6 +23,7 @@ body, html {
 
 
 .main-content {
+  
   background-color: #fff; /* Fondo blanco */
   font-size: 1.5rem;
   width: 70%;
@@ -28,7 +31,9 @@ body, html {
   line-height: 2.6rem;
   font-weight: 400;
   position: relative;
+  padding-top: 50px;
   padding: 20px;
+ 
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   text-align: center;
@@ -272,4 +277,26 @@ font-weight: bolder;
     -webkit-transform: translateY(-100px);
             transform: translateY(-100px);
   }
+}
+.text-important {
+  color: red;
+  font-weight: bold;
+}
+/* Alinea el logo de Mercado Pago al lado del título */
+.title-logo-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Estilo para el logo de Mercado Pago */
+.mercado-logo {
+  width: 100px; /* Ajusta el tamaño según tus necesidades */
+  margin-left: 10px; /* Espacio entre el título y el logo */
+  margin-bottom: 10px;
+}
+
+.donacion-details {
+  padding: 10px;
+  background-color: white;
+  border: #000000 1px solid;
 }

@@ -21,24 +21,6 @@ this.sharedServiceService.cambiarVisibilidadNavbar(false);
   
 
 
-
-  loadQuienesSomos() {
- 
-    this.sharedServiceService.currentComponent = 'quienesSomos';
-
-}
-  loadNuestraHistoria() {
-    this.sharedServiceService.currentComponent = 'historia'
- }
- loadObjetivos() {
-  this.sharedServiceService.currentComponent = 'objetivos'
-}
- loadTrabajo(){
-  this.sharedServiceService.currentComponent = 'trabajo'
- }
- loadDonar(){
-  this.sharedServiceService.currentComponent = 'donar'
- }
   cambiarComponente(nombre: string) {
    
     this.sharedServiceService.cambiarComponente(nombre);

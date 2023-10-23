@@ -26,7 +26,8 @@
     .img1 * {
       font-size: 20px;
       margin-top: 0px;
-      padding-top: -50px !important;
+      padding-top: 50px !important;
+      padding-bottom: 50px !important;
   
     }
   
@@ -37,6 +38,7 @@
       justify-content: center;
       align-content: center;
       margin-left: 110px;
+      padding-bottom: 50px !important;
     }
   
     .row.uno { 
@@ -54,8 +56,8 @@
     }
   
     .p1 {
-      font-size: 28px !important;
-      margin-top: 17px;
+      font-size: 20px !important;
+      margin-top: 37px !important;
       margin-bottom: 0;
       padding-bottom: 0;
     }
@@ -171,12 +173,12 @@
       display: flex;
       justify-content: center;
       align-content: center;
-      margin-left: 50px;
+      margin-left: 120px;
     }
   
     .p1 {
       text-align: center;
-      font-size: 35px !important;
+      font-size: 25px !important;
     }
   
     p.a {
@@ -304,13 +306,13 @@
     from {
       opacity: 0;
       transform: translateX(600px) rotate(0deg);
-      border: 5px solid black;
+    
     }
   
     to {
       opacity: 1;
       transform: translateX(0px) rotate(7deg);
-      border: 5px solid black;
+     
     }
   }
   
@@ -319,13 +321,13 @@
     from {
       opacity: 0;
       transform: translateX(600px) rotate(0deg);
-      border: 5px solid black;
+     
     }
   
     to {
       opacity: 1;
       transform: translateX(0px) rotate(2deg);
-      border: 5px solid black;
+     
     }
   }
   
@@ -334,21 +336,21 @@
     from {
       opacity: 0;
       transform: translateX(600px) rotate(0deg);
-      border: 5px solid black;
+   
     }
   
     to {
       opacity: 1;
       transform: translateX(0px) rotate(-5deg);
-      border: 5px solid black;
+   
     }
   }
   
   /* Aplicar la animación a elementos con clase .img1 */
   .img1 {
     animation: aparecer 1s forwards 1;
-    border-radius: 40px !important;
-    box-shadow: 3px 3px 10px 2px rgba(0, 0, 0, 0.5);
+  
+    
     width: 600px;
     height: auto;
   }
@@ -435,12 +437,7 @@
     line-height: 1.5;
   }
   
-  
-  .img-fluid {
-    -webkit-box-shadow: inset -1px 3px 8px 5px #1F87FF, 2px 5px 16px 0px #0B325E, 13px 10px 10px 11px rgba(0, 0, 0, 0.12);
-    box-shadow: inset -1px 3px 8px 5px #1F87FF, 2px 5px 16px 0px #0B325E, 13px 10px 10px 11px rgba(0, 0, 0, 0.12);
-    background: #1C6EA4;
-  }
+
   
   
   

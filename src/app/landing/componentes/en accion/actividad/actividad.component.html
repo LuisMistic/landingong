@@ -6,39 +6,36 @@
   <div class="col-12 col-xs-10 col-sm-10 col-md-11 col-lg-3">
     <!-- Texto sobre nosotros -->
     <div class="texto" [ngClass]="{'desaparecerTexto': shouldDisappear, 'aparecerTexto': shouldAppear}">
-      <h1 id="sobre" [ngClass]="{'desaparecerTexto': shouldDisappear, 'aparecerTexto': shouldAppear}"><p class="p1">ACTIVIDAD</p>
+      <h1 id="sobre" [ngClass]="{'desaparecerTexto': shouldDisappear, 'aparecerTexto': shouldAppear}"><p class="p1">Programa de Educación y Desarrollo:</p>
       </h1>
       <p class="p"> En la Asociación Misericordia, nos enorgullece llevar a cabo diversas actividades para marcar una diferencia positiva en la vida de los niños desfavorecidos. Algunas de nuestras actividades</p>
     </div>
   </div>
-  <div class="col-12 col-sm-7 col-md-6 col-lg-4">
-    <!-- Imagen con bordes redondeados -->
+ 
    
-      <div class="" [ngClass]="{'desaparecerFondo': shouldDisappear, 'aparecerFondo': shouldAppear}">
-        <p class="p" [ngClass]="{'desaparecer': shouldDisappear, 'aparecer': shouldAppear}"> * Programa de Educación y Desarrollo: Nuestro programa educativo ofrece acceso a
-
-            una educación de calidad y promueve el desarrollo integral de los niños. Ofrecemos
-            
-            talleres, clases de apoyo y actividades extracurriculares para fomentar el aprendizaje
-            
-            y el crecimiento personal.</p>
-
-        
-        
-      </div>
+    <div class="col-10 col-sm-7 col-md-6 col-lg-4">
+      <!-- Imagen con bordes redondeados -->
+     
+        <div class="contafoto" [ngClass]="{'desaparecerFondo': shouldDisappear, 'aparecerFondo': shouldAppear}">
+          <img src="../../../../../assets/educacion/jardin.png" alt="Imagen de la asociación" class="img-fluid img1"
+            [ngClass]="{'desaparecer': shouldDisappear, 'aparecer': shouldAppear}">
+          
+        </div>
+      
+    
     
   </div>
-  <div class="col-12 col-sm-10 col-md-10 col-lg-5">
+  <div class="col-12 col-sm-10 col-md-10 col-lg-4">
     <div class="" [ngClass]="{'desaparecerFondo': shouldDisappear, 'aparecerFondo': shouldAppear}">
     <div class="texto1" [ngClass]="{'desaparecerTexto1': shouldDisappear, 'aparecerTexto1': shouldAppear}">
 
-      <p class="p ">* Eventos de Recaudación de Fondos: Regularmente organizamos eventos especiales
+      <p class="p1">Nuestro programa educativo ofrece acceso a
 
-        para recaudar fondos y generar conciencia sobre los desafíos que enfrentan los niños
+        una educación de calidad y promueve el desarrollo integral de los niños. Ofrecemos
         
-        más vulnerables. Estos eventos incluyen galas benéficas, subastas, carreras solidarias
+        talleres, clases de apoyo y actividades extracurriculares para fomentar el aprendizaje
         
-        y mucho más. Tu participación y apoyo son fundamentales para alcanzar nuestros</p>
+        y el crecimiento personal.</p>
    
     </div>
 </div>
@@ -50,15 +47,15 @@
 </div>
 
 <section class="" >
-  <app-voluntariado id="voluntad"></app-voluntariado>
+  <app-sustento id="sustento"></app-sustento>
 </section>
 
-<!-- <section class="dos misions section-content" id="vision">
-  <app-vision></app-vision>
+ <section class="dos misions section-content" id="voluntad">
+  <app-voluntariado></app-voluntariado>
 </section>
 
 
-<section class="dos misions section-content" id="valores">
+<!--<section class="dos misions section-content" id="valores">
   <app-valores></app-valores>
 </section>
 

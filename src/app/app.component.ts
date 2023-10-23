@@ -1,10 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
-
-// TO DO -- import from Mercado Pago
-
-
+import { SharedServiceService } from '../app/landing/componentes/shared-service.service'; // Asegúrate de que la ruta sea correcta
 
 @Component({
   selector: 'app-root',
@@ -12,11 +8,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent {
+export class AppComponent implements OnInit {
   currentState = 'initial';
+ 
 
-  constructor(private router: Router) {
-    // Si es apropiado inicializar propiedades aqui
+  constructor(private router: Router, private sharedServiceService: SharedServiceService) {
+    // Si es apropiado inicializar propiedades aquí
   }
 
+  ngOnInit() {
+  
+  }
 }

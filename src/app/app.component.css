@@ -4,36 +4,30 @@ body {
     align-items: center;
 }
 
-h1 {
-    text-align: center;
-}
+
 
 * {
+  /* Agregamos la propiedad background-attachment con el valor fixed */
+  background-attachment: fixed;
+  /* El resto de las propiedades del fondo */
+  background-color: hsla(56,100%,97%,1);
+  background-image:
+    radial-gradient(at 58% 100%, hsla(28,100%,74%,1) 0px, transparent 50%),
+    radial-gradient(at 82% 100%, hsla(51,100%,56%,0.4) 0px, transparent 50%),
+    radial-gradient(at 0% 86%, hsla(355,100%,93%,1) 0px, transparent 50%),
+    radial-gradient(at 12% 12%, hsla(340,100%,76%,0) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, hsla(22,100%,77%,1) 0px, transparent 50%),
+    radial-gradient(at 80% 100%, hsla(242,100%,70%,1) 0px, transparent 50%),
+    radial-gradient(at 19% 98%, hsla(343,100%,76%,1) 0px, transparent 50%);
+    
+}
 
-    background-color: hsla(0, 100%, 50%, 0.03);
-    background-image: radial-gradient(at 50% 1%, hsla(60, 0%, 100%, 0.06) 0px, transparent 50%),
-                      radial-gradient(at 96% 10%, hsla(17, 100%, 98%, 0.09) 0px, transparent 50%),
-                      radial-gradient(at 81% 49%, hsla(339, 100%, 95%, 0.24) 0px, transparent 50%),
-                      radial-gradient(at 0% 100%, hsla(32, 36%, 64%, 0.45) 0px, transparent 50%),
-                      radial-gradient(at 80% 100%, hsla(23, 100%, 69%, 0.26) 0px, transparent 50%),
-                      radial-gradient(at 9% 64%, hsla(22, 89%, 47%, 0.1) 0px, transparent 50%);
-  }
-
-  .fondo {
-    display: table-cell;
-    vertical-align: middle;
-    position: absolute;
-    top: 0;
-    left: 0;
+ 
+    
+    /* Añadimos un efecto al pasar el mouse por encima */
    
-    background-attachment: scroll;
-    width: 100vw; /* 100% del ancho del viewport */
-    /* background-image: url("../../../../assets/imagen/fondo."); */
-    background-size: cover;
-    background-position: center;
-    margin: 0;
-    justify-content: center;
-    align-items: center;
-  
-  }
-  
+    
+    /* Añadimos un efecto al pasar el mouse por encima */
+   
+    
+    
