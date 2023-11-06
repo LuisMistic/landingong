@@ -84,7 +84,7 @@ export class BotonDePagoComponent {
 
   // Mercado Pago
 
-  mercadopago = new MercadoPago('TEST-2570476f-179d-421d-b6aa-d57511a3faff', {
+  mercadopago = new MercadoPago("APP_USR-83f34a8d-ebfe-46e8-b9b8-c4e9f1656299", {
     // PUBLIC-KEY
     locale: 'es-AR', // The most common are: 'pt-BR', 'es-AR' and 'en-US'
   });
@@ -120,7 +120,7 @@ export class BotonDePagoComponent {
       price: this.totalAmount.toString(),
     };
 
-    fetch(this.URL + '/create_preference', {
+    fetch(this.URL + "https://able-charming-garnet.glitch.me/", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
