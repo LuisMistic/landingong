@@ -50,11 +50,18 @@
             class="button-checkout donacion1"
             id="checkout-btn"
             (click)="checkoutButtonClicked()"
+            [disabled]="botonDesactivado"
           >
             <span class="donate-now">DONAR AQUÍ</span>
           </button>
           <div id="button-checkout"></div>
+        
+          <!-- Agrega un mensaje de espera -->
+          <div *ngIf="mostrarMensajeEspera" class="mensaje-espera">
+            Espere, estamos procesando su solicitud...
+          </div>
         </div>
+        
         <!-- Footer donacion -->
       </section>
     </div>

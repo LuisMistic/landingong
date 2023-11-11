@@ -108,12 +108,12 @@ select {
 
 .button-checkout {
   width: 100%;
-  background-color: #ef4135;
+  background-color: #fffefe;
   font-size: 16px;
   line-height: 50px;
   border-radius: 5px;
   font-size: 16px !important;
-  color: #fff;
+  color: #000000;
   text-transform: uppercase;
   border: none;
   cursor: pointer;
@@ -299,4 +299,36 @@ font-weight: bolder;
   padding: 10px;
   background-color: white;
   border: #000000 1px solid;
+}
+
+
+.mensaje-espera {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  background-color: #ffffff;
+  color: #9c0404;
+  padding: 20px;
+  border: 1px solid #cccccc;
+  margin-top: 20px;
+}
+.button-checkout {
+  position: relative; /* Necesario para el efecto de opacidad */
+}
+
+.button-checkout button {
+  /* Agrega estilos generales del botón aquí */
+  background-color: #4285f4; /* Color original del botón */
+  color: #ffffff;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.button-checkout button[disabled] {
+  opacity: 0.5; /* Opacidad cuando está desactivado */
+  background-color: #4285f4; /* Puedes ajustar este color si lo deseas */
+  /* Puedes ajustar otros estilos si lo necesitas */
 }

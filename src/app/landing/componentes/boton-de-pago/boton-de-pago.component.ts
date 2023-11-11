@@ -16,10 +16,12 @@ export class BotonDePagoComponent {
   totalAmount: number = 0;
   beerCount: number = 0;
   amountInput: number = 0;
-
+  botonDesactivado: boolean = true;
+  
+  mostrarMensajeEspera: boolean = false;
   mostrarAnimacionCierre: boolean = false;
   mostrarAnimacionInicial: boolean = true;
-
+ 
   constructor(private sharedServiceService: SharedServiceService ) {
     // Inicializar propiedades si es necesario
   }
@@ -35,6 +37,7 @@ export class BotonDePagoComponent {
       // Cambiar el valor de la variable mostrarAnimacionInicial según el valor emitido
       this.mostrarAnimacionInicial = animacion;
     });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }}
   mostrarNavbarConAnimacion() {
     throw new Error('Method not implemented.');
@@ -54,8 +57,10 @@ export class BotonDePagoComponent {
   updateBeerCount() {
     this.beerCount = this.amountInput;
     this.updateTotalAmount();
-  }
 
+    // Habilita o deshabilita el botón según el valor de la casilla
+    this.botonDesactivado = this.amountInput === 0;
+  }
   beer3ButtonClicked() {
     this.amountInput = 3;
     this.beerCount = 3;
@@ -114,13 +119,16 @@ export class BotonDePagoComponent {
   }
 
   checkoutButtonClicked() {
+    this.mostrarMensajeEspera = true;
+    this.botonDesactivado = true;
+
     const orderData = {
       quantity: 1,
       description: this.productDescription,
       price: this.totalAmount.toString(),
     };
 
-    fetch(this.URL + "https://able-charming-garnet.glitch.me/", {
+    fetch("https://able-charming-garnet.glitch.me/create_preference", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -130,9 +138,14 @@ export class BotonDePagoComponent {
       .then((response) => response.json())
       .then((preference) => {
         this.createCheckoutButton(preference.id);
+        // Oculta el mensaje de espera cuando el backend se activa
+        this.mostrarMensajeEspera = false;
       })
       .catch(() => {
         alert('Unexpected error');
+        // En caso de error, activa el botón y oculta el mensaje de espera
+        this.botonDesactivado = false;
+        this.mostrarMensajeEspera = false;
       });
   }
 }
