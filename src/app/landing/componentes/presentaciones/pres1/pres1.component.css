@@ -359,3 +359,102 @@ radial-gradient(at 25% 3%, hsla(30,77%,24%,1) 0px, transparent 50%);
     transform: scale(1.1);
   }
 }
+
+/* anuncio */
+
+.card20 {
+  
+  background-color:rgb(157, 146, 83, 60%); /* Color de fondo de la tarjeta */
+  border-radius: 10px; /* Bordes redondeados */
+  padding: 20px; /* Espacio alrededor de la tarjeta */
+  box-shadow: -2px -2px 10px #000000;
+  width: 100%; /* Ancho de la tarjeta */
+  margin: auto; /* Centrar la tarjeta */
+  margin-bottom: 20px;
+}
+
+.announcement {
+  text-align: center;
+}
+
+.announcement h1 {
+  font-size: 24px;
+  color: #333; /* Color del título */
+  margin-bottom: 10px; /* Espacio entre el título y el subtítulo */
+}
+
+.announcement h2 {
+  font-size: 18px;
+  color: #666; /* Color del subtítulo */
+  animation: blink 1s infinite alternate; /* Animación para hacer titilar el subtítulo */
+}
+
+.highlight {
+  font-size: 20px; /* Tamaño de fuente */
+  color: #fafcfa; /* Color de resaltado */
+  font-weight: bold; /* Negrita */
+  animation: blink 1s infinite alternate; /* Animación para hacer titilar */
+}
+
+.explanation {
+  text-align: center; /* Alineación del texto explicativo */
+  opacity: 0; /* Inicialmente oculto */
+  animation: slide-in 1s forwards; /* Animación de entrada */
+}
+
+.explanation p {
+  font-size: 16px;
+  color: #030303; /* Color del texto */
+  margin-bottom: 10px;
+}
+
+.explanation a {
+  display: block;
+  color: #ffffff; /* Color del enlace */
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.explanation a:hover {
+  text-decoration: underline;
+}
+
+.announcement button {
+  background-color: #4CAF50; /* Color de fondo del botón */
+  color: white; /* Color del texto del botón */
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s; /* Transición suave al cambiar de color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra suave */
+}
+
+.announcement button:hover {
+  background-color: #45a049; /* Color de fondo del botón al pasar el ratón */
+}
+
+@keyframes blink {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+

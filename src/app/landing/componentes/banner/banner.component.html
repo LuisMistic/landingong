@@ -2,6 +2,9 @@
     <app-pres1></app-pres1>
   </ng-container>
   
+  <ng-container *ngIf="sharedServiceService.currentComponent === 'anuncio'">
+    <app-anuncio></app-anuncio>
+  </ng-container>
       <ng-container *ngIf="sharedServiceService.currentComponent === 'quienesSomos'">
         <app-quienes-somos></app-quienes-somos>
       </ng-container>
