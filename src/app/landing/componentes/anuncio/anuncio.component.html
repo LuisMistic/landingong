@@ -2,17 +2,20 @@
 <div *ngIf="mostrarAnimacionCierre" >  <app-logocierreFinal></app-logocierreFinal></div>
 
 <div class="row uno colorFondo  align-items-center" media="(orientation: landscape) and (min-device-width: 320px) and (max-device-width: 480px)"   id="actividad"[ngClass]="{'desaparecerColorFondo': colorFondoDesparecer, 'aparecerColorFondo ': colorFondoAparecer}">
-  <div class="col-12 col-xs-10 col-sm-10 col-md-11 col-lg-3">
+  <div class="col-12 col-xs-12 col-sm-10 col-md-11 col-lg-8">
     <!-- Texto sobre nosotros -->
     <div class="texto" [ngClass]="{'desaparecerTexto': shouldDisappear, 'aparecerTexto': shouldAppear}">
-      <h1 id="sobre" [ngClass]="{'desaparecerTexto': shouldDisappear, 'aparecerTexto': shouldAppear}"><p class="p1">PRIMERAS INFANCIAS</p>
+      <h1 id="sobre" [ngClass]="{'desaparecerTexto': shouldDisappear, 'aparecerTexto': shouldAppear}"><p class="p1">INSCRIPCIONES 2024</p>
       </h1>
-      <p class="p"> En la Asociación Misericordia, nos enorgullece llevar a cabo diversas actividades para marcar una diferencia positiva en la vida de los niños desfavorecidos. Algunas de nuestras actividades</p>
+      
+        <p class="important-text">Los Centros de Primera Infancia (CPI) son espacios destinados al cuidado, crianza y aprendizaje de niñas y niños de entre 1 y 3 años que se encuentran en situación de vulnerabilidad social.</p>
+        <p>Estos centros ofrecen una jornada completa y brindan tres comidas al día (desayuno, almuerzo y merienda). Las inscripciones se realizan los miércoles y viernes de 9 a 11 horas en la siguiente dirección:</p>
+        <p class="important-text">Alberti 1674, entre Inclán y Av. Garay.</p>
     </div>
   </div>
  
    
-    <div class="col-10 col-sm-7 col-md-6 col-lg-4">
+  <div class="col-10 col-xs-6 col-sm-10 col-md-11 col-lg-3">
       <!-- Imagen con bordes redondeados -->
      
         <div class="contafoto" [ngClass]="{'desaparecerFondo': shouldDisappear, 'aparecerFondo': shouldAppear}">
@@ -21,47 +24,8 @@
           
         </div>
       
-    
-    
-  </div>
-  <div class="col-12 col-sm-10 col-md-10 col-lg-4">
-    <div class="" [ngClass]="{'desaparecerFondo': shouldDisappear, 'aparecerFondo': shouldAppear}">
-    <div class="texto1" [ngClass]="{'desaparecerTexto1': shouldDisappear, 'aparecerTexto1': shouldAppear}">
+        <br><br><br><br>
+        <div class="col-12 col-xs-12 col-sm-10 col-md-11 col-lg-12">
 
-      <p class="p1">Nuestro programa educativo ofrece acceso a
-
-        una educación de calidad y promueve el desarrollo integral de los niños. Ofrecemos
-        
-        talleres, clases de apoyo y actividades extracurriculares para fomentar el aprendizaje
-        
-        y el crecimiento personal.</p>
-   
-    </div>
-</div>
-  </div>
-  
- 
-
-
-</div>
-
-<section class="" >
-  <app-sustento id="sustento"></app-sustento>
-</section>
-
- <section class="dos misions section-content" id="voluntad">
-  <app-voluntariado></app-voluntariado>
-</section>
-
-
-<!--<section class="dos misions section-content" id="valores">
-  <app-valores></app-valores>
-</section>
-
-<section class="dos misions section-content" id="comision">
-  <app-comision> </app-comision>
-</section> -->
-
-<div class="flotante">
-  <app-boton-flotante-en-accion></app-boton-flotante-en-accion>
-</div>
+        <app-boton-de-contacto></app-boton-de-contacto>
+      </div>

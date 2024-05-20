@@ -476,4 +476,7 @@
   }
   
   
-  
+  .important-text {
+    font-weight: bold;
+    color: #0074D9; /* Azul brillante */
+}

@@ -29,6 +29,9 @@
       <ng-container *ngIf="sharedServiceService.currentComponent === 'actividad'">
         <app-actividad></app-actividad>
       </ng-container>
+      <ng-container *ngIf="sharedServiceService.currentComponent === 'fotos'">
+        <app-galeria></app-galeria>
+      </ng-container>
       <ng-container *ngIf="sharedServiceService.currentComponent === 'contacto'">
         <app-contacto></app-contacto>
       </ng-container>

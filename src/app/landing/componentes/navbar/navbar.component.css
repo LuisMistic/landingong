@@ -63,7 +63,7 @@ nav.navbar {
 
 .logo-img {
   animation: parpadeo 5s infinite; /* Aplica la animación al logo */
-  filter: drop-shadow(4 3 10px rgba(rgb(255, 255, 255))); /* Sombra en relieve */
+  filter: drop-shadow(4 3 10px rgba(rgb(31, 30, 30))); /* Sombra en relieve */
   
 }
 
@@ -92,8 +92,8 @@ nav.navbar {
   position: relative;
   animation: pulse 2s linear infinite;
 
-  border-radius: 10px;
-  padding: 5px;
+  border-radius: 50px;
+  padding: 50px;
 }
 
 @keyframes pulse {
@@ -110,7 +110,7 @@ nav.navbar {
 .logo-img  {
   position: relative;
   animation: pulse 2s linear infinite;
-  border: 1px solid rgb(12, 12, 12);
+ 
   border-radius: 10px;
   padding: 5px;
 }
@@ -433,7 +433,7 @@ button.navbar-nav {
 /* logo */
 .logo-img {
   display: block;
-  max-width: 120%;
+  max-width: 350%;
   height: auto;
   margin-left:40px ;
 }

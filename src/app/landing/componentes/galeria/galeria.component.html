@@ -1,0 +1,25 @@
+<div *ngIf="mostrarAnimacionInicial" class="ini"> <app-logo-inicial ></app-logo-inicial></div> 
+<div *ngIf="mostrarAnimacionCierre" class="ini">  <app-logocierreFinal></app-logocierreFinal></div>
+
+
+
+          
+<div class="container my-5">
+    <div id="gallery" class="row">
+      <div *ngFor="let image of images; let i = index" class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="gallery-item shadow" (click)="openImage(i)">
+          <img [src]="image.src" [alt]="image.alt" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div *ngIf="fullscreenIndex !== null" class="fullscreen-overlay">
+    <img [src]="images[fullscreenIndex].src" [alt]="images[fullscreenIndex].alt" class="fullscreen-image">
+    <button class="close-btn" (click)="closeImage()">X</button>
+    <button class="prev-btn" (click)="prevImage()">❮</button>
+    <button class="next-btn" (click)="nextImage()">❯</button>
+  </div>
+  
+
+
