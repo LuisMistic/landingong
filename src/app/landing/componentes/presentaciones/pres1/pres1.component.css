@@ -361,6 +361,22 @@ radial-gradient(at 25% 3%, hsla(30,77%,24%,1) 0px, transparent 50%);
 }
 
 /* anuncio */
+.animate-slide-in {
+  opacity: 0;
+  transform: translateY(-50px);
+  animation: slideIn 3.10s forwards;
+}
+
+@keyframes slideIn {
+  from {
+      opacity: 0;
+      transform: translateY(-300px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
 
 .card20 {
   
@@ -403,7 +419,7 @@ radial-gradient(at 25% 3%, hsla(30,77%,24%,1) 0px, transparent 50%);
 }
 
 .explanation p {
-  font-size: 16px;
+  font-size: 14px;
   color: #030303; /* Color del texto */
   margin-bottom: 10px;
 }
@@ -458,3 +474,42 @@ radial-gradient(at 25% 3%, hsla(30,77%,24%,1) 0px, transparent 50%);
 
 
 
+.nueva-seccion {
+  background-image: linear-gradient(25deg, #f8a30549, #967a08, #ac640658, #fabf00a1);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+  box-shadow:
+    0 0 10px rgba(0, 0, 0, 0.3),
+    0 0 20px rgba(0, 0, 0, 0.2),
+    0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.nueva-seccion h1 {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.nueva-seccion p {
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.nueva-seccion button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.nueva-seccion button:hover {
+  background-color: #45a049;
+}

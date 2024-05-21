@@ -59,12 +59,14 @@ import { AyudaComponent } from './landing/componentes/ayudanos/ayuda/ayuda.compo
 import { BotonDeAyudaComponent } from './landing/componentes/ayudanos/boton-de-ayuda/boton-de-ayuda.component';
 import { SociosComponent } from './landing/componentes/ayudanos/socios/socios.component';
 import { InsumosComponent } from './landing/componentes/ayudanos/insumos/insumos.component';
+import { AnuncioComponent } from './landing/componentes/anuncio/anuncio.component';
+import { GaleriaComponent } from './landing/componentes/galeria/galeria.component';
 
 
 
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, BotonDePagoComponent, NavbarComponent, BannerComponent, QuienesSomosComponent, DonarComponent, SidebarComponent, DashboardComponent, NuestraHistoriaComponent, MisionComponent,  VisionComponent, ScrollToDirective, ValoresComponent, ComisionComponent, BotonFlotanteComponent, Pres1Component, ImgQuienesComponent, LogoComponent, LibroComponent, Pres2Component, FundacionComponent, BotonFlotanteHistoriaComponent, ObjetivosComponent, BotonFlotanteObjetivosComponent, FamiliaComponent, ParticiparComponent, TrabajoComponent, OdontologiaComponent, BotonFlotanteTrabajoComponent, LogotarnsitionComponent, LogoInicialComponent, ActividadComponent, VoluntariadoComponent, BotonFlotanteEnAccionComponent, ContactoComponent, BotonDeContactoComponent, SustentoComponent, AyudaComponent, BotonDeAyudaComponent, SociosComponent, InsumosComponent,    
+  declarations: [AppComponent, HomeComponent, BotonDePagoComponent, NavbarComponent, BannerComponent, QuienesSomosComponent, DonarComponent, SidebarComponent, DashboardComponent, NuestraHistoriaComponent, MisionComponent,  VisionComponent, ScrollToDirective, ValoresComponent, ComisionComponent, BotonFlotanteComponent, Pres1Component, ImgQuienesComponent, LogoComponent, LibroComponent, Pres2Component, FundacionComponent, BotonFlotanteHistoriaComponent, ObjetivosComponent, BotonFlotanteObjetivosComponent, FamiliaComponent, ParticiparComponent, TrabajoComponent, OdontologiaComponent, BotonFlotanteTrabajoComponent, LogotarnsitionComponent, LogoInicialComponent, ActividadComponent, VoluntariadoComponent, BotonFlotanteEnAccionComponent, ContactoComponent, BotonDeContactoComponent, SustentoComponent, AyudaComponent, BotonDeAyudaComponent, SociosComponent, InsumosComponent, AnuncioComponent, GaleriaComponent,    
    ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, BrowserAnimationsModule, FontAwesomeModule, NgxPageScrollModule, MatDialogModule, NgxPageScrollCoreModule, NoopAnimationsModule,],
   providers: [HTMLElement, ScrollToService, ModalImgService],

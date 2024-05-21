@@ -1,5 +1,5 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
-import { skip } from 'rxjs';
+import { Component, OnInit, AfterViewInit, OnDestroy } from '@angular/core';
+import { skip, Subject } from 'rxjs';
 import { SharedServiceService } from '../shared-service.service';
 import SmoothScroll from 'smooth-scroll';
 
@@ -14,7 +14,9 @@ interface ImageData {
   templateUrl: './galeria.component.html',
   styleUrls: ['./galeria.component.css']
 })
-export class GaleriaComponent implements OnInit, AfterViewInit {
+export class GaleriaComponent implements OnInit, AfterViewInit, OnDestroy {
+
+  private destroy$ = new Subject<void>();
 
   shouldAppear = false;
   shouldDisappear = false;
@@ -40,23 +42,15 @@ export class GaleriaComponent implements OnInit, AfterViewInit {
       this.mostrarNavbarConAnimacion();
     }, 0);
 
-    this.sharedServiceService.obtenerNotificacionCierre().pipe(skip(1)).subscribe(cierre => {
-      this.mostrarAnimacionCierre = cierre;
-    });
-
-    this.sharedServiceService.obtenerNotificacionAnimacionInicial().pipe(skip(1)).subscribe(animacion => {
-      this.mostrarAnimacionInicial = animacion;
-    });
-
     // Inicializar la galería con 20 imágenes de ejemplo
     this.images = [
-      { id: 1, src: '../../../../assets/quienesSomos/nosotros.JPG', alt: 'Imagen 1' },
-      { id: 2, src: 'https://via.placeholder.com/300/33FF57/ffffff?text=Imagen+2', alt: 'Imagen 2' },
-      { id: 3, src: 'https://via.placeholder.com/300/3357FF/ffffff?text=Imagen+3', alt: 'Imagen 3' },
-      { id: 4, src: 'https://via.placeholder.com/300/57FF33/ffffff?text=Imagen+4', alt: 'Imagen 4' },
-      { id: 5, src: 'https://via.placeholder.com/300/5733FF/ffffff?text=Imagen+5', alt: 'Imagen 5' },
+      { id: 1, src: '../../../../assets/galeria/IMG_1312.jpg', alt: 'Imagen 1' },
+      { id: 2, src: '../../../../assets/galeria/1.jpg', alt: 'Imagen 2' },
+      { id: 3, src: '../../../../assets/galeria/IMG_1261.jpg', alt: 'Imagen 3' },
+      { id: 4, src: '../../../../assets/galeria/IMG_1326.jpg', alt: 'Imagen 4' },
+      { id: 5, src: '../../../../assets/galeria/IMG_1332.jpg', alt: 'Imagen 5' },
       { id: 6, src: 'https://via.placeholder.com/300/FF33A1/ffffff?text=Imagen+6', alt: 'Imagen 6' },
-      { id: 7, src: '../../../../assets/quienesSomos/nosotros.JPG', alt: 'Imagen 7' },
+      { id: 7, src: 'https://via.placeholder.com/300/33FFA1/ffffff?text=Imagen+7', alt: 'Imagen 7' },
       { id: 8, src: 'https://via.placeholder.com/300/A133FF/ffffff?text=Imagen+8', alt: 'Imagen 8' },
       { id: 9, src: 'https://via.placeholder.com/300/FF5733/ffffff?text=Imagen+9', alt: 'Imagen 9' },
       { id: 10, src: 'https://via.placeholder.com/300/33FF57/ffffff?text=Imagen+10', alt: 'Imagen 10' },
@@ -71,12 +65,28 @@ export class GaleriaComponent implements OnInit, AfterViewInit {
       { id: 19, src: 'https://via.placeholder.com/300/3357FF/ffffff?text=Imagen+19', alt: 'Imagen 19' },
       { id: 20, src: 'https://via.placeholder.com/300/57FF33/ffffff?text=Imagen+20', alt: 'Imagen 20' }
     ];
+
+    this.sharedServiceService.obtenerNotificacionCierre().pipe(skip(1)).subscribe(cierre => {
+      this.mostrarAnimacionCierre = cierre;
+      if (cierre) {
+        this.closeImage(); // Cerrar la imagen en fullscreen si está abierta
+      }
+    });
+
+    this.sharedServiceService.obtenerNotificacionAnimacionInicial().pipe(skip(1)).subscribe(animacion => {
+      this.mostrarAnimacionInicial = animacion;
+    });
   }
 
   ngAfterViewInit(): void {
     this.scroll = new SmoothScroll('a[href*="#"]', {
       // Configuración de SmoothScroll si es necesario
     });
+  }
+
+  ngOnDestroy() {
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 
   mostrarNavbarConAnimacion() {

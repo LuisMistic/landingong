@@ -1,27 +1,23 @@
-
-
 <div *ngIf="mostrarAnimacionInicial"> <app-logo-inicial></app-logo-inicial></div> 
 <div *ngIf="mostrarAnimacionCierre" >  <app-logocierreFinal></app-logocierreFinal></div>
-<app-logo></app-logo>
+<div class="nueva-seccion animate-slide-in">
+    <h1>¡Nueva Sección de Galería!</h1>
+    <button (click)="cambiarComponente('fotos')">Ver Galería</button>
+</div>
+<div class="nueva-seccion animate-slide-in">
+    <p class="highlight">INSCRIBITE... CENTROS DE PRIMERA INFANCIA</p>
+    <div class="explanation">
+        <p>LOS CPI son espacios de cuidado, crianza y aprendizaje para niñas y niños entre 1 a tres años en situación de vulnerabilidad social.</p>
+    </div>
+    <button type="button" (click)="cambiarComponente('anuncio')">más información</button>
+</div>
+  
+      
+  <app-logo class="logo"></app-logo>
 
 <div class="row fondo d-flex justify-content-center align-items-center" id="quienes">
 
-    <div class=" col-8 col-sm-10 col-md-8 col-lg-12 card ">
-    <div class="card20">
-        <div class="announcement">
-          <h1>ENTRA E INSCRIBITE</h1>
-          <h2>ES FÁCIL...</h2>
-          <p class="highlight">CENTROS DE PRIMERA INFANCIA</p>
-          <div class="explanation">
-            <p>LOS CPI son espacios de cuidado, crianza y aprendizaje para niñas y niños entre 1 a tres años en situación de vulnerabilidad social.</p>
-          </div>
-          <button type="button" (click)="cambiarComponente('anuncio')">mas información</button>
-        </div>
-      </div>
-
-      
-    </div>
-      
+  
       
       
       
@@ -74,9 +70,9 @@
                         <div class=" col-8 col-sm-10 col-md-8 col-lg-2 card ">
         
                             <button class="card-body1 custom-button" (click)="cambiarComponente('fotos')">
-                        <h3 class="quienes"><div class="light-point"></div>FOTOS</h3>
+                        <h3 class="quienes"><div class="light-point"></div>GALERIA</h3>
                             
-                            <img src="../../../../../assets/presentacion/pres5.png" class="card-img-top img-fluid rounded-top border shadow-sm mb-0" alt="Jelo 1">
+                            <img src="../../../../../assets/galeria/IMG_1326.jpg" class="card-img-top img-fluid rounded-top border shadow-sm mb-0" alt="Jelo 1">
                         </button>
                         
                             </div>
