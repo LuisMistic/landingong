@@ -12,6 +12,9 @@ export class BotonDePagoComponent {
   // URL= 'https://able-charming-garnet.glitch.me';
   URL = 'http://localhost:8080';
 
+  PRODUCTION_LUIS: string = 'APP_USR-0b59bab9-7402-420c-bf92-13fb10f20c25';
+  TEST_CREDENTIAL: string = 'TEST-2570476f-179d-421d-b6aa-d57511a3faff';
+
   productDescription: string = 'Donaciones';
   totalAmount: number = 0;
   beerCount: number = 0;
@@ -89,7 +92,7 @@ export class BotonDePagoComponent {
 
   // Mercado Pago
 
-  mercadopago = new MercadoPago("APP_USR-83f34a8d-ebfe-46e8-b9b8-c4e9f1656299", {
+  mercadopago = new MercadoPago('TEST-2570476f-179d-421d-b6aa-d57511a3faff', {
     // PUBLIC-KEY
     locale: 'es-AR', // The most common are: 'pt-BR', 'es-AR' and 'en-US'
   });
